@@ -6,6 +6,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { categories, products } from "@/data/site";
 import { sitePath } from "@/data/paths";
+import { pageMetadata } from "@/data/metadata";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -16,7 +17,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const product = products.find((item) => item.id === slug && item.detail);
-  return product ? { title: `${product.name} | Huinong Food`, description: product.detail!.intro } : {};
+  return product ? pageMetadata(product.name, product.detail!.intro) : {};
 }
 
 export default async function ProductPage({ params }: Props) {

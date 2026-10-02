@@ -1,4 +1,4 @@
-import { company, navigation } from "@/data/site";
+import { brand, navigation } from "@/data/site";
 import { sitePath } from "@/data/paths";
 
 export function SiteFooter() {
@@ -6,8 +6,11 @@ export function SiteFooter() {
     <footer className="site-footer">
       <div className="shell footer-main">
         <div className="footer-brand">
-          <a className="footer-wordmark" href={sitePath("/#top")}>{company.wordmark}</a>
-          <p>Dried fruits, frozen berries, botanical ingredients and tea directions for a clearer sourcing conversation.</p>
+          <a className="footer-wordmark" href={sitePath("/#top")} aria-label={`${brand.name}, back to home`}>
+            <span className="footer-wordmark-main">{brand.name}</span>
+            <span className="footer-wordmark-sub">{brand.descriptor}</span>
+          </a>
+          <p>Frozen berries, dried fruits, botanical ingredients and tea directions for food and beverage sourcing.</p>
         </div>
         <div className="footer-links">
           <span className="footer-label">Explore</span>
@@ -16,13 +19,10 @@ export function SiteFooter() {
         <div className="footer-contact">
           <span className="footer-label">Connect</span>
           <a href={sitePath("/#quote")}>Request a Quote <span aria-hidden="true">↗</span></a>
-          <a href={company.storefront} target="_blank" rel="noopener noreferrer">
-            Alibaba storefront <span aria-hidden="true">↗</span>
-          </a>
         </div>
       </div>
       <div className="shell footer-bottom">
-        <span>© {new Date().getFullYear()} {company.name}</span>
+        <span>{brand.businessName}</span>
         <span>Development preview · imagery is illustrative</span>
       </div>
     </footer>

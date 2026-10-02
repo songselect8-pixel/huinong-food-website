@@ -1,12 +1,23 @@
-export const company = {
-  name: "Jiaxing Huinong Food Co., Ltd.",
-  wordmark: "HUINONG FOOD",
-  chineseName: "嘉兴汇农食品股份有限公司",
-  storefront: "https://cnjxhn.en.alibaba.com/",
-  email: null,
-  phone: null,
-  whatsapp: null,
-  address: null,
+export const brand = {
+  name: "FRUNORIA",
+  businessName: "FRUNORIA Ingredients",
+  descriptor: "FRUIT & BOTANICAL INGREDIENTS",
+  shareImage: "/images/frunoria-share.png",
+} as const;
+
+// Brand identity is separate from the unconfirmed website operating entity.
+export const siteIdentity = {
+  siteUrl: null as string | null,
+  operatorLegalName: null as string | null,
+  email: null as string | null,
+  phone: null as string | null,
+  whatsapp: null as string | null,
+  address: null as string | null,
+} as const;
+
+// Historical sourcing reference only; its relationship to FRUNORIA is unverified.
+export const referenceLinks = {
+  legacyMarketplace: "https://cnjxhn.en.alibaba.com/",
 } as const;
 
 export const navigation = [

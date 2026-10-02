@@ -4,13 +4,11 @@ import { ScrollReveals } from "@/components/scroll-reveals";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { sitePath } from "@/data/paths";
+import { pageMetadata } from "@/data/metadata";
+import { brand } from "@/data/site";
 import "./private-label.css";
 
-export const metadata: Metadata = {
-  title: "Private Label Tea & Fruit Solutions | Huinong Food",
-  description:
-    "Explore ingredient sourcing, blend development and custom packaging solutions for private label tea and dried fruit projects with Huinong Food.",
-};
+export const metadata: Metadata = pageMetadata("Private Label Tea & Fruit Solutions", `Explore ingredient sourcing, blend development and custom packaging discussions for tea and fruit projects with ${brand.businessName}.`);
 
 const process = [
   {

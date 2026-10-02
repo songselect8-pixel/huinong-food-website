@@ -68,11 +68,11 @@ export function ApplicationExplorer() {
               <div className="application-related">
                 <span className="mini-label">Related product directions</span>
                 <div className="application-product-links">
-                  {relatedProducts.map((product) => product.sourceUrl ? (
-                    <a href={product.sourceUrl} target="_blank" rel="noopener noreferrer" key={product.id}>
+                  {relatedProducts.map((product) => (
+                    <a href={sitePath(product.detail ? `/products/${product.id}` : `/products?category=${product.categoryId}`)} key={product.id}>
                       {product.name} <span aria-hidden="true">↗</span>
                     </a>
-                  ) : <span key={product.id}>{product.name}</span>)}
+                  ))}
                 </div>
               </div>
               <a

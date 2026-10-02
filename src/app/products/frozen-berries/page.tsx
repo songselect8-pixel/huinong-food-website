@@ -4,11 +4,9 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { products } from "@/data/site";
 import { sitePath } from "@/data/paths";
+import { pageMetadata } from "@/data/metadata";
 
-export const metadata: Metadata = {
-  title: "Frozen Berries | Huinong Food",
-  description: "Explore IQF frozen raspberry and blueberry ingredient directions, buyer specifications and cold-chain questions.",
-};
+export const metadata: Metadata = pageMetadata("Frozen Berries", "Explore IQF frozen raspberry and blueberry ingredient directions, buyer specifications and cold-chain questions.");
 
 const berries = products.filter((product) => product.categoryId === "frozen-berries" && product.detail);
 
