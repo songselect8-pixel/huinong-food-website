@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { company, navigation } from "@/data/site";
+import { brand, navigation } from "@/data/site";
 import { sitePath } from "@/data/paths";
 
 export function SiteHeader() {
@@ -18,9 +18,9 @@ export function SiteHeader() {
   return (
     <header className={`site-header ${scrolled ? "is-scrolled" : ""}`}>
       <div className="header-inner shell">
-        <a className="wordmark" href={sitePath("/#top")} onClick={() => setMenuOpen(false)} aria-label="Huinong Food, back to home">
-          <span className="wordmark-main">{company.wordmark}</span>
-          <span className="wordmark-sub">FRUIT · FLOWERS · TEA</span>
+        <a className="wordmark" href={sitePath("/#top")} onClick={() => setMenuOpen(false)} aria-label={`${brand.name}, back to home`}>
+          <span className="wordmark-main">{brand.name}</span>
+          <span className="wordmark-sub">{brand.descriptor}</span>
         </a>
 
         <button

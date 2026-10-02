@@ -1,7 +1,9 @@
-# Huinong Food website rules
+# FRUNORIA website rules
 
 - Build this as an English B2B sourcing site. No cart, checkout, retail prices, fabricated reviews, or invented buyer history.
-- Keep the public company name in `src/data/site.ts`. Confirm it against export documents before production use.
+- Use FRUNORIA as the public brand and FRUIT & BOTANICAL INGREDIENTS as the wordmark descriptor. Keep brand, contact channels, domain and legal operator separate in `src/data/site.ts`; do not invent a FRUNORIA legal company name or imply a relationship to historical suppliers without evidence.
+- Preserve the wine #8F2D4F, blueberry #2C3F60, warm white #FBF9F5, blush #F5E9EE and ice #EDF2F8 interface palette for new pages.
+- Keep the legacy marketplace URL as a historical source reference, not a FRUNORIA storefront link. Do not attribute a supplier's certificates to FRUNORIA without checking the holder, site, product and process scope.
 - Give every product a source URL or `null` and a verification state. A marketplace listing title establishes only a product direction; it does not verify ingredients, process, specifications, health claims, certifications, MOQ, packaging, or lead time.
 - Keep single ingredients, blends, filled tea bags, and empty tea bags distinct. Never infer nuts or freeze drying from “Dry Fruits.” Merge repeated marketing listings for the same product direction.
 - The five images in `public/images` are AI concept visuals from `huinong-website-images/huinong-images`. Use them for homepage/category preview only. Do not present them as SKU photos, factory evidence, certificates, packaging cases, or proof of supply for every pictured ingredient.

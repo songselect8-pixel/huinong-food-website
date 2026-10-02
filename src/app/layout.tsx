@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/data/metadata";
+import { brand } from "@/data/site";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Huinong Food | Dried Fruits & Herbal Teas for Your Business",
-  description: "Explore dried fruit slices, frozen berry ingredients, botanicals and tea directions with Jiaxing Huinong Food Co., Ltd. Share a sourcing brief in our website preview.",
+  ...pageMetadata("Fruit & Botanical Ingredients for Your Business", `Explore frozen berries, dried fruits, floral ingredients, tea blends and private label project directions with ${brand.businessName}.`),
   robots: { index: false, follow: false },
 };
 

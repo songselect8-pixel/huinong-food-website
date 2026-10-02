@@ -6,7 +6,7 @@ import { QuoteForm } from "@/components/quote-form";
 import { ScrollReveals } from "@/components/scroll-reveals";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { categories, company } from "@/data/site";
+import { brand, categories } from "@/data/site";
 import { previewGuides } from "@/data/preview-guides";
 import { sitePath } from "@/data/paths";
 
@@ -14,8 +14,8 @@ const qualitySupportTopics = [
   {
     kind: "systems",
     title: "Food Safety Systems",
-    description: "Our food safety certifications support confident sourcing and documented quality discussions.",
-    listLabel: "Food safety certifications",
+    description: "Review certification documents against the actual holder, product and process scope.",
+    listLabel: "Systems to verify",
     items: ["HACCP", "ISO 22000", "BRCGS", "FSSC 22000"],
   },
   {
@@ -178,7 +178,7 @@ export default function HomePage() {
                         <li key={item}>
                           <span className="support-item-icon"><SupportIcon kind={topic.kind} /></span>
                           {topic.kind === "systems"
-                            ? <span className="support-cert-name"><strong>{item}</strong>{" "}<small>Certified</small></span>
+                            ? <span className="support-cert-name"><strong>{item}</strong>{" "}<small>Scope to verify</small></span>
                             : <span>{item}</span>}
                         </li>
                       ))}
@@ -222,15 +222,15 @@ export default function HomePage() {
         <section className="about-section section-space" id="about" aria-labelledby="about-title">
           <div className="shell about-layout" data-reveal="">
             <div className="about-heading">
-              <span className="eyebrow section-kicker">06 / About Huinong</span>
-              <h2 id="about-title">Meet Huinong Food</h2>
+              <span className="eyebrow section-kicker">06 / About {brand.name}</span>
+              <h2 id="about-title">Meet {brand.name}</h2>
               <div className="about-rule" aria-hidden="true" />
             </div>
             <div className="about-copy">
-              <p>We are <strong>{company.name}</strong>. Our ingredient directions include dried fruit slices, frozen berries, floral ingredients, fruit and herbal blends, and packed teas. Tell us the product and format you need so we can discuss the relevant information for your project.</p>
+              <p><strong>{brand.name}</strong> brings together frozen berries, dried fruits, botanical ingredients and tea solutions for food and beverage businesses. Share the product, format and market you have in mind so we can review the right sourcing information for your project.</p>
               <div className="about-actions">
                 <button className="button button-outline about-pending-button" type="button" disabled aria-describedby="about-page-note">About Us</button>
-                <span id="about-page-note">Full company page in preparation</span>
+                <span id="about-page-note">Full About page in preparation</span>
               </div>
             </div>
           </div>

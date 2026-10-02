@@ -4,11 +4,10 @@ import { ScrollReveals } from "@/components/scroll-reveals";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { sitePath } from "@/data/paths";
+import { pageMetadata } from "@/data/metadata";
+import { brand } from "@/data/site";
 
-export const metadata: Metadata = {
-  title: "Products & Ingredient Directions | Huinong Food",
-  description: "Explore dried fruits, botanical ingredients, tea directions and frozen berry sourcing briefs from Huinong Food.",
-};
+export const metadata: Metadata = pageMetadata("Products & Ingredient Directions", `Explore dried fruits, botanical ingredients, tea directions and frozen berry sourcing briefs from ${brand.businessName}.`);
 
 export default function ProductsPage() {
   return <>
