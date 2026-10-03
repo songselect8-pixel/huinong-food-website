@@ -66,14 +66,14 @@ export default function HomePage() {
         <section className="hero shell" aria-labelledby="hero-title">
           <div className="hero-media">
             <img
-              src={sitePath("/images/01-home-hero.webp")}
-              alt="Illustrative still life of dried citrus slices, flowers and loose tea ingredients"
-              width={1672}
-              height={941}
+              src={sitePath("/images/home-berries-citrus-hero.webp")}
+              alt="Illustrative composition of frozen raspberries and blueberries beside dried lemon and orange slices with a few dried flowers"
+              width={1536}
+              height={1024}
               loading="eager"
               fetchPriority="high"
             />
-            <span className="hero-image-note">Fruit · Flowers · Tea</span>
+            <span className="hero-image-note">Illustrative ingredient concept</span>
           </div>
           <div className="hero-copy">
             <svg className="hero-sprig" viewBox="0 0 220 240" fill="none" aria-hidden="true">
