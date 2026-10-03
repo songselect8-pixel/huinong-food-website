@@ -4,18 +4,37 @@ import { useEffect, useState } from "react";
 import { categories, products } from "@/data/site";
 import { useInquiryDraft } from "@/components/inquiry-draft";
 import { readDocumentationRequest } from "@/data/quality";
+import { readApplicationRequest } from "@/data/applications";
 
 export function QuoteForm() {
   const [previewed, setPreviewed] = useState(false);
   const [prefilledProductId, setPrefilledProductId] = useState("");
   const [targetMarket, setTargetMarket] = useState("");
   const [documentRequest, setDocumentRequest] = useState("");
+  const [packagingRequest, setPackagingRequest] = useState("");
   const { interest, setInterest, contextNote, applyBrief, clearBrief } = useInquiryDraft();
 
   useEffect(() => setPreviewed(false), [interest, contextNote]);
 
   useEffect(() => {
     const search = new URLSearchParams(window.location.search);
+    const applicationRequest = readApplicationRequest(search);
+    if (applicationRequest) {
+      const {application, productId, packaging, documents, source} = applicationRequest;
+      const selectedProduct = products.find(item => item.id === productId);
+      const category = categories.find(item => item.id === selectedProduct?.categoryId);
+      setPrefilledProductId(selectedProduct?.id ?? "");
+      setPackagingRequest(packaging);
+      setDocumentRequest(documents);
+      applyBrief({interest: category?.name ?? "Not sure yet", note: [
+        `Application: ${application.name}`,
+        `Product: ${selectedProduct?.name ?? "To be discussed"}`,
+        `Page source: ${source}`,
+        packaging ? `Packaging requirements: ${packaging}` : "",
+        documents ? `Document requirements: ${documents}` : "",
+      ].filter(Boolean).join("\n")});
+      return;
+    }
     const product = products.find((item) => item.id === search.get("product"));
     if (product) {
       const category = categories.find((item) => item.id === product.categoryId);
@@ -64,7 +83,7 @@ export function QuoteForm() {
             <span className="mini-label">Added to your inquiry</span>
             <p>{contextNote}</p>
           </div>
-          <button type="button" onClick={() => {clearBrief(); setTargetMarket(""); setDocumentRequest("");}} aria-label="Remove added inquiry details">Remove</button>
+          <button type="button" onClick={() => {clearBrief(); setTargetMarket(""); setDocumentRequest(""); setPackagingRequest("");}} aria-label="Remove added inquiry details">Remove</button>
         </div>
       )}
       <input type="hidden" name="briefContext" value={contextNote ?? ""} />
@@ -112,7 +131,7 @@ export function QuoteForm() {
           <label><span>Target market</span><input name="targetMarket" maxLength={100} value={targetMarket} onChange={event => setTargetMarket(event.target.value)} placeholder="Destination country or region" /></label>
           <label><span>Estimated quantity</span><input name="quantity" type="number" min="0" step="any" placeholder="Amount to discuss" /></label>
           <label><span>Unit</span><select name="unit" defaultValue=""><option value="">Select a unit</option><option value="kg">kg</option><option value="tonnes">tonnes</option><option value="other">Other / to discuss</option></select></label>
-          <label className="form-wide"><span>Packaging requirements</span><input name="packagingRequest" maxLength={250} placeholder="Pack format, unit weight or material questions" /></label>
+          <label className="form-wide"><span>Packaging requirements</span><input name="packagingRequest" maxLength={250} value={packagingRequest} onChange={event => setPackagingRequest(event.target.value)} placeholder="Pack format, unit weight or material questions" /></label>
           <label className="form-wide"><span>Testing or certification questions</span><input name="documentRequest" maxLength={300} value={documentRequest} onChange={event => setDocumentRequest(event.target.value)} placeholder="Documents your team needs us to check" /></label>
           {(prefilledProductId === "iqf-frozen-raspberries" || prefilledProductId === "iqf-frozen-blueberries") && <label className="form-wide"><span>Cold-chain delivery requirements</span><input name="coldChain" maxLength={250} placeholder="Temperature records, handover or route questions" /></label>}
           {prefilledProductId === "raspberry-leaf-tea" && <label className="form-wide"><span>Leaf cut or tea-bag development brief</span><input name="leafFormat" maxLength={250} placeholder="Cut size or a separate filled-bag project question" /></label>}

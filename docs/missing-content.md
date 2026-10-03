@@ -70,3 +70,18 @@ The `/quality` page and request controls are implemented and browser-checked. Th
 | 待资料确认 | User acceptance of Quality visual/content page | Development preview only; later roadmap stages not started |
 
 See `docs/quality-source-review.md` for dated sources and `docs/quality-review.md` for actual checks. Missing files do not mean certifications do not exist; neither certification ownership nor publication permission is inferred from file availability.
+
+## Applications evidence and visual acceptance — 2026-10-03
+
+The overview, four detail pages and nine original concepts have been developed; actual-use evidence is separate from the working interface.
+
+| Status | Confirmation needed | Affected guide |
+| --- | --- | --- |
+| 待视觉验收 | User acceptance of the overview, four detail layouts and nine independently generated concepts | All Applications pages |
+| 待资料确认 | Ingredient/botanical identity, offered cuts, actual blend declarations and filled-bag project scope | Tea & Infusion Blends |
+| 待资料确认 | Actual slice dimensions/integrity/appearance, composition/process declaration and hospitality handling/packing guidance | Beverage Garnishes |
+| 待资料确认 | Offered berry forms/identity/size, agreed evaluation methods, processing-result expectations, packing and cold-chain records | Bakery & Fruit Preparations |
+| 待资料确认 | Actual-use suitability, preparation responsibility, fruit presentation/portioning, packing and relevant testing scope; no presumed direct ready-to-eat use | Dairy & Frozen Desserts |
+| 待资料确认 | Prior certificate holder/site/product/process mapping, original files/permissions, lot reports and current project-specific market pathway | Unchanged Quality backlog |
+
+These images are not actual manufacturing, customer-case or product-performance evidence. No regulatory or health conclusion, exact formula, fixed shelf life, MOQ or delivery promise was added. Stop after Applications visual delivery; do not begin the remaining inner pages automatically.

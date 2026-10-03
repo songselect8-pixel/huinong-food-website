@@ -4,22 +4,26 @@ Updated: 2026-10-03. This is the current development sequence; older design note
 
 ## Fixed boundaries
 
-Keep FRUNORIA, the wine / blueberry / warm-white / blush / ice palette, approved Home and Private Label structure, the Products grid and existing URLs. Develop in the current project. Inquiry remains a local preview. No email connection, publication or deployment in this round.
+Keep FRUNORIA, the wine / blueberry / warm-white / blush / ice palette, approved Home and Private Label structure, the Products grid and existing URLs. Develop in the current project. Inquiry remains a local preview. No email connection, remote push, publication or deployment in this round.
 
-Status vocabulary: **未开始** (not started), **开发中** (in development), **待资料确认** (evidence pending), **已检查** (actually checked). Implementation and evidence are separate columns: a working page does not verify business claims or authorize publication.
+Status vocabulary: **未开始**, **开发中**, **已完成开发**, **已检查功能**, **待视觉验收**, **待资料确认**. Code completion, actual interaction checks, visual acceptance and evidence verification are separate. A working page does not verify business claims or authorize publication.
 
-| Order | Stage | Implementation / checks | Evidence / acceptance |
-| --- | --- | --- | --- |
-| 1 | Product details and new imagery | 已检查 — nine complete routes, 27 distinct product concepts and five separate range concepts; previous-round prerequisites rechecked before Quality development | 待资料确认 — actual product identity, specifications, handling, lot images, concept-image approval and supporting documents |
-| 2 | Quality & Compliance | 已检查 — canonical `/quality`, certifications, product-document categories, market tabs and shared inquiry handoff; desktop/mobile browser checks and build passed | 待资料确认 — certificate holder/scope/validity, public file permission, actual reports and project-specific market pathway; user page acceptance pending |
-| 3 | Applications | 未开始 — record scope only this round | 待资料确认 — approved uses and selection guidance for each actual product |
-| 4 | About and Contact / Inquiry | 未开始 — full inner pages; existing inquiry preview retained | 待资料确认 — operator identity, brand relationship, contact channels and approved company statements |
-| 5 | Resources and buying guides | 未开始 — editorial outline only, see draft queue below | 待资料确认 — technical sources and review ownership; no invented byline/date/customer case |
-| 6 | Whole-site acceptance and launch preparation | 未开始 | 待资料确认 — page acceptance, legal operator/privacy, verified claims, document permissions, final domain/contact configuration and explicit launch authorization |
+| Order | Stage | Development | Functional checks | Visual acceptance | Evidence |
+| --- | --- | --- | --- | --- | --- |
+| 1 | Product details and new imagery | 已完成开发 — nine routes, 27 product and five range concepts | 已检查功能 — nine galleries, catalogue and quote handoff; regression checked this round | 待视觉验收 — retain prior review artifacts | 待资料确认 — actual identity, specifications, handling, lot imagery and supporting records |
+| 2 | Quality & Compliance | 已完成开发 — one canonical `/quality` | 已检查功能 — document/market tabs, requests and shared inquiry; regression checked this round | 待视觉验收 — previous complete desktop/mobile screenshots preserved | 待资料确认 — certificate holder/scope/validity/permissions, actual reports and project-specific market pathway |
+| 3 | Applications | 已完成开发 — overview, four detail routes, nine independent application concepts | 已检查功能 — links, FAQs, product selection, optional requirements and inquiry; desktop/mobile and reduced motion | 待视觉验收 — screenshots in the Applications delivery | 待资料确认 — actual-use suitability, processing, packing and supporting document scope |
+| 4 | About and Contact / Inquiry | 未开始 — full inner pages; existing inquiry preview retained | 未开始 for new pages | 未开始 | 待资料确认 — operator, brand relationship, contact channels and company statements |
+| 5 | Resources and buying guides | 未开始 — six-item editorial outline only | 未开始 | 未开始 | 待资料确认 — sources and review ownership; no invented byline/date/customer case |
+| 6 | Whole-site acceptance and launch preparation | 未开始 | 未开始 | 未开始 | 待资料确认 — page acceptance, legal/privacy, verified claims, domain/contacts and explicit launch authorization |
 
-## Applications: next stage, not built in this round
+## Applications: delivered for review
 
-Each application needs its own explanation, matching products, selection considerations, relevant quality documents and application-aware inquiry entry. Generate independent application concepts when this stage begins. Do not reuse the 27 product-gallery images or the homepage teapot as application filler. Actual use suitability and preparation guidance require evidence.
+Routes: `/applications`, `/applications/tea-infusion-blends`, `/applications/beverage-garnishes`, `/applications/bakery-fruit-preparations`, `/applications/dairy-frozen-desserts`.
+
+Each detail has distinct ingredient forms, existing product links, procurement considerations, packing/quality links, four FAQs and an application-aware inquiry brief. Nine original scenes are separate from all product, Home and Private Label imagery; related product cards use the approved product main images for identification only. See `docs/applications-review.md` and the image manifest.
+
+Actual use suitability and preparation guidance still require evidence. Neither an application scene nor a completed UI verifies ready-to-eat suitability, a formula, processing capability or certificate coverage.
 
 ## Resources: six items in the review queue
 
@@ -36,4 +40,4 @@ Technical content needs sources; company capability statements need actual recor
 
 ## Stop point
 
-This round ends after Quality browser checks and delivery for page acceptance. Do not advance into Applications, About/Contact or Resources automatically. A pending certificate or market document is not a completed verification task.
+This round ends after Applications browser checks and delivery for visual acceptance. Do not advance into About/Contact, Resources or launch preparation automatically. Keep pending certificate, specification and market evidence separate from completed development.

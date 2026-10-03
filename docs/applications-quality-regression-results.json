@@ -1,0 +1,40 @@
+{
+  "desktop": "1440x1000",
+  "tabResults": [
+    {
+      "prefix": "documents",
+      "count": 3,
+      "keyboard": "passed",
+      "stableHeight": true
+    },
+    {
+      "prefix": "markets",
+      "count": 5,
+      "keyboard": "passed",
+      "stableHeight": true
+    }
+  ],
+  "certifications": "4 records; independent verification/file states; details and requests passed",
+  "prefill": "5 types, 4 certificate topics, EU/US/CA/GB; product/category/market/documents/source; native validation; editable fields; removal; preview-only confirmed",
+  "entryPoints": "Home x2, header, footer, Private Label, product details x9",
+  "responsive": [
+    {
+      "width": 1920,
+      "overflow": false,
+      "text": "clear"
+    },
+    {
+      "width": 900,
+      "overflow": false,
+      "text": "clear"
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "text": "clear"
+    }
+  ],
+  "reducedMotion": "passed",
+  "downloads": 0,
+  "pageErrors": []
+}

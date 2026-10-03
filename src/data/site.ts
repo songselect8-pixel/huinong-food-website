@@ -24,7 +24,7 @@ export const referenceLinks = {
 
 export const navigation = [
   { label: "Products", href: "/products" },
-  { label: "Applications", href: "/#applications" },
+  { label: "Applications", href: "/applications" },
   { label: "Private Label", href: "/private-label" },
   { label: "Quality", href: "/quality" },
   { label: "About", href: "/#about" },
@@ -380,6 +380,7 @@ export const categories = [
 
 export const applications = [
   {
+    href: "/applications/tea-infusion-blends",
     number: "01",
     name: "Tea & Infusion Blends",
     detail: "Start with floral ingredients or a listed herbal blend, then discuss the intended format.",
@@ -389,6 +390,7 @@ export const applications = [
   },
   {
     number: "02",
+    href: "/applications/beverage-garnishes",
     name: "Beverage Garnishes",
     detail: "Explore dried lemon slices for a beverage brief; confirm the required cut and specification.",
     productIds: ["dried-lemon-slices"],
@@ -397,6 +399,7 @@ export const applications = [
   },
   {
     number: "03",
+    href: "/applications/bakery-fruit-preparations",
     name: "Bakery & Food Ingredients",
     detail: "Tell us about your intended use so the relevant dried fruit specification can be reviewed.",
     productIds: ["dried-lemon-slices"],
