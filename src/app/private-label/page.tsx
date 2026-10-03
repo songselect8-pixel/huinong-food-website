@@ -10,34 +10,6 @@ import "./private-label.css";
 
 export const metadata: Metadata = pageMetadata("Private Label Tea & Fruit Solutions", `Explore ingredient sourcing, blend development and custom packaging discussions for tea and fruit projects with ${brand.businessName}.`);
 
-const process = [
-  {
-    number: "01",
-    title: "Ingredient Selection",
-    detail: "Define the fruit, floral or tea direction and the information your team needs.",
-  },
-  {
-    number: "02",
-    title: "Blend Development",
-    detail: "Discuss the intended blend profile and review ingredient choices together.",
-  },
-  {
-    number: "03",
-    title: "Packaging Solution",
-    detail: "Explore a format that fits the product brief and target market.",
-  },
-  {
-    number: "04",
-    title: "Production Coordination",
-    detail: "Align the agreed production path and responsibilities with the approved brief.",
-  },
-  {
-    number: "05",
-    title: "Quality Control",
-    detail: "Align specifications, testing and documentation with the agreed scope.",
-  },
-] as const;
-
 const packagingFormats = [
   { name: "Tea Bags", options: ["Pyramid Bags", "Filter Bags"] },
   { name: "Pouches", options: ["Kraft Pouch", "Aluminum Foil Pouch"] },
@@ -63,12 +35,12 @@ const customizationTopics = [
 ] as const;
 
 const workflowSteps = [
-  { name: "Customer Idea", icon: "M9 18h6m-5 3h4M12 2a7 7 0 0 0-4 12.8c.8.5 1.3 1.2 1.5 2.2h5c.2-1 .7-1.7 1.5-2.2A7 7 0 0 0 12 2Z" },
-  { name: "Ingredient Discussion", icon: "M12 21V10m0 6c-5 0-8-2.5-8-7 5 0 8 2.5 8 7Zm0-3c0-5 3-8 8-8 0 5-3 8-8 8Z" },
-  { name: "Sample Development", icon: "M8 3h8m-6 0v6l-4.8 8.2A2.5 2.5 0 0 0 7.4 21h9.2a2.5 2.5 0 0 0 2.2-3.8L14 9V3M8 15h8" },
-  { name: "Packaging Confirmation", icon: "m3 7 9-4 9 4-9 4-9-4Zm0 0v10l9 4 9-4V7m-9 4v10M7.5 5l9 4" },
-  { name: "Production Coordination", icon: "M4 4h6v6H4zm10 0h6v6h-6zm-5 10h6v6H9zM7 10v2h5v2m5-4v2h-5" },
-  { name: "Quality Review", icon: "m12 2-8 3v6c0 5 3.4 8.6 8 11 4.6-2.4 8-6 8-11V5l-8-3Zm-3.5 10 2.5 2.5 4.5-5" },
+  { name: "Customer Idea", detail: "Share the product idea, intended use and target market.", icon: "M9 18h6m-5 3h4M12 2a7 7 0 0 0-4 12.8c.8.5 1.3 1.2 1.5 2.2h5c.2-1 .7-1.7 1.5-2.2A7 7 0 0 0 12 2Z" },
+  { name: "Ingredient Discussion", detail: "Review relevant fruit, botanical and tea ingredients.", icon: "M12 21V10m0 6c-5 0-8-2.5-8-7 5 0 8 2.5 8 7Zm0-3c0-5 3-8 8-8 0 5-3 8-8 8Z" },
+  { name: "Sample Development", detail: "Agree on a sample brief and review feasible options.", icon: "M8 3h8m-6 0v6l-4.8 8.2A2.5 2.5 0 0 0 7.4 21h9.2a2.5 2.5 0 0 0 2.2-3.8L14 9V3M8 15h8" },
+  { name: "Packaging Confirmation", detail: "Check the format, materials and artwork requirements.", icon: "m3 7 9-4 9 4-9 4-9-4Zm0 0v10l9 4 9-4V7m-9 4v10M7.5 5l9 4" },
+  { name: "Production Coordination", detail: "Align the agreed route, responsibilities and timing.", icon: "M4 4h6v6H4zm10 0h6v6h-6zm-5 10h6v6H9zM7 10v2h5v2m5-4v2h-5" },
+  { name: "Quality Review", detail: "Review specifications and documents for the agreed scope.", icon: "m12 2-8 3v6c0 5 3.4 8.6 8 11 4.6-2.4 8-6 8-11V5l-8-3Zm-3.5 10 2.5 2.5 4.5-5" },
 ] as const;
 
 const projectConsiderations = [
@@ -118,20 +90,32 @@ export default function PrivateLabelPage() {
           <div className="shell">
             <div className="pl-section-heading" data-reveal="">
               <div>
-                <span className="eyebrow section-kicker">A clear path for your brief</span>
-                <h2 id="pl-process-title">From Ingredients to <em>Finished Products</em></h2>
+                <span className="eyebrow section-kicker">Illustrative project path</span>
+                <h2 id="pl-process-title">From Idea to <em>Quality Review</em></h2>
               </div>
               <p>A practical sequence for aligning ingredients, format, production and quality requirements.</p>
             </div>
-            <ol className="pl-process-list" data-reveal="">
-              {process.map((step) => (
-                <li key={step.number}>
-                  <span className="pl-process-marker" aria-hidden="true">{step.number}</span>
-                  <h3>{step.title}</h3>
+            <ol className="pl-workflow-list" id="workflow" data-reveal="">
+              {workflowSteps.map((step, index) => (
+                <li key={step.name}>
+                  <div className="pl-workflow-meta">
+                    <span>{String(index + 1).padStart(2, "0")}</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
+                      <path d={step.icon} />
+                    </svg>
+                  </div>
+                  <strong>{step.name}</strong>
                   <p>{step.detail}</p>
                 </li>
               ))}
             </ol>
+            <p className="pl-workflow-note">The exact workflow is confirmed for each product and project.</p>
+            <div className="pl-considerations" data-reveal="">
+              <h3>Project Considerations</h3>
+              <ul>
+                {projectConsiderations.map((item) => <li key={item}>{item}</li>)}
+              </ul>
+            </div>
           </div>
         </section>
 
@@ -248,38 +232,6 @@ export default function PrivateLabelPage() {
                 </li>
               ))}
             </ul>
-          </div>
-        </section>
-
-        <section className="pl-workflow section-space" id="workflow" aria-labelledby="pl-workflow-title">
-          <div className="shell">
-            <div className="pl-section-heading" data-reveal="">
-              <div>
-                <span className="eyebrow section-kicker">Illustrative project path</span>
-                <h2 id="pl-workflow-title">Private Label <em>Workflow Example</em></h2>
-              </div>
-              <p>From the first idea to a quality review, each stage helps define the next project decision.</p>
-            </div>
-            <ol className="pl-workflow-list" data-reveal="">
-              {workflowSteps.map((step, index) => (
-                <li key={step.name}>
-                  <div className="pl-workflow-meta">
-                    <span>{String(index + 1).padStart(2, "0")}</span>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
-                      <path d={step.icon} />
-                    </svg>
-                  </div>
-                  <strong>{step.name}</strong>
-                </li>
-              ))}
-            </ol>
-            <p className="pl-workflow-note">The exact workflow is confirmed for each product and project.</p>
-            <div className="pl-considerations" data-reveal="">
-              <h3>Project Considerations</h3>
-              <ul>
-                {projectConsiderations.map((item) => <li key={item}>{item}</li>)}
-              </ul>
-            </div>
           </div>
         </section>
 

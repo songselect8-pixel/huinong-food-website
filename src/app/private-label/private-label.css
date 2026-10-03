@@ -18,13 +18,6 @@
 .pl-section-heading h2, .pl-packaging h2, .pl-custom h2, .pl-quality h2, .pl-cta h2 { margin: 16px 0 0; font-size: clamp(43px,4vw,62px); line-height: 1.07; }
 .pl-section-heading > p { max-width: 465px; margin-bottom: 5px; color: var(--muted); font-size: 17px; line-height: 1.62; }
 .pl-process { background: #fff; }
-.pl-process-list { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 0; margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line-strong); }
-.pl-process-list li { position: relative; min-width: 0; padding: 27px 24px 6px 0; }
-.pl-process-list li:not(:last-child) { border-right: 1px solid var(--line); margin-right: 24px; }
-.pl-process-marker { position: relative; display: inline-grid; place-items: center; width: 38px; height: 38px; margin-bottom: 27px; border: 1px solid var(--brand-wine); border-radius: 50%; background: var(--warm-white); color: var(--brand-wine); font-size: 12px; font-weight: 850; }
-.pl-process-marker::before { position: absolute; top: -33px; left: 50%; width: 8px; height: 8px; border-radius: 50%; background: var(--brand-wine); content: ""; transform: translateX(-50%); }
-.pl-process-list h3 { max-width: 220px; margin: 0 0 12px; font-size: clamp(24px,1.9vw,31px); line-height: 1.13; }
-.pl-process-list p { max-width: 240px; margin-bottom: 0; color: var(--muted); font-size: 14px; line-height: 1.58; }
 
 .pl-solutions { background: var(--warm-white); }
 .pl-solution-grid { display: grid; grid-template-columns: repeat(12,minmax(0,1fr)); gap: 19px; }
@@ -80,15 +73,15 @@
 .pl-custom-list strong { font-family: var(--display); font-size: clamp(23px,1.8vw,29px); font-weight: 500; letter-spacing: -.025em; }
 .pl-custom-detail { color: var(--muted); font-size: 13px; }
 
-.pl-workflow { background: #fff; }
 .pl-workflow-list { display: grid; grid-template-columns: repeat(6,minmax(0,1fr)); gap: 17px; margin: 0; padding: 0; list-style: none; }
-.pl-workflow-list li { position: relative; display: flex; flex-direction: column; justify-content: space-between; min-height: 137px; min-width: 0; padding: 20px 18px; border: 1px solid var(--line); background: var(--warm-white); transition: border-color .2s ease, background-color .2s ease; }
+.pl-workflow-list li { position: relative; display: flex; flex-direction: column; min-height: 212px; min-width: 0; padding: 20px 18px; border: 1px solid var(--line); background: var(--warm-white); transition: border-color .2s ease, background-color .2s ease; }
 .pl-workflow-list li:hover { border-color: var(--brand-wine); background: var(--blush); }
 .pl-workflow-list li:not(:last-child)::after { position: absolute; z-index: 1; top: 50%; right: -18px; color: var(--brand-wine); font-family: var(--body); font-size: 18px; content: "→"; transform: translateY(-50%); }
 .pl-workflow-meta { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; color: var(--brand-wine); }
 .pl-workflow-meta span { font-size: 11px; font-weight: 850; letter-spacing: .12em; }
 .pl-workflow-meta svg { width: 31px; height: 31px; flex: 0 0 auto; }
-.pl-workflow-list strong { max-width: 200px; font-family: var(--display); font-size: clamp(21px,1.65vw,27px); font-weight: 500; letter-spacing: -.025em; line-height: 1.13; }
+.pl-workflow-list strong { max-width: 200px; margin-top: 23px; font-family: var(--display); font-size: clamp(21px,1.65vw,27px); font-weight: 500; letter-spacing: -.025em; line-height: 1.13; }
+.pl-workflow-list p { margin: 10px 0 0; color: var(--muted); font-size: 13px; line-height: 1.48; }
 .pl-workflow-note { margin: 17px 0 0; color: var(--muted); font-size: 12px; }
 .pl-considerations { display: grid; grid-template-columns: 285px minmax(0,1fr); gap: 30px; align-items: center; margin-top: 53px; padding-top: 28px; border-top: 1px solid var(--line); }
 .pl-considerations h3 { margin: 0; font-size: 31px; line-height: 1.13; }
@@ -126,8 +119,8 @@
 @media (max-width: 1200px) {
   .pl-hero-copy { padding: 45px; }
   .pl-hero h1 { font-size: clamp(50px,5vw,66px); }
-  .pl-process-list li { padding-right: 12px; }
-  .pl-process-list li:not(:last-child) { margin-right: 12px; }
+  .pl-workflow-list { grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .pl-workflow-list li:not(:last-child)::after { display: none; }
   .pl-quality-layout { grid-template-columns: 115px minmax(0,1fr); }
   .pl-quality-symbol { width: 115px; height: 115px; }
   .pl-quality-page-back { top: 17px; left: 18px; }
@@ -142,9 +135,6 @@
   .pl-hero-copy { padding: 52px; }
   .pl-section-heading, .pl-packaging-layout, .pl-custom-layout { grid-template-columns: 1fr; gap: 24px; }
   .pl-section-heading > p { max-width: 650px; }
-  .pl-process-list { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 28px 18px; border-top: 0; }
-  .pl-process-list li, .pl-process-list li:not(:last-child) { margin: 0; padding: 20px 8px 0 0; border-top: 1px solid var(--line-strong); border-right: 0; }
-  .pl-process-marker::before { top: -25px; }
   .pl-solution-fruit, .pl-solution-herbal, .pl-solution-tea, .pl-solution-garnish, .pl-solution-pack { grid-column: span 6; }
   .pl-solution-herbal .pl-solution-copy { min-height: 0; }
   .pl-solution-pack .pl-solution-copy { min-height: 320px; }
@@ -152,12 +142,8 @@
   .pl-packaging-copy { max-width: 730px; }
   .pl-packaging-custom { grid-template-columns: 1fr; gap: 15px; }
   .pl-custom-list { max-width: 800px; }
-  .pl-workflow-list { grid-template-columns: 1fr; gap: 17px; max-width: 640px; }
-  .pl-workflow-list li { flex-direction: row; align-items: center; justify-content: flex-start; gap: 24px; min-height: 78px; padding: 16px 21px; }
-  .pl-workflow-list li:not(:last-child)::after { top: auto; right: auto; bottom: -22px; left: 24px; content: "↓"; transform: none; }
-  .pl-workflow-meta { align-items: center; flex: 0 0 74px; gap: 13px; }
-  .pl-workflow-meta svg { width: 28px; height: 28px; }
-  .pl-workflow-list strong { max-width: none; font-size: 25px; }
+  .pl-workflow-list { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; }
+  .pl-workflow-list li { min-height: 213px; }
   .pl-considerations { grid-template-columns: 1fr; gap: 18px; }
   .pl-considerations ul { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .pl-cta-layout { align-items: start; flex-direction: column; gap: 27px; }
@@ -173,9 +159,12 @@
   .pl-hero-footnote { flex-wrap: wrap; justify-content: flex-start; gap: 8px 18px; font-size: 9px; }
   .pl-section-heading h2, .pl-packaging h2, .pl-custom h2, .pl-cta h2 { font-size: clamp(40px,10vw,53px); }
   .pl-section-heading > p { font-size: 16px; }
-  .pl-process-list { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 25px 17px; }
-  .pl-process-list h3 { font-size: 27px; }
-  .pl-process-list p { font-size: 13px; }
+  .pl-workflow-list { grid-template-columns: 1fr; gap: 10px; }
+  .pl-workflow-list li { display: grid; grid-template-columns: 52px minmax(0,1fr); gap: 4px 13px; min-height: 0; padding: 16px; }
+  .pl-workflow-meta { grid-row: span 2; flex-direction: column; gap: 8px; }
+  .pl-workflow-meta svg { width: 27px; height: 27px; }
+  .pl-workflow-list strong { max-width: none; margin-top: 0; font-size: 24px; }
+  .pl-workflow-list p { grid-column: 2; margin: 0; }
   .pl-solution-grid { grid-template-columns: 1fr; gap: 15px; }
   .pl-solution-fruit, .pl-solution-herbal, .pl-solution-tea, .pl-solution-garnish, .pl-solution-pack { grid-column: 1; }
   .pl-solution-media img, .pl-solution-fruit .pl-solution-media img { height: auto; object-fit: contain; }
@@ -205,18 +194,11 @@
 
 @media (max-width: 420px) {
   .pl-hero-actions .button, .pl-cta .button, .pl-quality .button { width: 100%; }
-  .pl-process-list { grid-template-columns: 1fr; gap: 11px; }
-  .pl-process-list li { display: grid; grid-template-columns: 46px 1fr; gap: 0 13px; padding: 17px 0 0; }
-  .pl-process-list li:not(:last-child) { margin: 0; padding: 17px 0 0; }
-  .pl-process-marker { grid-row: span 2; margin: 0; }
-  .pl-process-list h3 { margin: 0 0 6px; }
-  .pl-process-list p { grid-column: 2; }
   .pl-format-list { grid-template-columns: 1fr; }
   .pl-format-list li { min-height: 77px; padding-block: 13px; }
   .pl-format-list strong { font-size: 15px; }
   .pl-format-options { font-size: 13px; }
-  .pl-workflow-list li { gap: 13px; padding-inline: 15px; }
-  .pl-workflow-meta { flex-basis: 65px; gap: 8px; }
+  .pl-workflow-list li { gap: 4px 10px; padding-inline: 15px; }
   .pl-workflow-list strong { font-size: 23px; }
   .pl-considerations ul { gap: 13px 8px; }
   .pl-considerations li { padding-left: 9px; font-size: 12px; }
