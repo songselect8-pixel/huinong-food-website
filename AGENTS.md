@@ -11,6 +11,10 @@
 - Hide modules that require missing evidence, especially individual product cards and certificates. Use real in-page anchors until inner pages exist.
 - Keep the inquiry form in preview mode until a real delivery channel is approved and implemented. Never claim a request was sent when it was not.
 - Record source and missing-content changes in `docs/source-map.md` and `docs/missing-content.md` as content is verified.
+- Preserve the approved Home, Products and Private Label designs; do not repeatedly redesign their palette, width or structure without a new request.
+- Never invent product values, certifications, reports, company history or contact details. Keep certificate ownership/verification separate from file-upload and public-access status; market rules need dated official sources.
+- Generate new visuals independently by product or purpose. A product's own main image may be shared by its listing card and detail hero; do not reuse it for another product or as an application/article cover.
+- Each development round includes actual browser and interaction checks. Follow `docs/site-roadmap.md`; keep unfinished research marked as pending confirmation. Inquiry stays in preview mode: no email integration, deployment or publication without explicit authorization.
 
 <!-- BEGIN:nextjs-agent-rules -->
 

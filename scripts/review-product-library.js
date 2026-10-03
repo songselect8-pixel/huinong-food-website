@@ -70,7 +70,7 @@ async (page) => {
     await page.waitForFunction(() => document.querySelector('.pd-option').getAttribute('aria-pressed') === 'false');
     await options.nth(1).click();
     const requirement = await options.nth(1).locator('strong').innerText();
-    const quoteLinks = await page.locator('.pd-page a[href*="?product="]').evaluateAll(nodes => nodes.map(n => n.getAttribute('href')));
+    const quoteLinks = await page.locator('.pd-page a[href*="?product="][href$="#quote"]').evaluateAll(nodes => nodes.map(n => n.getAttribute('href')));
     assert(quoteLinks.length === 3 && new Set(quoteLinks).size === 1, 'Quote links not synchronized');
     assert(new URL(quoteLinks[0], base).searchParams.get('form') === requirement, 'Selected requirement missing');
     await page.locator('.pd-faq-list summary').first().click();

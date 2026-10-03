@@ -246,7 +246,7 @@ export default function PrivateLabelPage() {
               <h2 id="pl-quality-title">Confidence in every <em>sourcing decision.</em></h2>
               <p>Discuss product specifications, testing reports and the documentation required for your market and project.</p>
             </div>
-            <a className="button button-outline" href={sitePath("/#quality")}>Explore Quality &amp; Compliance <span aria-hidden="true">↗</span></a>
+            <a className="button button-outline" href={sitePath("/quality")}>Explore Quality &amp; Compliance <span aria-hidden="true">↗</span></a>
           </div>
         </section>
 

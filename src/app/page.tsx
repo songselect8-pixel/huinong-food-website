@@ -189,7 +189,7 @@ export default function HomePage() {
             </div>
             <div className="support-footer">
               <p className="support-assurance">Supporting global buyers with reliable quality documents, testing reports and export requirements.</p>
-              <a className="button button-outline support-cta" href="#quality">Explore Quality &amp; Compliance <span aria-hidden="true">↗</span></a>
+              <a className="button button-outline support-cta" href={sitePath("/quality")}>Explore Quality &amp; Compliance <span aria-hidden="true">↗</span></a>
             </div>
           </div>
         </section>
@@ -213,7 +213,7 @@ export default function HomePage() {
               <span className="eyebrow quality-kicker">05 / Specifications &amp; quality</span>
               <h2 id="quality-title">Product Specifications &amp; Documentation</h2>
               <p>Start with the information your team needs. We will confirm which details and documents are available for the product and market in question.</p>
-              <a className="text-link text-link-light" href="#quote">Ask about a product <span aria-hidden="true">↗</span></a>
+              <a className="text-link text-link-light" href={sitePath("/quality")}>Explore Quality &amp; Compliance <span aria-hidden="true">↗</span></a>
             </div>
             <QualityDetails />
           </div>
