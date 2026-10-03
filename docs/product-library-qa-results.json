@@ -1,0 +1,196 @@
+{
+  "date": "2026-10-03",
+  "build": {
+    "typecheck": "exit 0",
+    "build": "exit 0",
+    "detailRoutes": 9
+  },
+  "desktop": {
+    "viewport": "1440x1000",
+    "catalogue": "9 unique new images, 27 detail links, 3-column grid, combined filters, no-results and reset passed",
+    "detailResults": [
+      {
+        "name": "Dried Lemon Slices",
+        "path": "/products/dried-lemon-slices",
+        "gallery": 3,
+        "prefill": "passed",
+        "requirement": "Infusion Brief"
+      },
+      {
+        "name": "Dried Orange Slices",
+        "path": "/products/dried-orange-slices",
+        "gallery": 3,
+        "prefill": "passed",
+        "requirement": "Infusion Ingredient"
+      },
+      {
+        "name": "IQF Frozen Raspberries",
+        "path": "/products/iqf-frozen-raspberries",
+        "gallery": 3,
+        "prefill": "passed",
+        "requirement": "Whole & Broken"
+      },
+      {
+        "name": "IQF Frozen Blueberries",
+        "path": "/products/iqf-frozen-blueberries",
+        "gallery": 3,
+        "prefill": "passed",
+        "requirement": "Whole Fruit Brief"
+      },
+      {
+        "name": "Dried Rose Flowers",
+        "path": "/products/dried-rose-flowers",
+        "gallery": 3,
+        "prefill": "passed",
+        "requirement": "Loose Infusion Brief"
+      },
+      {
+        "name": "Raspberry Leaf Tea",
+        "path": "/products/raspberry-leaf-tea",
+        "gallery": 3,
+        "prefill": "passed",
+        "requirement": "Cut & Sifted"
+      },
+      {
+        "name": "Chrysanthemum, Honeysuckle & Goji Blend",
+        "path": "/products/chrysanthemum-honeysuckle-goji-blend",
+        "gallery": 3,
+        "prefill": "passed",
+        "requirement": "Blend Development Brief"
+      },
+      {
+        "name": "Lemon, Passion Fruit & Orange Infusion",
+        "path": "/products/lemon-passion-fruit-orange-infusion",
+        "gallery": 3,
+        "prefill": "passed",
+        "requirement": "Fruit Form Discussion"
+      },
+      {
+        "name": "Cassia, Goji & Chrysanthemum Tea Bags",
+        "path": "/products/cassia-goji-chrysanthemum-tea-bags",
+        "gallery": 3,
+        "prefill": "passed",
+        "requirement": "Blend & Cut Brief"
+      }
+    ],
+    "pageErrors": []
+  },
+  "mobile": {
+    "mobileResults": [
+      {
+        "product": "Dried Lemon Slices",
+        "gallery": "3 views / stable",
+        "selection": "passed",
+        "prefill": "passed",
+        "overflow": false
+      },
+      {
+        "product": "Dried Orange Slices",
+        "gallery": "3 views / stable",
+        "selection": "passed",
+        "prefill": "passed",
+        "overflow": false
+      },
+      {
+        "product": "IQF Frozen Raspberries",
+        "gallery": "3 views / stable",
+        "selection": "passed",
+        "prefill": "passed",
+        "overflow": false
+      },
+      {
+        "product": "IQF Frozen Blueberries",
+        "gallery": "3 views / stable",
+        "selection": "passed",
+        "prefill": "passed",
+        "overflow": false
+      },
+      {
+        "product": "Dried Rose Flowers",
+        "gallery": "3 views / stable",
+        "selection": "passed",
+        "prefill": "passed",
+        "overflow": false
+      },
+      {
+        "product": "Raspberry Leaf Tea",
+        "gallery": "3 views / stable",
+        "selection": "passed",
+        "prefill": "passed",
+        "overflow": false
+      },
+      {
+        "product": "Chrysanthemum, Honeysuckle & Goji Blend",
+        "gallery": "3 views / stable",
+        "selection": "passed",
+        "prefill": "passed",
+        "overflow": false
+      },
+      {
+        "product": "Lemon, Passion Fruit & Orange Infusion",
+        "gallery": "3 views / stable",
+        "selection": "passed",
+        "prefill": "passed",
+        "overflow": false
+      },
+      {
+        "product": "Cassia, Goji & Chrysanthemum Tea Bags",
+        "gallery": "3 views / stable",
+        "selection": "passed",
+        "prefill": "passed",
+        "overflow": false
+      }
+    ],
+    "layouts": [
+      {
+        "width": 900,
+        "columns": 2,
+        "overflow": false
+      },
+      {
+        "width": 1920,
+        "columns": 3,
+        "overflow": false
+      }
+    ],
+    "homepage": [
+      {
+        "name": "Dried Fruits & Slices",
+        "image": "/images/categories/v2/dried-fruits.webp",
+        "href": "/products?category=dried-fruits"
+      },
+      {
+        "name": "Frozen Berries",
+        "image": "/images/categories/v2/frozen-berries.webp",
+        "href": "/products?category=frozen-berries"
+      },
+      {
+        "name": "Flowers & Herbal Ingredients",
+        "image": "/images/categories/v2/flowers-herbs.webp",
+        "href": "/products?category=flowers-herbs"
+      },
+      {
+        "name": "Fruit & Herbal Blends",
+        "image": "/images/categories/v2/fruit-tea-blends.webp",
+        "href": "/products?category=fruit-tea-blends"
+      },
+      {
+        "name": "Tea Bags & Packed Teas",
+        "image": "/images/categories/v2/tea-bags.webp",
+        "href": "/products?category=tea-bags"
+      }
+    ],
+    "privateLabel": "One six-step workflow; headings fully opaque and not clipped at 390px and 1440px",
+    "reducedMotion": "Private Label and detail content / gallery / selection passed",
+    "mobileForm": "Validation preview and remove context passed; no email sent"
+  },
+  "finalCapture": {
+    "screenshots": "Recaptured at actual viewport sizes, without sticky header covering screenshot content",
+    "frozenCategory": {
+      "uniqueNewImages": 4,
+      "detailEntryLinks": 6,
+      "mobileOverflow": false,
+      "desktopOverflow": false
+    }
+  }
+}

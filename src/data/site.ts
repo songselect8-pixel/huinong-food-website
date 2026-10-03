@@ -1,3 +1,5 @@
+import { additionalProductDetails } from "./additional-product-details";
+
 export const brand = {
   name: "FRUNORIA",
   businessName: "FRUNORIA Ingredients",
@@ -33,6 +35,8 @@ export type Verification = "store-listing" | "store-category" | "provided-brief"
 
 export type ProductDetail = {
   intro: string;
+  overview: string;
+  knownFacts: { name: string; value: string }[];
   positioning: string;
   images: { main: string; detail: string; application: string };
   forms: { name: string; note: string }[];
@@ -68,7 +72,8 @@ export const products: Product[] = [
     sourceUrl: "https://www.alibaba.com/product-detail/ISO-HACCP-Dried-Lemon-Slices-100_1601815043780.html",
     verification: "store-listing",
     skuImage: null,
-    conceptImage: "/images/products/dried-lemon-slices-card.webp",
+    conceptImage: "/images/products/v2/dried-lemon-slices-main.webp",
+    detail: additionalProductDetails["dried-lemon-slices"],
     cardDescription: "Discuss dried lemon slices by cut, appearance and intended ingredient or garnish use.",
     specification: null,
     packaging: null,
@@ -81,7 +86,8 @@ export const products: Product[] = [
     sourceUrl: "https://www.alibaba.com/product-detail/Organic-Cocktail-Garnish-Natural-Edible-3_1601839223912.html",
     verification: "store-listing",
     skuImage: null,
-    conceptImage: "/images/products/dried-orange-slices-card.webp",
+    conceptImage: "/images/products/v2/dried-orange-slices-main.webp",
+    detail: additionalProductDetails["dried-orange-slices"],
     cardDescription: "Review dried orange slices for the cut and appearance your food or beverage brief needs.",
     specification: null,
     packaging: null,
@@ -94,7 +100,8 @@ export const products: Product[] = [
     sourceUrl: "https://www.alibaba.com/product-detail/100-Natural-No-Additives-Hand-Selected_1601811980304.html",
     verification: "store-listing",
     skuImage: null,
-    conceptImage: "/images/products/dried-rose-flowers-card.webp",
+    conceptImage: "/images/products/v2/dried-rose-flowers-main.webp",
+    detail: additionalProductDetails["dried-rose-flowers"],
     cardDescription: "Explore dried rose flowers for a botanical tea or blend sourcing brief.",
     specification: null,
     packaging: null,
@@ -107,7 +114,8 @@ export const products: Product[] = [
     sourceUrl: "https://www.alibaba.com/product-detail/Natural-Chrysanthemum-Honeysuckle-Goji-Berry-Blend_1601807220316.html",
     verification: "store-listing",
     skuImage: null,
-    conceptImage: "/images/products/chrysanthemum-honeysuckle-goji-blend-card.webp",
+    conceptImage: "/images/products/v2/chrysanthemum-honeysuckle-goji-blend-main.webp",
+    detail: additionalProductDetails["chrysanthemum-honeysuckle-goji-blend"],
     cardDescription: "Review the listed chrysanthemum, honeysuckle and goji blend with its actual ingredient ratio.",
     specification: null,
     packaging: null,
@@ -120,7 +128,8 @@ export const products: Product[] = [
     sourceUrl: "https://www.alibaba.com/product-detail/Wholesale-Bulk-Supply-Vegan-Keto-Non_1601838400545.html",
     verification: "store-listing",
     skuImage: null,
-    conceptImage: "/images/products/lemon-passion-fruit-orange-infusion-card.webp",
+    conceptImage: "/images/products/v2/lemon-passion-fruit-orange-infusion-main.webp",
+    detail: additionalProductDetails["lemon-passion-fruit-orange-infusion"],
     cardDescription: "Discuss a lemon, passion fruit and orange infusion with project-specific ingredient review.",
     specification: null,
     packaging: null,
@@ -133,7 +142,8 @@ export const products: Product[] = [
     sourceUrl: "https://www.alibaba.com/product-detail/Premium-High-Quality-Roasted-Cassia-Seed_1601838337283.html",
     verification: "store-listing",
     skuImage: null,
-    conceptImage: "/images/products/cassia-goji-chrysanthemum-tea-bags-card.webp",
+    conceptImage: "/images/products/v2/cassia-goji-chrysanthemum-tea-bags-main.webp",
+    detail: additionalProductDetails["cassia-goji-chrysanthemum-tea-bags"],
     cardDescription: "Review the listed filled tea-bag direction, including its contents and bag format.",
     specification: null,
     packaging: null,
@@ -152,11 +162,13 @@ export const products: Product[] = [
     certifications: null,
     detail: {
       intro: "A frozen raspberry sourcing direction for buyers who need to define fruit integrity, processing use and a batch-specific acceptance standard before quotation.",
+      overview: "IQF frozen raspberries are reviewed around the fruit form needed in the finished food. A project with visible berries may focus on intact fruit, while a filling brief may accept broken material. Define the proposed use, acceptance method and cold-chain requirements before comparing samples or quotations.",
+      knownFacts: [{ name: "Ingredient", value: "Raspberry fruit" }, { name: "Product direction", value: "Individually quick-frozen (IQF)" }, { name: "Handling category", value: "Frozen ingredient" }],
       positioning: "Whole, mixed and crumble formats are procurement requests. Availability and exact grade definitions must be confirmed for the project.",
       images: {
-        main: "/images/products/iqf-frozen-raspberries-main.webp",
-        detail: "/images/products/iqf-frozen-raspberries-detail.webp",
-        application: "/images/products/iqf-frozen-raspberries-application.webp",
+        main: "/images/products/v2/iqf-frozen-raspberries-main.webp",
+        detail: "/images/products/v2/iqf-frozen-raspberries-detail.webp",
+        application: "/images/products/v2/iqf-frozen-raspberries-application.webp",
       },
       forms: [
         { name: "Whole", note: "Discuss the target proportion of intact berries and appearance needed for visible-fruit applications." },
@@ -207,11 +219,13 @@ export const products: Product[] = [
     certifications: null,
     detail: {
       intro: "A frozen blueberry sourcing direction built around clear fruit identity, size, integrity and the requirements of the finished food project.",
+      overview: "For IQF blueberry projects, establish the offered fruit identity before comparing size, integrity or processing performance. The buyer's recipe and handling process guide the acceptance criteria. The actual source, lot specification and cold-chain arrangements are reviewed separately from the concept imagery.",
+      knownFacts: [{ name: "Ingredient direction", value: "Blueberry fruit" }, { name: "Product direction", value: "Individually quick-frozen (IQF)" }, { name: "Handling category", value: "Frozen ingredient" }],
       positioning: "Wild blueberry, bilberry and cultivated or highbush blueberry are different identities to verify, not three confirmed supply lines.",
       images: {
-        main: "/images/products/iqf-frozen-blueberries-main.webp",
-        detail: "/images/products/iqf-frozen-blueberries-detail.webp",
-        application: "/images/products/iqf-frozen-blueberries-application.webp",
+        main: "/images/products/v2/iqf-frozen-blueberries-main.webp",
+        detail: "/images/products/v2/iqf-frozen-blueberries-detail.webp",
+        application: "/images/products/v2/iqf-frozen-blueberries-application.webp",
       },
       forms: [
         { name: "Species / Variety to Confirm", note: "Identify the botanical and commercial supply type before comparing quotes or samples." },
@@ -264,11 +278,13 @@ export const products: Product[] = [
     certifications: null,
     detail: {
       intro: "A raspberry leaf herbal ingredient direction for buyers planning loose-leaf infusions or botanical blends. The plant identity and exact cut are confirmed against the proposed source.",
+      overview: "This sourcing direction concerns dried raspberry leaf material. Leaf identity, plant part, cut and stem content are the starting points for comparing samples. A loose infusion and a future filled-bag project may need different cuts, so the actual form and packing feasibility are confirmed for the intended use.",
+      knownFacts: [{ name: "Plant material", value: "Raspberry leaf" }, { name: "Product direction", value: "Dried botanical ingredient" }, { name: "Range", value: "Flowers & Herbal Ingredients" }],
       positioning: "This is leaf material, not raspberry fruit tea. Powder and finished tea bags are separate project questions, not listed stock formats.",
       images: {
-        main: "/images/products/raspberry-leaf-tea-main.webp",
-        detail: "/images/products/raspberry-leaf-tea-detail.webp",
-        application: "/images/products/raspberry-leaf-tea-application.webp",
+        main: "/images/products/v2/raspberry-leaf-tea-main.webp",
+        detail: "/images/products/v2/raspberry-leaf-tea-detail.webp",
+        application: "/images/products/v2/raspberry-leaf-tea-application.webp",
       },
       forms: [
         { name: "Whole Leaf", note: "Discuss visible leaf integrity and the amount of stems or small fragments acceptable for your loose-leaf project." },
@@ -315,8 +331,8 @@ export const categories = [
     number: "01",
     name: "Dried Fruits & Slices",
     description: "Citrus and other dried fruit directions for ingredient sourcing.",
-    image: "/images/02-dried-fruits.webp",
-    imageAlt: "Illustrative composition of dried fruit slices on a warm stone surface",
+    image: "/images/categories/v2/dried-fruits.webp",
+    imageAlt: "Original concept of dried lemon and orange slices in separate ceramic dishes",
     sourceUrl: "https://cnjxhn.en.alibaba.com/productgrouplist-969052928/Dried_Fruit_Slices.html",
     verification: "store-category" as Verification,
   },
@@ -325,7 +341,7 @@ export const categories = [
     number: "02",
     name: "Frozen Berries",
     description: "IQF berry ingredient directions with product-specific cold-chain and quality requirements.",
-    image: "/images/products/frozen-berries-category.webp",
+    image: "/images/categories/v2/frozen-berries.webp",
     imageAlt: "Illustrative composition of individually quick-frozen raspberries and blueberries",
     sourceUrl: null,
     verification: "provided-brief" as Verification,
@@ -335,8 +351,8 @@ export const categories = [
     number: "03",
     name: "Flowers & Herbal Ingredients",
     description: "Floral and botanical ingredients for your sourcing brief.",
-    image: "/images/03-flowers-herbs.webp",
-    imageAlt: "Illustrative composition of dried flowers and botanical ingredients",
+    image: "/images/categories/v2/flowers-herbs.webp",
+    imageAlt: "Original concept of dried rose buds and raspberry leaves kept separately",
     sourceUrl: "https://cnjxhn.en.alibaba.com/productgrouplist-968606692/Dried_Flower_Tea.html",
     verification: "store-category" as Verification,
   },
@@ -345,8 +361,8 @@ export const categories = [
     number: "04",
     name: "Fruit & Herbal Blends",
     description: "Fruit infusions and herbal combinations listed by the store.",
-    image: "/images/04-fruit-tea-blends.webp",
-    imageAlt: "Illustrative bowl of fruit and herbal tea blend ingredients",
+    image: "/images/categories/v2/fruit-tea-blends.webp",
+    imageAlt: "Original concept of botanical and citrus infusion ingredients in separate displays",
     sourceUrl: "https://cnjxhn.en.alibaba.com/productgrouplist-968304721/Fruit_Infusion_Detox_Water.html",
     verification: "store-category" as Verification,
   },
@@ -355,8 +371,8 @@ export const categories = [
     number: "05",
     name: "Tea Bags & Packed Teas",
     description: "Discuss the tea contents and packing format your project needs.",
-    image: "/images/05-tea-bags.webp",
-    imageAlt: "Illustrative tea bags, plain pouches and brewed tea for a packaging discussion",
+    image: "/images/categories/v2/tea-bags.webp",
+    imageAlt: "Original concept of unbranded filled tea bags and simple packaging for a project discussion",
     sourceUrl: "https://cnjxhn.en.alibaba.com/productgrouplist-969273622/Herbal_Tea_Bags_Tea_Blends.html",
     verification: "store-category" as Verification,
   },

@@ -23,7 +23,7 @@ export default function FrozenBerriesPage() {
           <a className="button button-dark" href="#frozen-products">Explore the range <span aria-hidden="true">↓</span></a>
         </div>
         <div className="frozen-hero-visual" aria-label="Illustrative images of frozen raspberries and blueberries">
-          {berries.map((product) => <img src={sitePath(product.detail!.images.main)} alt={`Illustrative ${product.name.toLowerCase()}`} width={1254} height={1254} key={product.id} />)}
+          {berries.map((product) => <img src={sitePath(product.detail!.images.detail)} alt={`Illustrative texture detail of ${product.name.toLowerCase()}`} width={1448} height={1086} key={product.id} />)}
         </div>
       </section>
       <section className="shell frozen-range section-space" id="frozen-products">
@@ -31,7 +31,7 @@ export default function FrozenBerriesPage() {
         <div className="frozen-product-grid">
           {berries.map((product) => <article className="frozen-product-card" key={product.id}>
             <a href={sitePath(`/products/${product.id}`)}><img src={sitePath(product.detail!.images.main)} alt={`Illustrative ${product.name.toLowerCase()} product concept`} width={1254} height={1254} loading="lazy" /></a>
-            <div><span className="mini-label">IQF / Frozen berries</span><h3>{product.name}</h3><p>{product.detail!.intro}</p><a className="text-link" href={sitePath(`/products/${product.id}`)}>View sourcing details <span aria-hidden="true">↗</span></a></div>
+            <div><span className="mini-label">IQF / Frozen berries</span><h3><a href={sitePath(`/products/${product.id}`)}>{product.name}</a></h3><p>{product.detail!.intro}</p><a className="text-link" href={sitePath(`/products/${product.id}`)}>View Product <span aria-hidden="true">↗</span></a></div>
           </article>)}
         </div>
       </section>
