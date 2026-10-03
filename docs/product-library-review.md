@@ -81,4 +81,3 @@
 - 产品内容根据用户本轮确认的产品方向与原有项目资料整理；原 sourceUrl、verification、skuImage:null、公司主体和认证内容不变。未将市场研究或同行参数写成销售承诺。
 - 茶包图经过一次原料形态校正；[Kew 的植物资料](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A234560-2/general-information)仅作为绘图形态参考，没有将某一物种认定为实际供货身份。
 - 上线前仍需核对实际植物身份、配方及比例、袋材、规格实测值、用途、储运条件、包装、MOQ/交期、检测文件与证书关系；没有把这些待确认事项伪装成已核实参数。
-
