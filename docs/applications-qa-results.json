@@ -1,0 +1,56 @@
+{
+  "desktop": "1440x1000",
+  "images": 9,
+  "overview": "2x2 cards, working image/title/CTA links",
+  "detailResults": [
+    {
+      "path": "/applications/tea-infusion-blends",
+      "relatedProducts": 7,
+      "faq": 4,
+      "prefill": "application + product + source + packaging + documents passed"
+    },
+    {
+      "path": "/applications/beverage-garnishes",
+      "relatedProducts": 2,
+      "faq": 4,
+      "prefill": "application + product + source + packaging + documents passed"
+    },
+    {
+      "path": "/applications/bakery-fruit-preparations",
+      "relatedProducts": 2,
+      "faq": 4,
+      "prefill": "application + product + source + packaging + documents passed"
+    },
+    {
+      "path": "/applications/dairy-frozen-desserts",
+      "relatedProducts": 2,
+      "faq": 4,
+      "prefill": "application + product + source + packaging + documents passed"
+    }
+  ],
+  "relatedProductRoutesChecked": 9,
+  "inquiry": "4 detail handoffs + overview, optional requirements retained, query validation, preview-only status",
+  "homeEntries": 3,
+  "responsive": [
+    {
+      "width": 1920,
+      "overview": "passed",
+      "details": 4,
+      "overflow": false
+    },
+    {
+      "width": 900,
+      "overview": "passed",
+      "details": 4,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "overview": "passed",
+      "details": 4,
+      "overflow": false
+    }
+  ],
+  "reducedMotion": "passed",
+  "pageErrors": []
+}

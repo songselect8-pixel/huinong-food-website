@@ -1,0 +1,70 @@
+{
+  "viewport": "1440x1000",
+  "catalogue": "9 unique new images, 27 detail links, 3-column grid, combined filters, no-results and reset passed",
+  "detailResults": [
+    {
+      "name": "Dried Lemon Slices",
+      "path": "/products/dried-lemon-slices",
+      "gallery": 3,
+      "prefill": "passed",
+      "requirement": "Infusion Brief"
+    },
+    {
+      "name": "Dried Orange Slices",
+      "path": "/products/dried-orange-slices",
+      "gallery": 3,
+      "prefill": "passed",
+      "requirement": "Infusion Ingredient"
+    },
+    {
+      "name": "IQF Frozen Raspberries",
+      "path": "/products/iqf-frozen-raspberries",
+      "gallery": 3,
+      "prefill": "passed",
+      "requirement": "Whole & Broken"
+    },
+    {
+      "name": "IQF Frozen Blueberries",
+      "path": "/products/iqf-frozen-blueberries",
+      "gallery": 3,
+      "prefill": "passed",
+      "requirement": "Whole Fruit Brief"
+    },
+    {
+      "name": "Dried Rose Flowers",
+      "path": "/products/dried-rose-flowers",
+      "gallery": 3,
+      "prefill": "passed",
+      "requirement": "Loose Infusion Brief"
+    },
+    {
+      "name": "Raspberry Leaf Tea",
+      "path": "/products/raspberry-leaf-tea",
+      "gallery": 3,
+      "prefill": "passed",
+      "requirement": "Cut & Sifted"
+    },
+    {
+      "name": "Chrysanthemum, Honeysuckle & Goji Blend",
+      "path": "/products/chrysanthemum-honeysuckle-goji-blend",
+      "gallery": 3,
+      "prefill": "passed",
+      "requirement": "Blend Development Brief"
+    },
+    {
+      "name": "Lemon, Passion Fruit & Orange Infusion",
+      "path": "/products/lemon-passion-fruit-orange-infusion",
+      "gallery": 3,
+      "prefill": "passed",
+      "requirement": "Fruit Form Discussion"
+    },
+    {
+      "name": "Cassia, Goji & Chrysanthemum Tea Bags",
+      "path": "/products/cassia-goji-chrysanthemum-tea-bags",
+      "gallery": 3,
+      "prefill": "passed",
+      "requirement": "Blend & Cut Brief"
+    }
+  ],
+  "pageErrors": []
+}

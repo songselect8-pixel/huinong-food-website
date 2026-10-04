@@ -10,7 +10,7 @@ const orderedProducts = categories.flatMap((category) => products.filter((produc
 function ProductCard({ product }: { product: Product }) {
   const category = categories.find((item) => item.id === product.categoryId);
   const href = sitePath(product.detail ? `/products/${product.id}` : `/?product=${encodeURIComponent(product.id)}#quote`);
-  const image = product.conceptImage ?? product.detail?.images.main;
+  const image = product.detail?.images.main ?? product.conceptImage;
   const action = product.detail ? "View Product" : "Discuss Product";
 
   return <article className="catalog-card">
@@ -20,7 +20,7 @@ function ProductCard({ product }: { product: Product }) {
     </a>
     <div className="catalog-card-copy">
       <span className={`mini-label ${product.id === "iqf-frozen-raspberries" ? "catalog-label-raspberry" : ""} ${product.id === "iqf-frozen-blueberries" ? "catalog-label-blueberry" : ""}`}>{category?.name}</span>
-      <h2>{product.name}</h2>
+      <h2><a href={href}>{product.name}</a></h2>
       <p>{product.cardDescription ?? product.detail?.intro}</p>
       <a className="text-link" href={href}>{action} <span aria-hidden="true">↗</span></a>
     </div>

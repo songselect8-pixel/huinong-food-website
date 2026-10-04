@@ -1,13 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { applications, categories, products } from "@/data/site";
-import { useInquiryDraft } from "@/components/inquiry-draft";
+import { applications, products } from "@/data/site";
 import { sitePath } from "@/data/paths";
 
 export function ApplicationExplorer() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const { applyBrief } = useInquiryDraft();
 
   return (
     <div className="application-explorer" data-reveal>
@@ -50,10 +48,6 @@ export function ApplicationExplorer() {
             const product = products.find((item) => item.id === id);
             return product ? [product] : [];
           });
-          const categoryIds = [...new Set(relatedProducts.map((product) => product.categoryId))];
-          const matchingCategory = categoryIds.length === 1
-            ? categories.find((category) => category.id === categoryIds[0])
-            : undefined;
 
           return (
             <div
@@ -77,13 +71,9 @@ export function ApplicationExplorer() {
               </div>
               <a
                 className="button button-dark"
-                href="#quote"
-                onClick={() => applyBrief({
-                  interest: matchingCategory?.name ?? "",
-                  note: `Application: ${application.name}\nRelated product directions: ${relatedProducts.map((product) => product.name).join(", ")}\nSuitability and specifications to be confirmed.`,
-                })}
+                href={sitePath(application.href)}
               >
-                Discuss this application <span aria-hidden="true">↗</span>
+                Explore Application <span aria-hidden="true">↗</span>
               </a>
             </div>
           );

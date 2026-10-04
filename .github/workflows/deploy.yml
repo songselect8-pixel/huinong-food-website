@@ -1,8 +1,7 @@
 name: Deploy website preview
 
 on:
-  push:
-    branches: [main]
+  # Deployment requires an explicitly approved manual run.
   workflow_dispatch:
 
 permissions:
