@@ -32,6 +32,13 @@ img { display: block; max-width: 100%; }
 section[id] { scroll-margin-top: 104px; }
 
 .shell { width: min(1320px, calc(100% - 64px)); margin-inline: auto; }
+.resource-media { position:relative; display:block; }
+.resource-concept-label { position:absolute; left:12px; bottom:12px; padding:3px 7px; background:rgba(255,255,255,.94); color:var(--muted); font-size:10px; }
+.resource-card { display:flex; flex-direction:column; }
+.resource-media { flex-shrink:0; }
+.resource-copy { display:flex; flex-direction:column; flex:1; }
+.resource-copy > .draft-chip { align-self:flex-start; }
+.resource-copy > .text-link { align-self:flex-start; margin-top:auto; padding-top:18px; }
 .section-space { padding-block: 100px; }
 .eyebrow, .mini-label { display: inline-flex; align-items: center; gap: 11px; color: var(--brand-wine); font-size: 11px; font-weight: 800; letter-spacing: .16em; line-height: 1.3; text-transform: uppercase; }
 .eyebrow-line { width: 23px; height: 1px; background: currentColor; }

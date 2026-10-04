@@ -9,7 +9,7 @@ function walk(directory) {
   });
 }
 let copied = 0;
-for (const source of walk('out')) {
+for (const source of walk(process.argv[2] || 'out')) {
   const parts = source.split(path.sep);
   const start = parts.findIndex(part => part.startsWith('__next.'));
   if (start < 0 || start === parts.length - 1 || !source.endsWith('.txt')) continue;

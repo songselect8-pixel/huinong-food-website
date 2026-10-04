@@ -1,0 +1,134 @@
+{
+  "status": "draft",
+  "reviewStatus": "pending",
+  "author": null,
+  "reviewer": null,
+  "createdAt": "2026-10-04",
+  "updatedAt": "2026-10-04",
+  "publishedAt": null,
+  "publicationAuthorization": null,
+  "slug": "frozen-vs-freeze-dried-berries",
+  "title": "Frozen vs. Freeze-Dried Berries: A Buyer’s Guide",
+  "metaDescription": "Compare frozen and freeze-dried berries by physical form, project needs, packaging and handling. Prepare a clear ingredient sourcing brief.",
+  "summary": "Two different ingredient forms. Understand what to specify before comparing samples, packing and quotations.",
+  "category": "Ingredient Guides",
+  "coverAlt": "Illustrative comparison of frosted frozen raspberries and dry freeze-dried raspberries in separate dishes",
+  "bodyAlt": "Illustrative close view of icy frozen and brittle freeze-dried raspberry structures on separate spoons",
+  "relatedProducts": [
+    "iqf-frozen-raspberries",
+    "iqf-frozen-blueberries"
+  ],
+  "relatedGuides": [
+    "iqf-raspberry-grades",
+    "specifying-iqf-frozen-blueberries"
+  ],
+  "lead": "Frozen and freeze-dried berries are different purchasing forms, even when they start with the same fruit. Begin with the condition your process needs, then compare handling, packaging and product evidence. FRUNORIA’s current berry range covers frozen raspberries and blueberries; freeze-dried fruit appears here only as a comparison, not as an additional product offer.",
+  "sections": [
+    {
+      "id": "different-forms",
+      "title": "Start with the physical form",
+      "paragraphs": [
+        "Freeze drying removes water from previously frozen food through sublimation under reduced pressure. The resulting dry structure differs from fruit supplied in the frozen state. Utah State University Extension describes this process and notes that dried texture may be crisp or breakable, with variation among foods. Appearance alone cannot establish the residual moisture or the suitability of a supplied product. [Read the USU process explanation](https://extension.usu.edu/preserve-the-harvest/research/buying-a-home-freeze-dryer-what-to-know-before-you-go).",
+        "On a purchase brief, write the process name in full. “Berry pieces” does not tell a supplier whether you need frozen pieces, dried pieces or a powder. Add the fruit identity, whether pieces or whole berries are wanted, and the intended processing stage. Ask the supplier to confirm that the product description on the specification, quotation and sample label refers to the same material.",
+        "A photograph can help explain the shape you have in mind. It cannot settle the production method, water content, storage conditions or lot identity. The comparison photographs in this guide are generated illustrations. Request a representative sample and actual documentation before using any visual reference as an acceptance standard."
+      ]
+    },
+    {
+      "id": "comparison",
+      "title": "Compare the purchasing questions",
+      "paragraphs": [
+        "Use this table as a brief-building aid. It does not prescribe a shelf life, a temperature specification or a universal substitution rate. Those fields belong in the agreed product specification and your own development assessment."
+      ],
+      "table": {
+        "headers": [
+          "Decision",
+          "Frozen berries",
+          "Freeze-dried comparison"
+        ],
+        "rows": [
+          [
+            "Required condition",
+            "Confirm frozen form and cold-chain instructions.",
+            "Confirm dry form and moisture-related acceptance criteria."
+          ],
+          [
+            "Visual requirement",
+            "Whole fruit, broken fruit, pieces and separation.",
+            "Whole pieces, fragments or powder; breakage to discuss."
+          ],
+          [
+            "Packaging review",
+            "Pack size, liner, frozen handling and delivery arrangements.",
+            "Pack protection, closure and documented storage conditions."
+          ],
+          [
+            "Development sample",
+            "Assess in the intended receiving and processing sequence.",
+            "Assess in the intended dry or rehydrated use."
+          ],
+          [
+            "Quotation basis",
+            "Net product weight, form and delivery scope.",
+            "Net product weight, form and delivery scope; not assumed equivalent."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "application",
+      "title": "Describe the result you need",
+      "paragraphs": [
+        "Begin your development discussion with the finished product, without assuming that the two ingredient forms are interchangeable. For a cooked berry filling, explain whether you want visible fruit pieces or a more uniform preparation. For a dry inclusion concept, explain the desired piece appearance and how the ingredient will be combined with the rest of the product. These are different development questions even before a supplier proposes a sample.",
+        "A useful trial brief names the stage at which the ingredient enters the process, the appearance you expect afterwards, and how you will judge the result. Ask your development team to record observations using the same trial method for each sample. Do not replace frozen fruit with the same weight of a dry ingredient and assume that the recipe, yield or handling will remain unchanged.",
+        "Keep safety suitability as a separate decision. A preservation process name is not a ready-to-eat declaration. USU explicitly cautions that freeze drying does not kill bacteria; its home-preservation guidance is not an industrial process validation. Ask for the actual intended-use statement and relevant evidence for the proposed ingredient, then have your technical team assess it. [USU safety discussion](https://extension.usu.edu/preserve-the-harvest/research/buying-a-home-freeze-dryer-what-to-know-before-you-go).",
+        "The [Bakery & Fruit Preparations application](/applications/bakery-fruit-preparations) provides a starting point for discussions about our frozen berry directions. It does not establish that every form suits every process. Record the intended preparation and any acceptance criteria that matter to your project."
+      ]
+    },
+    {
+      "id": "packing",
+      "title": "Build a handling brief before a price comparison",
+      "paragraphs": [
+        "Ask who will receive the shipment and what information that team needs before arrival. A frozen project brief should cover the agreed condition at delivery, packaging configuration, receiving arrangements and temperature records to review. Request written instructions for the actual product rather than copying a temperature or holding time from a general article.",
+        "For a dry comparison product, request the supplier’s storage and after-opening instructions, packaging description and supporting shelf-life basis. An attractive pouch is not evidence of a particular barrier performance. Keep any material claim tied to a named packaging construction and its supporting records. Neither form should receive a shelf-life value inferred from these concept images.",
+        "Break the quoted scope into net ingredient quantity, inner and outer packs, delivery responsibility and the documents included. Ask whether sampling, development, freight or special documentation is quoted separately. This makes alternatives easier to compare without treating a lower unit price as proof of a better project fit.",
+        "Plan for sample evaluation and decision ownership. Identify who approves ingredient identity, who reviews the application trial and who accepts the packaging proposal. Keep the sample identifier and supplier specification revision together. When the commercial proposal changes, ask whether the approved sample still represents it."
+      ]
+    },
+    {
+      "id": "buyer-checklist",
+      "title": "Questions to send with your inquiry",
+      "paragraphs": [
+        "You do not need every answer before starting a discussion. Separate your confirmed requirements from fields on which you need guidance. That distinction lets a supplier respond to the real decision rather than guess from a short request for “best berries”."
+      ],
+      "bullets": [
+        "Which fruit identity and processing form does the quotation cover? Please identify whole fruit, pieces or another requested presentation.",
+        "What is the intended application, and what product-use information should our technical team review?",
+        "Which appearance characteristics can be assessed on a representative sample, and how should the sample be identified?",
+        "What packing configuration, handling instructions and delivery conditions apply to the proposed product?",
+        "Which specification, lot-linked testing information and traceability records can be requested, and what is their scope?",
+        "Which items remain open for development or confirmation rather than being included as standard supply?"
+      ]
+    },
+    {
+      "id": "next-step",
+      "title": "Keep the next step specific",
+      "paragraphs": [
+        "Once the product form is clear, narrow the request to the appropriate existing product direction. For raspberries, specify whether intact shape or smaller fragments matter. For blueberries, identify any species, size or integrity requirement that your team already has. If those requirements are undecided, state the intended result and request options for review.",
+        "The [Quality & Compliance page](/quality) explains how to request product and document information. Select only the product you actually want to discuss below. This guide does not add freeze-dried berries to the catalogue, and a request made in this development preview remains a local inquiry preview."
+      ]
+    }
+  ],
+  "references": [
+    {
+      "title": "Utah State University Extension — Buying a Home Freeze-Dryer",
+      "url": "https://extension.usu.edu/preserve-the-harvest/research/buying-a-home-freeze-dryer-what-to-know-before-you-go",
+      "checkedAt": "2026-10-04",
+      "scope": "Sublimation, dry texture and process limitations; home guidance used only for physical principles, not industrial specifications."
+    }
+  ],
+  "pending": [
+    "Brand editorial approval; technical review of comparisons.",
+    "Actual frozen product handling, intended use, packaging and lot documents remain project-specific.",
+    "Freeze-dried comparison must not become a product offer."
+  ]
+}

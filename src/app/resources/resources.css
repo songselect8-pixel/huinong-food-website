@@ -1,0 +1,99 @@
+.resources-page { padding-top:1px; }
+.guides-intro { padding:68px 0 42px; max-width:940px; }
+.guides-intro h1 { font:500 clamp(44px,4.5vw,72px)/1.05 var(--display); letter-spacing:-.035em; margin:20px 0 22px; }
+.guides-intro h1 em { color:var(--brand-wine); font-weight:400; }
+.guides-intro > p { max-width:690px; color:var(--muted); font-size:18px; }
+.guides-intro .guide-preview-note { font-size:13px; border-left:2px solid var(--brand-wine); padding-left:14px; margin-top:24px; }
+.guide-tools { border-block:1px solid var(--line); padding:24px 0; display:grid; gap:22px; }
+.guide-tools label { display:grid; gap:8px; font-size:13px; font-weight:650; max-width:560px; }
+.guide-tools input,.guide-inquiry select { width:100%; min-height:48px; border:1px solid var(--line-strong); background:#fff; border-radius:2px; padding:12px 14px; color:var(--text); font-size:15px; }
+.guide-chips { display:flex; flex-wrap:wrap; gap:8px; }
+.guide-chips button { background:#fff; border:1px solid var(--line); color:var(--brand-blue); border-radius:24px; padding:9px 17px; font-size:13px; min-height:43px; }
+.guide-chips button:hover { border-color:var(--brand-wine); }
+.guide-chips button[aria-pressed="true"] { background:var(--brand-wine); border-color:var(--brand-wine); color:#fff; }
+.guide-results { display:flex; justify-content:space-between; align-items:center; min-height:66px; color:var(--muted); font-size:13px; }
+.guide-results button { background:none; border:0; }
+.guide-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:28px; }
+.guide-card { min-width:0; background:#fff; border:1px solid var(--line); display:flex; flex-direction:column; transition:border-color .2s; }
+.guide-card:hover,.guide-card:focus-within { border-color:var(--brand-wine); }
+.guide-card-image { position:relative; display:block; aspect-ratio:16/9; overflow:hidden; }
+.guide-card-image img { width:100%; height:100%; object-fit:cover; }
+.guide-card-image > span { position:absolute; bottom:10px; left:12px; background:rgba(255,255,255,.93); color:var(--muted); padding:3px 7px; font-size:10px; }
+.guide-card-copy { padding:25px; display:flex; flex-direction:column; flex:1; }
+.guide-card h2 { font:500 clamp(25px,2vw,31px)/1.15 var(--display); margin:16px 0; }
+.guide-card-copy > p { font-size:15px; color:var(--muted); margin:0 0 24px; }
+.guide-card-bottom { margin-top:auto; display:flex; gap:16px; flex-wrap:wrap; justify-content:space-between; align-items:center; }
+.guide-draft { display:inline-block; color:var(--brand-wine); background:var(--blush); font-size:11px; padding:5px 9px; line-height:1.5; }
+.guide-empty { background:var(--ice); padding:44px; margin:24px 0; }
+.guide-empty h2 { font:500 32px/1.2 var(--display); }
+.guides-end { margin:65px 0 90px; padding:35px 40px; background:var(--ice); display:flex; gap:32px; justify-content:space-between; align-items:center; }
+.guides-end h2 { font:500 35px/1.15 var(--display); margin:12px 0; }
+.guides-end p { color:var(--muted); margin:0; }
+.guide-breadcrumb { display:flex; flex-wrap:wrap; gap:10px; padding-top:32px; font-size:12px; color:var(--muted); }
+.guide-breadcrumb a:hover { color:var(--brand-wine); }
+.guide-heading { padding-block:42px 38px; }
+.guide-heading h1 { font:500 clamp(40px,4.3vw,68px)/1.08 var(--display); letter-spacing:-.025em; max-width:1060px; margin:20px 0 24px; text-wrap:balance; }
+.guide-lead { font-size:18px; line-height:1.7; max-width:790px; color:var(--muted); }
+.guide-byline { display:flex; flex-wrap:wrap; gap:16px; font-size:13px; margin-top:24px; }
+.guide-cover { margin-block:0; position:relative; }
+.guide-cover img { width:100%; max-height:660px; object-fit:cover; aspect-ratio:16/9; }
+.guide-cover figcaption { position:absolute; bottom:16px; left:20px; background:#fff; padding:5px 10px; font-size:11px; color:var(--muted); }
+.guide-reading-layout { display:grid; grid-template-columns:230px minmax(0,760px); gap:clamp(35px,6vw,100px); justify-content:center; padding-block:64px 75px; align-items:start; }
+.guide-toc { position:sticky; top:125px; border-top:2px solid var(--brand-wine); padding-top:20px; }
+.guide-toc nav,.guide-mobile-toc nav { display:grid; gap:16px; margin-top:24px; }
+.guide-toc a,.guide-mobile-toc a { display:grid; grid-template-columns:22px 1fr; gap:10px; font-size:13px; line-height:1.5; color:var(--muted); }
+.guide-toc a:hover,.guide-mobile-toc a:hover { color:var(--brand-wine); }
+.guide-toc a span { color:var(--brand-wine); font-size:11px; }
+.guide-body { min-width:0; font-size:17px; line-height:1.85; }
+.guide-body section { margin-bottom:44px; }
+.guide-body h2 { font:500 34px/1.2 var(--display); letter-spacing:-.01em; margin:0 0 22px; }
+.guide-body p { margin:0 0 22px; }
+.guide-body a { color:var(--brand-wine); text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px; overflow-wrap:anywhere; }
+.guide-body-image { margin:35px 0 48px; }
+.guide-body-image img { width:100%; height:auto; }
+.guide-body-image figcaption { color:var(--muted); font-size:12px; line-height:1.55; padding:10px 0; }
+.guide-table-scroll { overflow-x:auto; border:1px solid var(--line); margin-block:28px; }
+.guide-table-scroll table { border-collapse:collapse; min-width:540px; width:100%; font-size:14px; line-height:1.65; background:#fff; }
+.guide-table-scroll th,.guide-table-scroll td { padding:16px 18px; text-align:left; vertical-align:top; border-bottom:1px solid var(--line); }
+.guide-table-scroll thead { background:var(--ice); color:var(--brand-blue); }
+.guide-table-scroll th[scope="row"] { width:27%; font-weight:650; color:var(--brand-blue); }
+.guide-checklist { list-style:square; padding-left:22px; }
+.guide-checklist li { padding:10px 0 10px 6px; border-bottom:1px solid var(--line); }
+.guide-checklist li::marker { color:var(--brand-wine); }
+.guide-references { border-top:1px solid var(--line); padding-top:32px; font-size:15px; }
+.guide-references h2 { margin-top:13px; }
+.guide-references ol { padding-left:23px; }
+.guide-references li { padding-left:5px; margin-top:24px; }
+.guide-references li p { margin:10px 0 4px; color:var(--muted); }
+.guide-references small { color:var(--muted); }
+.guide-mobile-toc { display:none; }
+.guide-related-products { background:var(--ice); padding:60px 0; }
+.guide-section-heading { margin-bottom:30px; }
+.guide-section-heading h2 { font:500 39px/1.15 var(--display); margin:12px 0; }
+.guide-section-heading p { color:var(--muted); font-size:15px; }
+.guide-product-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:25px; }
+.guide-product-grid article { background:#fff; border:1px solid var(--line); display:grid; grid-template-columns:120px minmax(0,1fr); align-items:center; gap:20px; padding:18px; }
+.guide-product-grid img { width:100%; aspect-ratio:1; object-fit:contain; }
+.guide-product-grid h3 { font:500 24px/1.15 var(--display); margin:0 0 15px; }
+.guide-product-grid .text-link { font-size:12px; }
+.guide-related-guides { padding-block:65px; }
+.guide-inquiry-section { background:var(--blush); padding:65px 0; }
+.guide-inquiry { display:grid; grid-template-columns:1fr 1fr; gap:80px; }
+.guide-inquiry h2 { font:500 43px/1.1 var(--display); max-width:490px; margin:18px 0; }
+.guide-inquiry p { color:var(--muted); max-width:480px; }
+.guide-inquiry label { display:flex; gap:12px; align-items:center; font-size:14px; margin-bottom:10px; }
+.guide-inquiry small { color:var(--muted); font-weight:400; font-size:12px; }
+.guide-inquiry details { margin:18px 0 24px; }
+.guide-inquiry summary { cursor:pointer; padding:10px 0; font-size:14px; }
+.guide-inquiry fieldset { border:0; padding:10px 0; margin:0; }
+.guide-inquiry input[type="checkbox"] { accent-color:var(--brand-wine); width:18px; height:18px; flex-shrink:0; }
+.guide-inquiry .button { white-space:normal; text-align:left; }
+.guide-inquiry .guide-small { font-size:12px; }
+.guide-template { background:var(--ice); padding:25px; margin:25px 0; }
+.guide-template label { font-weight:650; font-size:14px; display:block; margin-bottom:12px; }
+.guide-template textarea { width:100%; min-height:420px; background:#fff; border:1px solid var(--line-strong); padding:16px; font-size:14px; line-height:1.7; color:var(--text); resize:vertical; }
+.guide-template button { margin-top:16px; }
+.guide-template p[role="status"] { font-size:13px; min-height:24px; margin:10px 0 0; }
+@media(max-width:1100px){.guide-grid{grid-template-columns:repeat(2,minmax(0,1fr));}.guide-reading-layout{grid-template-columns:200px minmax(0,760px);gap:35px;}.guide-product-grid{grid-template-columns:repeat(2,minmax(0,1fr));}.guide-inquiry{gap:35px;}}
+@media(max-width:760px){.guides-intro{padding:42px 0 25px;}.guides-intro h1{font-size:43px;}.guides-intro>p{font-size:16px;}.guide-grid{grid-template-columns:1fr;gap:25px;}.guide-card h2{font-size:30px;}.guide-card-copy{padding:24px;}.guide-chips button{font-size:12px;padding:9px 13px;}.guides-end{display:block;padding:28px 23px;margin:45px 0;}.guides-end .button{margin-top:24px;}.guide-heading{padding-block:30px;}.guide-heading h1{font-size:39px;text-wrap:initial;}.guide-lead{font-size:16px;}.guide-cover img{max-height:none;}.guide-cover figcaption{bottom:9px;left:10px;font-size:10px;}.guide-reading-layout{display:block;padding-block:30px 35px;}.guide-toc{display:none;}.guide-mobile-toc{display:block;border-block:1px solid var(--line);padding:16px 0;margin-bottom:34px;}.guide-mobile-toc summary{display:flex;justify-content:space-between;cursor:pointer;font-size:15px;font-weight:650;}.guide-mobile-toc nav{margin-bottom:12px;}.guide-body{font-size:16px;line-height:1.85;}.guide-body h2{font-size:29px;}.guide-body section{margin-bottom:34px;}.guide-table-scroll th,.guide-table-scroll td{padding:13px;}.guide-body-image{margin:25px 0 35px;}.guide-product-grid{grid-template-columns:1fr;gap:16px;}.guide-product-grid article{grid-template-columns:105px minmax(0,1fr);gap:18px;}.guide-product-grid h3{font-size:24px;}.guide-related-products,.guide-related-guides,.guide-inquiry-section{padding-block:42px;}.guide-section-heading h2{font-size:34px;}.guide-inquiry{grid-template-columns:1fr;gap:22px;}.guide-inquiry h2{font-size:36px;}.guide-template{padding:18px;}.guide-empty{padding:25px;}}
+@media(prefers-reduced-motion:reduce){.guide-card{transition:none;}}

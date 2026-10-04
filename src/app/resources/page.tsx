@@ -1,0 +1,6 @@
+import SiteLink from "@/components/site-link";
+import { GuideBrowser } from "@/components/guide-browser";
+import { getGuides, guideSummary, localGuidePreview } from "@/data/guides";
+import { pageMetadata } from "@/data/metadata";
+export const metadata=pageMetadata("Insights & Buying Guides","Practical guides to ingredient selection, product specifications, packaging and sourcing documentation.");
+export default function ResourcesPage(){return <div className="shell"><header className="guides-intro"><span className="eyebrow">Resources / The buying desk</span><h1>Insights &amp; <em>Buying Guides</em></h1><p>Practical guides to ingredient selection, product specifications, packaging and sourcing documentation.</p>{localGuidePreview && <p className="guide-preview-note">Local editorial preview · complete drafts awaiting review and publication approval.</p>}</header><GuideBrowser guides={getGuides().map(guideSummary)}/><aside className="guides-end"><div><span className="eyebrow">Start with your project</span><h2>Have a sourcing question?</h2><p>Share the ingredient, application or documentation you want to discuss.</p></div><SiteLink className="button button-dark" href="/contact">Discuss Your Project <span aria-hidden="true">↗</span></SiteLink></aside></div>;}

@@ -11,7 +11,7 @@ export const emptyBrief = {
   kind: "product" as "product" | "private-label" | "quality",
   productId: "", categoryId: "", form: "", application: "", packaging: "",
   quantity: "", unit: "", timeline: "", targetMarket: "", documents: [] as string[],
-  certificateId: "", documentNote: "", source: "", coldChain: "", leafFormat: "", projectNotes: "",
+  certificateId: "", documentNote: "", source: "", articleTitle: "", coldChain: "", leafFormat: "", projectNotes: "",
 };
 export type InquiryBrief = typeof emptyBrief;
 export const emptyInquiry = { ...emptyBrief, name: "", email: "", company: "", region: "", message: "" };
@@ -57,5 +57,6 @@ export function briefRows(fields: InquiryFields): { key: keyof InquiryBrief; lab
     {key: "leafFormat", label: "Leaf format", value: fields.leafFormat},
     {key: "projectNotes", label: "Project requirements", value: fields.projectNotes},
     {key: "source", label: "Source page", value: fields.source},
+    {key: "articleTitle", label: "Buying guide", value: fields.articleTitle},
   ].filter(row => row.value) as { key: keyof InquiryBrief; label: string; value: string }[];
 }

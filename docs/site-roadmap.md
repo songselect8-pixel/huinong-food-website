@@ -4,7 +4,7 @@ Updated: 2026-10-04. This is the current development sequence; older design note
 
 ## Fixed boundaries
 
-Keep FRUNORIA, the wine / blueberry / warm-white / blush / ice palette, approved Home and Private Label structure, the Products grid and existing URLs. Develop in the current project. Inquiry remains a local preview. The previous push/merge is complete. This About + Contact round is local-only: no email integration, remote push, publication or deployment. The deployment workflow remains manual-only.
+Keep FRUNORIA, the wine / blueberry / warm-white / blush / ice palette, approved Home and Private Label structure, the Products grid and existing URLs. Develop in the current project. Inquiry remains a local preview. This Resources round is local-only: no email integration, remote push, publication or deployment. The deployment workflow remains manual-only.
 
 Status vocabulary: **未开始**, **开发中**, **已完成开发**, **已检查功能**, **待视觉验收**, **待资料确认**. Code completion, actual interaction checks, visual acceptance and evidence verification are separate. A working page does not verify business claims or authorize publication.
 
@@ -14,7 +14,7 @@ Status vocabulary: **未开始**, **开发中**, **已完成开发**, **已检�
 | 2 | Quality & Compliance | 已完成开发 — one canonical `/quality` | 已检查功能 — document/market tabs, requests and shared inquiry; regression checked this round | 待视觉验收 — previous complete desktop/mobile screenshots preserved | 待资料确认 — certificate holder/scope/validity/permissions, actual reports and project-specific market pathway |
 | 3 | Applications | 已完成开发 — overview, four detail routes, nine independent application concepts | 已检查功能 — links, FAQs, product selection, optional requirements and inquiry; desktop/mobile and reduced motion | 待视觉验收 — screenshots in the Applications delivery | 待资料确认 — actual-use suitability, processing, packing and supporting document scope |
 | 4 | About and Contact / Inquiry | 已完成开发 — /about, /contact, three new concepts and one shared in-memory inquiry | 已检查功能 — four source flows, all nine product prefills, validation, preview/edit, desktop/mobile and reduced motion | 待视觉验收 — complete desktop/mobile screenshots prepared | 待资料确认 — legal operator and brand/source relationship; approved contact channels; formal privacy terms and any future delivery channel |
-| 5 | Resources and buying guides | 未开始 — six-item editorial outline only | 未开始 | 未开始 | 待资料确认 — sources and review ownership; no invented byline/date/customer case |
+| 5 | Resources and buying guides | 已完成开发 — /resources + six full drafts, 12 independent images, shared inquiry and draft-export gate | 已检查功能 — search/category/reset, six routes, TOC, links, inquiry, template copy, mobile and reduced motion; production leakage audit | 待视觉验收 — list desktop/mobile, two full guides, Home entries | 待内容审核 / 待资料确认 — source review recorded; actual specifications, packaging and certificate relationships unchanged; 未授权发布 |
 | 6 | Whole-site acceptance and launch preparation | 未开始 | 未开始 | 未开始 | 待资料确认 — page acceptance, legal/privacy, verified claims, domain/contacts and explicit launch authorization |
 
 ## Applications: delivered for review
@@ -25,22 +25,24 @@ Each detail has distinct ingredient forms, existing product links, procurement c
 
 Actual use suitability and preparation guidance still require evidence. Neither an application scene nor a completed UI verifies ready-to-eat suitability, a formula, processing capability or certificate coverage.
 
-## Resources: six items in the review queue
+## Resources: six complete local drafts
 
-All items below are **待资料确认 / editorial drafts**, not published articles. Titles are planning labels, not reading links.
+| Guide | Path below /resources | Words | Category |
+| --- | --- | ---: | --- |
+| Frozen vs. Freeze-Dried Berries: A Buyer’s Guide | /frozen-vs-freeze-dried-berries | 1055 | Ingredient Guides |
+| IQF Raspberry Grades: Whole, Whole & Broken, and Crumble | /iqf-raspberry-grades | 1065 | Ingredient Guides |
+| How to Specify IQF Frozen Blueberries for a Bulk Order | /specifying-iqf-frozen-blueberries | 1090 | Ingredient Guides |
+| Raspberry Leaf Tea: Botanical Identity, Cut Size and Sourcing Questions | /raspberry-leaf-tea-sourcing | 1149 | Ingredient Guides |
+| Private Label Tea & Dried Fruit Packaging: A Buyer’s Planning Guide | /private-label-tea-packaging | 1077 | Private Label & Packaging |
+| What to Include in a Fruit & Botanical Ingredient Sourcing Inquiry | /ingredient-sourcing-inquiry | 1238 | Sourcing & Documentation |
 
-1. Frozen vs. Freeze-Dried Berries: What Buyers Need to Distinguish
-2. Choosing Whole and Broken Frozen Raspberries
-3. What to Confirm in a Frozen Blueberry Specification
-4. Describing Raspberry Leaf Identity and Cut Format
-5. Private Label Packaging Briefs for Dried Fruit and Botanical Tea
-6. Preparing an Effective Product and Documentation Inquiry
+All six: development complete; functionality checked; visual acceptance pending; editorial/technical review pending; publication not authorized. Author/reviewer/published date remain null. Word counts include lead, body headings, tables/checklists and editable template, excluding references/navigation/URLs. Evidence and outstanding questions: `resources-content-review.json`, `resources-source-review.md`. Images: `resource-image-manifest.json`.
 
-Technical content needs sources; company capability statements need actual records. No fabricated author, publication date, customer case, health benefit or fixed parameter. Generate dedicated covers after article scope is reviewed; do not recycle product main images.
+Default production export omits every unapproved article's body, title, route and images. The local preview is explicitly built to `out-preview` and served only on 127.0.0.1. No new product, company history, contact channel or certificate ownership claim was added. No public content API or formal sitemap exists; domain-dependent indexing checks remain future work.
 
 ## Stop point
 
-This round ends after About + Contact browser checks and delivery for visual acceptance. Do not advance into Resources or launch preparation automatically. Keep pending certificate, specification and market evidence separate from completed development.
+This round ends after Resources and six complete drafts are delivered for review. Stop before whole-site acceptance or launch preparation. Keep pending content, certificate, specification and market evidence separate from completed development. Do not publish, push or deploy.
 
 ## About + Contact delivery — 2026-10-04
 

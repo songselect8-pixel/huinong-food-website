@@ -1,0 +1,138 @@
+{
+  "checkedAt": "2026-10-04",
+  "wordCountMethod": "Visible lead, headings, paragraphs, tables/checklists and editable template; excludes metadata, URLs, references and navigation.",
+  "guides": [
+    {
+      "title": "Frozen vs. Freeze-Dried Berries: A Buyer’s Guide",
+      "path": "/resources/frozen-vs-freeze-dried-berries",
+      "words": 1055,
+      "category": "Ingredient Guides",
+      "status": "draft",
+      "reviewStatus": "pending",
+      "publication": "Not authorized",
+      "sources": [
+        {
+          "title": "Utah State University Extension — Buying a Home Freeze-Dryer",
+          "url": "https://extension.usu.edu/preserve-the-harvest/research/buying-a-home-freeze-dryer-what-to-know-before-you-go",
+          "checkedAt": "2026-10-04",
+          "scope": "Sublimation, dry texture and process limitations; home guidance used only for physical principles, not industrial specifications."
+        }
+      ],
+      "pending": [
+        "Brand editorial approval; technical review of comparisons.",
+        "Actual frozen product handling, intended use, packaging and lot documents remain project-specific.",
+        "Freeze-dried comparison must not become a product offer."
+      ]
+    },
+    {
+      "title": "IQF Raspberry Grades: Whole, Whole & Broken, and Crumble",
+      "path": "/resources/iqf-raspberry-grades",
+      "words": 1065,
+      "category": "Ingredient Guides",
+      "status": "draft",
+      "reviewStatus": "pending",
+      "publication": "Not authorized",
+      "sources": [
+        {
+          "title": "FAO/WHO Codex Alimentarius — CXS 69-1981, Quick-Frozen Raspberries",
+          "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXS%2B69-1981%252FCXS_069e.pdf",
+          "checkedAt": "2026-10-04",
+          "scope": "Sections 1, 2.4 and 3.3; scope and visual vocabulary only. Excludes products indicated for industrial processing; no grade thresholds adopted."
+        }
+      ],
+      "pending": [
+        "Actual whole/broken/crumble availability, definitions, thresholds and test method require supplier/product confirmation.",
+        "No Codex industrial applicability or ready-to-eat status claimed.",
+        "Editorial and technical review before publication."
+      ]
+    },
+    {
+      "title": "How to Specify IQF Frozen Blueberries for a Bulk Order",
+      "path": "/resources/specifying-iqf-frozen-blueberries",
+      "words": 1090,
+      "category": "Ingredient Guides",
+      "status": "draft",
+      "reviewStatus": "pending",
+      "publication": "Not authorized",
+      "sources": [
+        {
+          "title": "USDA AMS — U.S. Standards for Grades of Frozen Blueberries",
+          "url": "https://www.ams.usda.gov/sites/default/files/media/Frozen_Blueberries_Standard%5B1%5D.pdf",
+          "checkedAt": "2026-10-04",
+          "scope": "Voluntary quality reference; types and defect vocabulary, not a FRUNORIA grade or market-access certificate."
+        }
+      ],
+      "pending": [
+        "Botanical identity, origin, size bands, Brix, tolerances and actual supply grade remain unverified.",
+        "Application suitability and handling requirements require product-specific technical review.",
+        "Brand publication authorization absent."
+      ]
+    },
+    {
+      "title": "Raspberry Leaf Tea: Botanical Identity, Cut Size and Sourcing Questions",
+      "path": "/resources/raspberry-leaf-tea-sourcing",
+      "words": 1149,
+      "category": "Ingredient Guides",
+      "status": "draft",
+      "reviewStatus": "pending",
+      "publication": "Not authorized",
+      "sources": [
+        {
+          "title": "Royal Botanic Gardens, Kew — Raspberry",
+          "url": "https://growwild.kew.org/plants/raspberry",
+          "checkedAt": "2026-10-04",
+          "scope": "Botanical name and leaf morphology only; no health or medicinal statements used."
+        }
+      ],
+      "pending": [
+        "Actual botanical species, origin, leaf/stem distribution and cut specifications require documentation.",
+        "No identity determination from generated images or medical claims.",
+        "Food-use suitability, testing and packaging information still project-specific; editorial approval pending."
+      ]
+    },
+    {
+      "title": "Private Label Tea & Dried Fruit Packaging: A Buyer’s Planning Guide",
+      "path": "/resources/private-label-tea-packaging",
+      "words": 1077,
+      "category": "Private Label & Packaging",
+      "status": "draft",
+      "reviewStatus": "pending",
+      "publication": "Not authorized",
+      "sources": [
+        {
+          "title": "European Commission — Food Contact Materials",
+          "url": "https://food.ec.europa.eu/food-safety/chemical-safety/food-contact-materials_en",
+          "checkedAt": "2026-10-04",
+          "scope": "EU general food-contact framework; no product-specific or material-specific compliance conclusion."
+        }
+      ],
+      "pending": [
+        "Actual formats, materials, barrier/food-contact evidence and artwork-support scope require project confirmation.",
+        "No environmental claims, fixed MOQ or lead time adopted.",
+        "Destination-specific label review and brand publication approval pending."
+      ]
+    },
+    {
+      "title": "What to Include in a Fruit & Botanical Ingredient Sourcing Inquiry",
+      "path": "/resources/ingredient-sourcing-inquiry",
+      "words": 1238,
+      "category": "Sourcing & Documentation",
+      "status": "draft",
+      "reviewStatus": "pending",
+      "publication": "Not authorized",
+      "sources": [
+        {
+          "title": "ISO — Certification",
+          "url": "https://www.iso.org/certification.html",
+          "checkedAt": "2026-10-04",
+          "scope": "Certification is performed by external certification bodies; verify issuer and scope rather than treating a logo as a lot report."
+        }
+      ],
+      "pending": [
+        "Brand/technical editorial approval; actual document availability remains product-specific.",
+        "No certificate ownership, market clearance, delivery or production promise made.",
+        "Final legal operator/contact channels and publication authorization remain unset."
+      ]
+    }
+  ]
+}

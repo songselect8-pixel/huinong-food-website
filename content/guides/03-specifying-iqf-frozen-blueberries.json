@@ -1,0 +1,140 @@
+{
+  "status": "draft",
+  "reviewStatus": "pending",
+  "author": null,
+  "reviewer": null,
+  "createdAt": "2026-10-04",
+  "updatedAt": "2026-10-04",
+  "publishedAt": null,
+  "publicationAuthorization": null,
+  "slug": "specifying-iqf-frozen-blueberries",
+  "title": "How to Specify IQF Frozen Blueberries for a Bulk Order",
+  "metaDescription": "Prepare an IQF blueberry brief covering botanical identity, size, integrity, intended processing, packing, delivery and supporting documents.",
+  "summary": "A practical specification framework for identity, berry size, integrity, handling and bulk-order documentation.",
+  "category": "Ingredient Guides",
+  "coverAlt": "Illustrative individually frozen blueberries in separate clean sampling dishes",
+  "bodyAlt": "Illustrative close view of frozen blueberry calyx crowns, skin bloom and natural size variation",
+  "relatedProducts": [
+    "iqf-frozen-blueberries",
+    "iqf-frozen-raspberries"
+  ],
+  "relatedGuides": [
+    "frozen-vs-freeze-dried-berries",
+    "ingredient-sourcing-inquiry"
+  ],
+  "lead": "A useful blueberry specification identifies the fruit, describes the condition your process needs and defines how the delivery will be reviewed. Start with identity and intended use before asking for a size range or price. A catalogue image and the phrase “premium IQF” cannot establish species, origin, grade or processing suitability.",
+  "sections": [
+    {
+      "id": "identity-first",
+      "title": "Resolve identity before comparing offers",
+      "paragraphs": [
+        "Ask for the common name and declared botanical identity of the proposed fruit. If your project requires a particular cultivated type, wild type, species or cultivar, make that requirement explicit. Do not treat wild blueberry, bilberry and cultivated blueberry as interchangeable purchasing names. Where a declaration is incomplete, leave the identity open for confirmation rather than selecting a species from a photograph.",
+        "The USDA Agricultural Marketing Service frozen blueberry standard distinguishes native or wild and cultivated types. It is a voluntary grading reference, not evidence that a particular supplier’s fruit has a USDA grade. Its terminology can help frame questions, but it cannot replace the actual product declaration. [USDA AMS frozen blueberry standard](https://www.ams.usda.gov/sites/default/files/media/Frozen_Blueberries_Standard%5B1%5D.pdf).",
+        "Record origin separately from botanical identity. Ask which origin information is available for the offered lot and how it appears in traceability records. A generic country description on a presentation should not silently become a lot-level commitment. If the purchasing team requires an origin restriction, include it at the inquiry stage.",
+        "Also request the ingredient declaration and proposed product form. Clarify whether you are discussing individually frozen whole berries or another form, and whether anything has been added. This article does not confirm an additive status, species or cultivar for FRUNORIA’s current product direction."
+      ]
+    },
+    {
+      "id": "appearance",
+      "title": "Turn appearance preferences into reviewable fields",
+      "paragraphs": [
+        "Size matters only when the requirement is expressed clearly enough for both parties to review. Ask what sizing approach the supplier uses and whether a requested range refers to diameter, a screen method or another agreed measure. Include how variation is handled. Do not lift a size band from a competing catalogue and present it as the specification of an unreviewed offer.",
+        "For integrity, describe whether intact berries are important at receipt, after handling or after your own process. Those are different observations. Ask your development team to define the assessment that will matter to the finished product. Keep the sample condition and the proposed trial method with the result.",
+        "USDA’s quality reference treats colour, character and absence of defects as distinct factors, including issues such as stems, leaves, clusters and underdeveloped fruit. These are useful separate discussion topics. No numerical limits or grade scores from that document are adopted here. [USDA quality factors and defect definitions](https://www.ams.usda.gov/sites/default/files/media/Frozen_Blueberries_Standard%5B1%5D.pdf).",
+        "Discuss clumping separately from size and breakage. Ask how the supplier describes free-flowing condition and how the receiving team should assess it. If a sample has been transported, opened or handled before evaluation, document that history. A single staged photograph cannot establish consistency across an order."
+      ]
+    },
+    {
+      "id": "specification-table",
+      "title": "Fields for a bulk-order specification brief",
+      "paragraphs": [
+        "Use the right column to identify the information to request. Populate values only when they are your genuine requirements or have been confirmed for the offered product."
+      ],
+      "table": {
+        "headers": [
+          "Field",
+          "What to include or ask"
+        ],
+        "rows": [
+          [
+            "Identity",
+            "Declared botanical identity; required type or cultivar if relevant."
+          ],
+          [
+            "Form and declaration",
+            "Individually frozen form and the actual ingredient declaration."
+          ],
+          [
+            "Size",
+            "Requested range or selection question, with the measurement method."
+          ],
+          [
+            "Integrity",
+            "Intactness and breakage criteria, with the assessment condition."
+          ],
+          [
+            "Appearance and unwanted material",
+            "Colour, immature fruit, stems, leaves and foreign-matter criteria."
+          ],
+          [
+            "Separation",
+            "Clumping description and the proposed review method."
+          ],
+          [
+            "Application",
+            "Intended processing and finished-product appearance to evaluate."
+          ],
+          [
+            "Packing and delivery",
+            "Net pack quantity, outer packing, destination and cold-chain information."
+          ],
+          [
+            "Documents",
+            "Specification revision, traceability and requested testing scope."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "trial-design",
+      "title": "Organize the trial around your application",
+      "paragraphs": [
+        "A bakery buyer can describe how berries enter the preparation and what appearance is wanted in the baked product. A fruit-preparation buyer may be more concerned with the distribution of pieces after processing. Describe those needs without declaring that every blueberry product is suitable for either process.",
+        "For a [Dairy & Frozen Desserts project](/applications/dairy-frozen-desserts), state how the berry component will be prepared and introduced. Do not assume that frozen raw material is already approved for ready-to-eat use. Suitability and any necessary processing controls require review against the actual product and process; this guide supplies neither a treatment schedule nor a validated recipe.",
+        "Agree who evaluates each part of the sample. Procurement may compare the commercial scope while development reviews behaviour in a trial and quality reviews the documents. Record each result against the same sample identifier so that approvals do not accidentally refer to different proposals.",
+        "If a trial generates a new requirement, update the brief before asking for a revised quote. For example, a preference for visible whole berries should be stated as an outcome to assess, not converted into an unsupported promise that the fruit will retain a particular shape under all processing conditions."
+      ]
+    },
+    {
+      "id": "packing-records",
+      "title": "Match the order to receiving and documentation needs",
+      "paragraphs": [
+        "State the desired net pack quantity and the receiving format. Ask about inner liners, outer cartons, pallet arrangements and the information expected on the pack. Give a delivery destination and identify who is responsible for each transport stage. Confirm the offered arrangements before using them in an internal project plan.",
+        "Request handling and storage instructions for the actual supply. Ask what temperature information can accompany the delivery and how the receiving team should raise a concern. Keep those instructions separate from generic website guidance. No fixed transport tolerance or shelf life is supplied by this article.",
+        "On documents, start with the product specification and list additional questions by purpose. For testing, name the analysis or concern, relevant market or buyer criterion, and whether lot-linked information is required. Ask which methods and sample identifiers appear in the available records rather than assuming a COA contains every possible result.",
+        "The [Quality & Compliance page](/quality) groups document requests for frozen berries. Any certification review should identify the holder, location and activity covered. It remains separate from the identity and test information for the proposed berry order."
+      ]
+    },
+    {
+      "id": "ready-to-quote",
+      "title": "Send a brief that makes exceptions visible",
+      "paragraphs": [
+        "Finish the inquiry with quantity and units, intended order frequency if known, desired timing and a clear list of undecided fields. Distinguish a trial sample from an initial commercial order and from a forecast. Ask the supplier to confirm which requirements can be addressed and to highlight alternatives.",
+        "Keep the accepted specification version with the quotation and sample outcome. If product identity, form or packing changes, route the change back to the relevant reviewer. This is a practical way to prevent a descriptive inquiry from becoming an assumed specification without a shared decision."
+      ]
+    }
+  ],
+  "references": [
+    {
+      "title": "USDA AMS — U.S. Standards for Grades of Frozen Blueberries",
+      "url": "https://www.ams.usda.gov/sites/default/files/media/Frozen_Blueberries_Standard%5B1%5D.pdf",
+      "checkedAt": "2026-10-04",
+      "scope": "Voluntary quality reference; types and defect vocabulary, not a FRUNORIA grade or market-access certificate."
+    }
+  ],
+  "pending": [
+    "Botanical identity, origin, size bands, Brix, tolerances and actual supply grade remain unverified.",
+    "Application suitability and handling requirements require product-specific technical review.",
+    "Brand publication authorization absent."
+  ]
+}

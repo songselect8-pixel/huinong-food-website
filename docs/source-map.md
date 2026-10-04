@@ -136,3 +136,8 @@ The authorized brand profile uses only the existing five product ranges and nine
 Three independent Illustrative Concepts are in `public/images/about-contact/v1/`; their prompts, provenance, dimensions and hashes are in `docs/about-contact-image-manifest.json`. No image represents premises, testing evidence or an actual client project. No old product or application library file was changed.
 
 The shared form now supports Product Inquiry, Private Label Project and Quality Documents. Sourcing context is structured separately from Name, Email, Company, Country and Message; new contexts preserve those fields. Browser-only draft memory survives client navigation, while reload clears it. No messages, personal URL fields, persistence or marketing integrations were introduced. Quality confirmation/verification/upload/permission states are unchanged. See the current review and roadmap for separate development, functional, visual and evidence status.
+# Resources round — 2026-10-04
+
+Six complete editorial drafts now live in `content/guides`; 12 separate generated editorial concepts are in `content/images/resources`. See `docs/resources-source-review.md` and `docs/resources-content-review.json` for actual primary sources, checked dates, scope limitations and per-article pending items. Historical report numbers/specification examples were not converted into supply commitments. Old Home placeholder topics were merged into the completed leaf, packing and inquiry drafts; no parallel Blog collection remains.
+
+The images are illustrative and do not identify actual lots, species, tested grades, customer projects or packaging performance. Default production exports exclude unapproved content and assets; local preview is separate.

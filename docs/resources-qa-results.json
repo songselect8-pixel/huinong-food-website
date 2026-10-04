@@ -1,0 +1,179 @@
+{
+  "checkedAt": "2026-10-04",
+  "browser": {
+    "results": [
+      {
+        "guide": "/resources/frozen-vs-freeze-dried-berries/",
+        "body": "complete and opaque",
+        "metadata": "unique H1, noindex, draft schema without byline/dates",
+        "links": "all internal HTTP 200",
+        "toc": "visible below header",
+        "inquiry": "title/source/selected product/specification retained"
+      },
+      {
+        "guide": "/resources/iqf-raspberry-grades/",
+        "body": "complete and opaque",
+        "metadata": "unique H1, noindex, draft schema without byline/dates",
+        "links": "all internal HTTP 200",
+        "toc": "visible below header",
+        "inquiry": "title/source/selected product/specification retained"
+      },
+      {
+        "guide": "/resources/specifying-iqf-frozen-blueberries/",
+        "body": "complete and opaque",
+        "metadata": "unique H1, noindex, draft schema without byline/dates",
+        "links": "all internal HTTP 200",
+        "toc": "visible below header",
+        "inquiry": "title/source/selected product/specification retained"
+      },
+      {
+        "guide": "/resources/raspberry-leaf-tea-sourcing/",
+        "body": "complete and opaque",
+        "metadata": "unique H1, noindex, draft schema without byline/dates",
+        "links": "all internal HTTP 200",
+        "toc": "visible below header",
+        "inquiry": "title/source/selected product/specification retained"
+      },
+      {
+        "guide": "/resources/private-label-tea-packaging/",
+        "body": "complete and opaque",
+        "metadata": "unique H1, noindex, draft schema without byline/dates",
+        "links": "all internal HTTP 200",
+        "toc": "visible below header",
+        "inquiry": "title/source/selected product/specification retained"
+      },
+      {
+        "guide": "/resources/ingredient-sourcing-inquiry/",
+        "body": "complete and opaque",
+        "metadata": "unique H1, noindex, draft schema without byline/dates",
+        "links": "all internal HTTP 200",
+        "toc": "visible below header",
+        "inquiry": "title/source/selected product/specification retained"
+      }
+    ],
+    "search": "combined categories, query, reset and empty state passed",
+    "viewports": "1440 / 1920: 3 columns; 900: 2; 390: 1; no document overflow",
+    "inquiry": "all six selected prefills; no auto-selection; existing message preserved; validation/preview/edit passed; mobile passed",
+    "template": "edited text copied to clipboard",
+    "reducedMotion": "complete visible text and functional mobile contents",
+    "errors": [],
+    "failed": [],
+    "writes": []
+  },
+  "finalCapture": {
+    "checks": [
+      "Related-guide client navigation resets unsubmitted choices",
+      "Cover and Read Guide links navigate to real guides",
+      "Home three shared title/image/summary/link records match Resources",
+      "/resources/frozen-vs-freeze-dried-berries/: 390px layout, image ratio and text passed",
+      "/resources/iqf-raspberry-grades/: 390px layout, image ratio and text passed",
+      "/resources/specifying-iqf-frozen-blueberries/: 390px layout, image ratio and text passed",
+      "/resources/raspberry-leaf-tea-sourcing/: 390px layout, image ratio and text passed",
+      "/resources/private-label-tea-packaging/: 390px layout, image ratio and text passed",
+      "/resources/ingredient-sourcing-inquiry/: 390px layout, image ratio and text passed"
+    ]
+  },
+  "regression": {
+    "fourSources": {
+      "product": "passed: ID, form, source",
+      "privateLabel": "passed: type, direction, packing, quantity, timing",
+      "quality": "passed: product, market, multiple documents, certificate and source",
+      "application": "passed: product, application, packing, documents, source; free text kept in memory"
+    },
+    "productResults": [
+      {
+        "product": "dried-lemon-slices",
+        "prefill": "passed"
+      },
+      {
+        "product": "dried-orange-slices",
+        "prefill": "passed"
+      },
+      {
+        "product": "iqf-frozen-raspberries",
+        "prefill": "passed"
+      },
+      {
+        "product": "iqf-frozen-blueberries",
+        "prefill": "passed"
+      },
+      {
+        "product": "dried-rose-flowers",
+        "prefill": "passed"
+      },
+      {
+        "product": "raspberry-leaf-tea",
+        "prefill": "passed"
+      },
+      {
+        "product": "chrysanthemum-honeysuckle-goji-blend",
+        "prefill": "passed"
+      },
+      {
+        "product": "lemon-passion-fruit-orange-infusion",
+        "prefill": "passed"
+      },
+      {
+        "product": "cassia-goji-chrysanthemum-tea-bags",
+        "prefill": "passed"
+      }
+    ],
+    "layouts": [
+      {
+        "route": "about",
+        "width": 1440,
+        "result": "passed"
+      },
+      {
+        "route": "contact",
+        "width": 1440,
+        "result": "passed"
+      },
+      {
+        "route": "about",
+        "width": 1920,
+        "result": "passed"
+      },
+      {
+        "route": "contact",
+        "width": 1920,
+        "result": "passed"
+      },
+      {
+        "route": "about",
+        "width": 900,
+        "result": "passed"
+      },
+      {
+        "route": "contact",
+        "width": 900,
+        "result": "passed"
+      },
+      {
+        "route": "about",
+        "width": 390,
+        "result": "passed"
+      },
+      {
+        "route": "contact",
+        "width": 390,
+        "result": "passed"
+      }
+    ],
+    "validation": "required fields, email, inline errors, keyboard, preview/edit, clearing passed",
+    "memory": "client navigation and back/re-enter retain message and editable brief; new source replaces only sourcing context; no browser storage",
+    "legacy": "homepage form, packaging planner and old query prefills passed",
+    "reducedMotion": "About, Contact and Private Label passed",
+    "pageErrors": [],
+    "httpFailures": [],
+    "networkSubmissions": []
+  },
+  "builds": {
+    "preview": "passed",
+    "production": "passed; 161 HTML/RSC/JS/JSON/XML files audited, all unapproved guides excluded",
+    "typecheck": "passed",
+    "contentCheck": "passed: six complete SSR bodies, draft states and 12 unique images"
+  },
+  "warnings": "Next link prefetch produces unused-preload warnings; no page errors or failing preview HTTP requests were observed.",
+  "publication": "Not authorized; no email, push or deployment performed"
+}

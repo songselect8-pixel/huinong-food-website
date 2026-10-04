@@ -1,0 +1,55 @@
+{
+  "localProductionServer": "127.0.0.1:4175",
+  "checkedAt": "2026-10-04",
+  "resourcesStatus": "200 — neutral review state, no draft cards",
+  "results": [
+    {
+      "path": "/resources/frozen-vs-freeze-dried-berries/",
+      "status": 404
+    },
+    {
+      "path": "/guide-images/frozen-vs-freeze-dried-berries-cover.webp",
+      "status": 404
+    },
+    {
+      "path": "/resources/iqf-raspberry-grades/",
+      "status": 404
+    },
+    {
+      "path": "/guide-images/iqf-raspberry-grades-cover.webp",
+      "status": 404
+    },
+    {
+      "path": "/resources/specifying-iqf-frozen-blueberries/",
+      "status": 404
+    },
+    {
+      "path": "/guide-images/specifying-iqf-frozen-blueberries-cover.webp",
+      "status": 404
+    },
+    {
+      "path": "/resources/raspberry-leaf-tea-sourcing/",
+      "status": 404
+    },
+    {
+      "path": "/guide-images/raspberry-leaf-tea-sourcing-cover.webp",
+      "status": 404
+    },
+    {
+      "path": "/resources/private-label-tea-packaging/",
+      "status": 404
+    },
+    {
+      "path": "/guide-images/private-label-tea-packaging-cover.webp",
+      "status": 404
+    },
+    {
+      "path": "/resources/ingredient-sourcing-inquiry/",
+      "status": 404
+    },
+    {
+      "path": "/guide-images/ingredient-sourcing-inquiry-cover.webp",
+      "status": 404
+    }
+  ]
+}

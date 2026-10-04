@@ -97,3 +97,8 @@ Both pages and three images are complete in local development; visual acceptance
 - Unchanged: actual product identity/specifications/lot imagery, certificate holder/site/product/process coverage, original files/sharing permissions and product-specific market pathway.
 
 Stop after this About + Contact round. Resources remains planned only; no email connection, push or deployment is authorized for this round.
+# Resources review items — 2026-10-04
+
+Development is complete for the list, six full article drafts and 12 independent editorial images. Still pending: brand visual acceptance; named editorial/technical reviewer if supplied; actual product identity/specifications, packaging evidence and requested document availability; project-specific market checks; publication authorization and genuine publication dates. Final domain, contact channels and legal operator remain unconfirmed. No new evidence status has been inferred from completed pages.
+
+Before any future publication: confirm relative structured-data/image URLs against the approved domain, add an authorized sitemap, review canonical/Open Graph and indexing settings, perform public validator/search-console checks only after authorization. Local schema and noindex checks do not mean Google indexing or rich-result acceptance.

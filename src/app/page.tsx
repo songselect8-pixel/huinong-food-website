@@ -7,7 +7,8 @@ import { ScrollReveals } from "@/components/scroll-reveals";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { brand, categories } from "@/data/site";
-import { previewGuides } from "@/data/preview-guides";
+import { getGuides } from "@/data/guides";
+import { guideImage } from "@/data/guide-types";
 import { sitePath } from "@/data/paths";
 
 const qualitySupportTopics = [
@@ -59,6 +60,8 @@ function SupportIcon({ kind }: { kind: "systems" | "testing" | "export" }) {
 }
 
 export default function HomePage() {
+  const guides = getGuides();
+  const homeGuides = ["frozen-vs-freeze-dried-berries", "private-label-tea-packaging", "ingredient-sourcing-inquiry"].map(slug => guides.find(guide => guide.slug === slug)).filter(guide => guide !== undefined);
   return (
     <>
       <SiteHeader />
@@ -243,18 +246,20 @@ export default function HomePage() {
                 <span className="eyebrow section-kicker">07 / Resources</span>
                 <h2 id="resources-title">Insights &amp; Buying Guides</h2>
               </div>
-              <p>These working outlines are development drafts. Reviewed buying guides will be published here when the content is ready.</p>
+              <p>Practical guides to ingredient selection, packaging and sourcing documentation. <SiteLink className="text-link" href="/resources">Explore buying guides ↗</SiteLink></p>
             </div>
             <div className="resource-grid" data-reveal="">
-              {previewGuides.map((guide) => (
+              {homeGuides.map((guide) => (
                 <article className="resource-card" key={guide.title}>
-                  <div className="resource-media">
-                    <img src={sitePath(guide.image)} alt={guide.imageAlt} width={1448} height={1086} loading="lazy" decoding="async" />
-                  </div>
+                  <SiteLink className="resource-media" href={`/resources/${guide.slug}`} aria-label={`Read Guide: ${guide.title}`}>
+                    <img src={sitePath(guideImage(guide.slug,"cover"))} alt={guide.coverAlt} width={1672} height={941} loading="lazy" decoding="async" />
+                    <span className="resource-concept-label">Illustrative Concept</span>
+                  </SiteLink>
                   <div className="resource-copy">
-                    <span className="draft-chip">Development draft · not published</span>
-                    <h3>{guide.title}</h3>
+                    {guide.status === "draft" && <span className="draft-chip">Development draft · not published</span>}
+                    <h3><SiteLink href={`/resources/${guide.slug}`}>{guide.title}</SiteLink></h3>
                     <p>{guide.summary}</p>
+                    <SiteLink className="text-link" href={`/resources/${guide.slug}`}>Read Guide <span aria-hidden="true">↗</span></SiteLink>
                   </div>
                 </article>
               ))}
