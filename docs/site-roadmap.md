@@ -1,10 +1,10 @@
 # FRUNORIA site roadmap
 
-Updated: 2026-10-03. This is the current development sequence; older design notes remain historical records.
+Updated: 2026-10-04. This is the current development sequence; older design notes remain historical records.
 
 ## Fixed boundaries
 
-Keep FRUNORIA, the wine / blueberry / warm-white / blush / ice palette, approved Home and Private Label structure, the Products grid and existing URLs. Develop in the current project. Inquiry remains a local preview. No email connection, remote push, publication or deployment in this round.
+Keep FRUNORIA, the wine / blueberry / warm-white / blush / ice palette, approved Home and Private Label structure, the Products grid and existing URLs. Develop in the current project. Inquiry remains a local preview. The 2026-10-04 follow-up authorizes remote push and merge of the completed work. Email connection, site publication and deployment remain unauthorized; the deployment workflow is manual-only.
 
 Status vocabulary: **未开始**, **开发中**, **已完成开发**, **已检查功能**, **待视觉验收**, **待资料确认**. Code completion, actual interaction checks, visual acceptance and evidence verification are separate. A working page does not verify business claims or authorize publication.
 
