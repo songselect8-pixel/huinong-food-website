@@ -1,0 +1,95 @@
+{
+  "fourSources": {
+    "product": "passed: ID, form, source",
+    "privateLabel": "passed: type, direction, packing, quantity, timing",
+    "quality": "passed: product, market, multiple documents, certificate and source",
+    "application": "passed: product, application, packing, documents, source; free text kept in memory"
+  },
+  "productResults": [
+    {
+      "product": "dried-lemon-slices",
+      "prefill": "passed"
+    },
+    {
+      "product": "dried-orange-slices",
+      "prefill": "passed"
+    },
+    {
+      "product": "iqf-frozen-raspberries",
+      "prefill": "passed"
+    },
+    {
+      "product": "iqf-frozen-blueberries",
+      "prefill": "passed"
+    },
+    {
+      "product": "dried-rose-flowers",
+      "prefill": "passed"
+    },
+    {
+      "product": "raspberry-leaf-tea",
+      "prefill": "passed"
+    },
+    {
+      "product": "chrysanthemum-honeysuckle-goji-blend",
+      "prefill": "passed"
+    },
+    {
+      "product": "lemon-passion-fruit-orange-infusion",
+      "prefill": "passed"
+    },
+    {
+      "product": "cassia-goji-chrysanthemum-tea-bags",
+      "prefill": "passed"
+    }
+  ],
+  "layouts": [
+    {
+      "route": "about",
+      "width": 1440,
+      "result": "passed"
+    },
+    {
+      "route": "contact",
+      "width": 1440,
+      "result": "passed"
+    },
+    {
+      "route": "about",
+      "width": 1920,
+      "result": "passed"
+    },
+    {
+      "route": "contact",
+      "width": 1920,
+      "result": "passed"
+    },
+    {
+      "route": "about",
+      "width": 900,
+      "result": "passed"
+    },
+    {
+      "route": "contact",
+      "width": 900,
+      "result": "passed"
+    },
+    {
+      "route": "about",
+      "width": 390,
+      "result": "passed"
+    },
+    {
+      "route": "contact",
+      "width": 390,
+      "result": "passed"
+    }
+  ],
+  "validation": "required fields, email, inline errors, keyboard, preview/edit, clearing passed",
+  "memory": "client navigation and back/re-enter retain message and editable brief; new source replaces only sourcing context; no browser storage",
+  "legacy": "homepage form, packaging planner and old query prefills passed",
+  "reducedMotion": "About, Contact and Private Label passed",
+  "pageErrors": [],
+  "httpFailures": [],
+  "networkSubmissions": []
+}

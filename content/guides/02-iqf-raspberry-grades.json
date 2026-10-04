@@ -1,0 +1,133 @@
+{
+  "status": "draft",
+  "reviewStatus": "pending",
+  "author": null,
+  "reviewer": null,
+  "createdAt": "2026-10-04",
+  "updatedAt": "2026-10-04",
+  "publishedAt": null,
+  "publicationAuthorization": null,
+  "slug": "iqf-raspberry-grades",
+  "title": "IQF Raspberry Grades: Whole, Whole & Broken, and Crumble",
+  "metaDescription": "Define whole, whole and broken, or crumble raspberry requirements with a practical checklist for samples, visual criteria, packing and documents.",
+  "summary": "Turn a grade name into a usable brief: shape, breakage, separation, intended use and a shared inspection method.",
+  "category": "Ingredient Guides",
+  "coverAlt": "Illustrative frozen raspberry whole, whole-and-broken and crumble forms in three separate sample trays",
+  "bodyAlt": "Illustrative intact frozen raspberries beside broken sections and individual drupelets",
+  "relatedProducts": [
+    "iqf-frozen-raspberries",
+    "iqf-frozen-blueberries"
+  ],
+  "relatedGuides": [
+    "frozen-vs-freeze-dried-berries",
+    "ingredient-sourcing-inquiry"
+  ],
+  "lead": "Whole, Whole & Broken and Crumble are useful starting descriptions for an IQF raspberry discussion, but the names do not define a complete purchase specification. Describe the form you need, agree how it will be assessed, and keep food safety requirements separate from visual selection. No percentage or grade in this guide is a FRUNORIA supply commitment.",
+  "sections": [
+    {
+      "id": "define-the-name",
+      "title": "A grade name needs a written definition",
+      "paragraphs": [
+        "A buyer asking for whole raspberries may care most about recognizable shape after their own processing step. Another buyer may accept broken pieces for a fruit preparation. A crumble request may be driven by fragment size or distribution. Before discussing price, ask the supplier to describe exactly what the offered term means and how that material is separated or assessed.",
+        "The FAO/WHO Codex Alimentarius raspberry standard discusses free-flowing presentation and visual characteristics such as disintegration, stalks and extraneous vegetable matter. Its stated scope excludes products indicated for further industrial processing. It therefore provides useful vocabulary, not a universal whole/whole-and-broken/crumble contract for every application. [CXS 69-1981, sections 1, 2.4 and 3.3](https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXS%2B69-1981%252FCXS_069e.pdf).",
+        "Do not copy a supplier’s numerical grade threshold into a general buying policy without checking the method and context. If you request a limit, state whether it is your proposed acceptance criterion or an already agreed specification. Ask the supplier to identify any difference between your definition and the product they are offering."
+      ]
+    },
+    {
+      "id": "forms",
+      "title": "Choose a form around the intended result",
+      "paragraphs": [
+        "The following descriptions are discussion prompts. Availability, sampling method and acceptance limits must be confirmed for the actual product. None of these rows declares a certified grade."
+      ],
+      "table": {
+        "headers": [
+          "Requested direction",
+          "Explain what matters",
+          "Ask the supplier"
+        ],
+        "rows": [
+          [
+            "Whole",
+            "Recognizable berry shape and the appearance after your process.",
+            "How are intact and broken berries defined for this offer?"
+          ],
+          [
+            "Whole & Broken",
+            "A mix that may suit a fruit preparation after evaluation.",
+            "How is the mixture described and assessed on a sample?"
+          ],
+          [
+            "Crumble",
+            "Smaller raspberry fragments for a defined processing brief.",
+            "What fragment distribution and handling condition are proposed?"
+          ],
+          [
+            "Across every form",
+            "Identity, traceability, safe intended use and packing.",
+            "Which product and lot documents support the proposed supply?"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "visual-assessment",
+      "title": "Separate breakage, clumping and foreign matter",
+      "paragraphs": [
+        "Breakage concerns the raspberry’s own structure. Clumping concerns pieces or berries adhering together. Foreign matter is a different issue again. Write separate lines for these topics in your brief so that a response about “free flowing” does not silently become an answer about intact fruit or cleanliness.",
+        "Describe how your receiving team wants to assess separation. Ask whether evaluation is made in the frozen state, which sample size is proposed, and how the contents will be handled before inspection. Record any thawing or rough handling that could affect the observed sample. A photograph taken after uncontrolled handling may not represent the condition at delivery.",
+        "For visible pieces, identify which result you care about: appearance before processing, appearance after cooking, or the consistency of a prepared filling. Invite the supplier to state which of those questions a raw-material sample can answer. Your own finished-product trial remains a separate assessment.",
+        "Use photographs as a common reference only after they have been tied to an agreed sample and description. Generated photographs, including the images on this page, are useful for explaining forms but cannot set a lot acceptance limit. Avoid judging a percentage of whole fruit from a styled sample image.",
+        "Keep unwanted plant material and other foreign matter clearly described. Ask for the applicable specification and inspection approach rather than inventing a tolerance in a first email. If your quality team already has a required method or standard, provide its name and revision so the supplier can review the same reference."
+      ]
+    },
+    {
+      "id": "safety-and-evidence",
+      "title": "Visual selection does not reduce safety requirements",
+      "paragraphs": [
+        "A project that can use smaller pieces still needs the appropriate food safety review. Do not describe crumble as permission to accept unknown identity, unsuitable handling or missing traceability. Similarly, an attractive whole berry does not prove microbiological suitability. Visual selection and safety evidence answer different questions.",
+        "Tell the supplier whether the fruit will be processed further and what information your technical team needs to assess that use. Avoid the unsupported assumption that IQF means ready to eat. This article provides no processing instructions or validated treatment parameters, and the product’s actual intended-use information must be checked.",
+        "Ask for a specification first, then identify the testing information needed for the proposed order. A COA should be read for the actual sample or lot, methods, results and scope it contains; it should not be treated as automatic evidence for every test category. Use the [Quality & Compliance document request](/quality) to name your requirements.",
+        "Where certification information is relevant to your purchasing policy, ask which holder, site and activity the certificate covers. Keep that review distinct from the lot-level and product-level records. Do not infer coverage from a category name or a quality symbol on a website."
+      ]
+    },
+    {
+      "id": "quote-checklist",
+      "title": "A quotation checklist for raspberry projects",
+      "paragraphs": [
+        "Send one clear request and ask for exceptions to be identified. Leaving an undecided field openly marked “to discuss” is more useful than entering a guessed limit."
+      ],
+      "bullets": [
+        "Product: IQF frozen raspberries; requested form: [whole / whole & broken / crumble — to confirm].",
+        "Application: [describe your processing and desired finished appearance].",
+        "Visual criteria: [integrity, separation, colour and unwanted material topics to review].",
+        "Assessment: [sample identifier, proposed method and decision owner].",
+        "Quantity: [number and unit], with sample, initial order and later forecast distinguished.",
+        "Packing: [inner pack, outer carton and receiving requirements to discuss].",
+        "Delivery: [destination and desired project window], subject to supplier confirmation.",
+        "Documents: [specification, testing scope, traceability and cold-chain information required]."
+      ]
+    },
+    {
+      "id": "sample-to-order",
+      "title": "Carry the sample decision into the order",
+      "paragraphs": [
+        "Record the sample outcome in words that can travel with the purchase brief. “Looks good” is difficult to use when a different team handles receiving. Instead, note the requested form, the specification revision reviewed, the trial performed and the outstanding questions. If multiple samples are compared, keep their identifiers separate.",
+        "Before placing an order, ask the supplier to confirm the offered product against the agreed brief. Resolve any exception about form, packing or documentation in writing. If a different sample or specification is proposed, repeat the relevant review instead of assuming that the previous approval transfers automatically.",
+        "The [Bakery & Fruit Preparations page](/applications/bakery-fruit-preparations) can help frame an application discussion. Our existing [IQF Frozen Raspberries product page](/products/iqf-frozen-raspberries) is the product starting point. Whole, broken and crumble requirements remain selections to discuss against actual supply, not three newly created product promises."
+      ]
+    }
+  ],
+  "references": [
+    {
+      "title": "FAO/WHO Codex Alimentarius — CXS 69-1981, Quick-Frozen Raspberries",
+      "url": "https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%253A%252F%252Fworkspace.fao.org%252Fsites%252Fcodex%252FStandards%252FCXS%2B69-1981%252FCXS_069e.pdf",
+      "checkedAt": "2026-10-04",
+      "scope": "Sections 1, 2.4 and 3.3; scope and visual vocabulary only. Excludes products indicated for industrial processing; no grade thresholds adopted."
+    }
+  ],
+  "pending": [
+    "Actual whole/broken/crumble availability, definitions, thresholds and test method require supplier/product confirmation.",
+    "No Codex industrial applicability or ready-to-eat status claimed.",
+    "Editorial and technical review before publication."
+  ]
+}

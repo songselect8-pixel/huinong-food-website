@@ -128,3 +128,16 @@ The user explicitly authorized `/applications` plus tea/infusion, dried-citrus g
 Nine independent images are in `public/images/applications/v1/`: one overview, four entry scenes and four distinct detail heroes. They were generated with the built-in imagegen tool; exact prompts/provenance and two individually rejected/regenerated attempts are recorded in `docs/application-image-manifest.json`. Every scene is marked Application Concept in webpage text. Product identification cards reuse only each related product's own approved development main image; none of the 27 product concepts, Home or Private Label scenes is presented as a new application image.
 
 The new guides link to the current product and Quality pages. Application, selected product, source and optional packaging/document requests pass into the existing inquiry preview. No changes were made to product verification, certificate ownership/file/publication states or the dated Quality market research. See `docs/applications-review.md` and the updated roadmap for separate implementation, functional, visual and evidence status.
+
+## About + Contact and unified inquiry — 2026-10-04
+
+The authorized brand profile uses only the existing five product ranges and nine product records. It describes selection, project/packing communication and documentation review, with intended customer types rather than claimed customers. FRUNORIA is not assigned a legal operator, facility history, production figures or a relationship to historical suppliers. `/about` and `/contact` are now the canonical page routes. Existing Home and other-page visuals remain unchanged.
+
+Three independent Illustrative Concepts are in `public/images/about-contact/v1/`; their prompts, provenance, dimensions and hashes are in `docs/about-contact-image-manifest.json`. No image represents premises, testing evidence or an actual client project. No old product or application library file was changed.
+
+The shared form now supports Product Inquiry, Private Label Project and Quality Documents. Sourcing context is structured separately from Name, Email, Company, Country and Message; new contexts preserve those fields. Browser-only draft memory survives client navigation, while reload clears it. No messages, personal URL fields, persistence or marketing integrations were introduced. Quality confirmation/verification/upload/permission states are unchanged. See the current review and roadmap for separate development, functional, visual and evidence status.
+# Resources round — 2026-10-04
+
+Six complete editorial drafts now live in `content/guides`; 12 separate generated editorial concepts are in `content/images/resources`. See `docs/resources-source-review.md` and `docs/resources-content-review.json` for actual primary sources, checked dates, scope limitations and per-article pending items. Historical report numbers/specification examples were not converted into supply commitments. Old Home placeholder topics were merged into the completed leaf, packing and inquiry drafts; no parallel Blog collection remains.
+
+The images are illustrative and do not identify actual lots, species, tested grades, customer projects or packaging performance. Default production exports exclude unapproved content and assets; local preview is separate.

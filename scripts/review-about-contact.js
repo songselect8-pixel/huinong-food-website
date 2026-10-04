@@ -1,0 +1,115 @@
+// Actual browser checks; use playwright-cli run-code --filename scripts/review-about-contact.js.
+// Test contact values are synthetic and are never returned or included in screenshots.
+async page => {
+ const base='http://localhost:4173', shots='output/playwright/about-contact';
+ const errors=[], failed=[], sent=[];
+ page.on('pageerror',e=>errors.push(e.message));
+ page.on('response',r=>{if(r.status()>=400 && r.url().startsWith(base))failed.push({status:r.status(),url:r.url().split('?')[0]});});
+ page.on('request',r=>{if(!['GET','HEAD'].includes(r.method()))sent.push({method:r.method(),path:new URL(r.url()).pathname});});
+ const assert=(v,m)=>{if(!v)throw Error(m);};
+ const ready=async()=>{await page.evaluate(async()=>{await document.fonts.ready;await Promise.all([...document.images].map(i=>{i.loading='eager';return i.decode().catch(()=>{});}));});await page.waitForTimeout(500);};
+ const go=async path=>{const r=await page.goto(base+path);assert(r.status()===200,'Missing route '+path);await ready();};
+ const contact=async()=>{await page.waitForURL('**/contact/**');await ready();};
+ const summary=()=>page.locator('.inquiry-summary');
+ const value=name=>page.locator('.quote-form [name="'+name+'"]').inputValue();
+ const width=async()=>assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Horizontal overflow');
+ const readable=async()=>assert(await page.locator('main h1,main h2,main h3,main p').evaluateAll(nodes=>nodes.every(n=>{if(!n.getClientRects().length)return true;for(let p=n;p&&p!==document.body;p=p.parentElement){const s=getComputedStyle(p);if(s.visibility==='hidden')return true;if(+s.opacity<.99)return false;}return true;})),'Faded text');
+ await page.setViewportSize({width:1440,height:1000});
+ await go('/about/');
+ assert(await page.locator('.ab-directory > a').count()===5,'Five product directions');
+ assert(await page.locator('main img').count()===2,'About unique images');
+ await page.locator('.ab-directory > a').filter({hasText:'Flowers & Herbal Ingredients'}).click();await page.waitForURL('**/products/**');await ready();
+ assert(await page.locator('.catalog-card').count()===2,'About category filter');
+ assert((await page.locator('.catalog-card').allTextContents()).some(t=>t.includes('Raspberry Leaf Tea')),'Leaf in botanical category');
+ await page.locator('.header-quote').click();await contact();
+ assert((await page.locator('.quote-form [required]').count())===3,'Only Name Email Message required');
+ await page.getByRole('button',{name:'Preview Inquiry',exact:true}).click();
+ assert(await page.locator('.field-error').count()===3,'Required errors');
+ assert(await page.locator('input[name="name"]').evaluate(n=>n===document.activeElement),'Focus first error');
+ await page.locator('input[name="name"]').fill('Preview QA');
+ await page.locator('input[name="email"]').fill('invalid');
+ await page.locator('textarea[name="message"]').fill('Synthetic review brief, retained while browsing.');
+ await page.getByRole('button',{name:'Preview Inquiry',exact:true}).click();
+ assert(await page.locator('#error-email').isVisible(),'Email validation');
+ await page.locator('input[name="email"]').fill('qa@example.invalid');
+ await page.getByRole('button',{name:'Preview Inquiry',exact:true}).click();
+ assert(await page.locator('.inquiry-preview').isVisible(),'Actual preview');
+ assert((await page.locator('.inquiry-preview').innerText()).includes('has not been sent'),'Not sent state');
+ await page.getByRole('button',{name:'Back to Edit'}).click();
+ assert((await value('message')).startsWith('Synthetic review'),'Back preserves message');
+ await page.evaluate(()=>window.__inquirySessionProbe=true);
+ await page.getByRole('navigation').getByRole('link',{name:'Products',exact:true}).click();await page.waitForURL('**/products/**');await ready();
+ await page.locator('.catalog-card').filter({hasText:'Dried Lemon Slices'}).getByRole('link',{name:'View Product',exact:true}).click();await page.waitForURL('**/dried-lemon-slices/');await ready();
+ const firstForm=await page.locator('.pd-option').first().locator('strong').innerText();await page.locator('.pd-option').first().click();
+ await page.locator('main').getByRole('link',{name:'Request a Quote',exact:true}).first().click();await contact();
+ assert(await value('product')==='dried-lemon-slices','Product ID prefill');
+ assert(await value('form')===firstForm,'Product form prefill');
+ assert((await summary().innerText()).includes('/products/dried-lemon-slices'),'Product source');
+ assert((await value('message')).startsWith('Synthetic review'),'New prefill did not overwrite message');
+ assert(await page.evaluate(()=>window.__inquirySessionProbe===true),'Client navigation retained memory');
+ assert(!page.url().includes('qa%40')&&!page.url().includes('Synthetic'),'No PII in URL');
+ await summary().getByRole('button',{name:'Edit details',exact:true}).click();
+ await page.locator('[name="packaging"]').fill('Neutral bulk pack discussion');
+ await page.goBack();await ready();await page.locator('main').getByRole('link',{name:'Request a Quote',exact:true}).first().click();await contact();
+ assert(await value('packaging')==='Neutral bulk pack discussion','Same incoming link preserves edited brief');
+ await summary().getByRole('button',{name:'Remove product',exact:true}).click();
+ assert(await value('product')==='','Remove product');assert(await page.locator('.quote-form [name="form"]').count()===0,'Remove dependent form');
+ await page.getByRole('navigation').getByRole('link',{name:'Private Label',exact:true}).click();await page.waitForURL('**/private-label/');await ready();
+ await page.locator('main').getByRole('link',{name:'Start Your Project',exact:true}).first().click();await contact();
+ assert(await page.locator('input[name="inquiryType"]:checked').inputValue()==='private-label','Private label type');
+ assert((await summary().innerText()).includes('/private-label'),'Private label source');
+ await summary().getByRole('button',{name:'Edit details',exact:true}).click();
+ await page.locator('select[name="interest"]').selectOption('tea-bags');await page.locator('[name="packaging"]').fill('Plain sample pouch discussion');await page.locator('[name="quantity"]').fill('200');await page.locator('[name="unit"]').selectOption('packs');await page.locator('[name="timeline"]').fill('Review sampling sequence');
+ await page.getByRole('button',{name:'Preview Inquiry',exact:true}).click();
+ assert((await page.locator('.inquiry-preview').innerText()).includes('Review sampling sequence'),'Private label preview fields');
+ await page.getByRole('button',{name:'Back to Edit'}).click();
+ await page.getByRole('navigation').getByRole('link',{name:'Quality',exact:true}).click();await page.waitForURL('**/quality/');await ready();
+ await page.getByRole('button',{name:'Request HACCP certification information',exact:true}).click();
+ await page.locator('#request-product').selectOption('iqf-frozen-raspberries');await page.locator('#request-market').selectOption('eu');await page.locator('input[name="document"][value="testing"]').check();
+ await page.locator('#documentation-request-form').getByRole('button',{name:'Request Documentation',exact:true}).click();await contact();
+ assert(await value('product')==='iqf-frozen-raspberries','Quality product');
+ assert(await page.locator('input[name="inquiryType"]:checked').inputValue()==='quality','Quality request type');
+ assert((await summary().innerText()).includes('HACCP')&&(await summary().innerText()).includes('Testing Documentation'),'Document/certificate topics');
+ assert((await value('targetMarket')).includes('European'),'Quality market');
+ assert(!(await summary().innerText()).includes('200 packs'),'No stale private label quantity');
+ assert((await value('message')).startsWith('Synthetic review'),'Quality keeps message');
+ await summary().getByRole('button',{name:'Edit details',exact:true}).click();await page.locator('input[name="documentType"][value="certification"]').uncheck();assert(await page.locator('[name="certification"]').count()===0,'Certificate dependency clears');
+ await page.getByRole('navigation').getByRole('link',{name:'Applications',exact:true}).click();await page.waitForURL('**/applications/');await ready();
+ await page.locator('.ap-range-card').filter({hasText:'Bakery & Fruit Preparations'}).getByRole('link',{name:'Explore Application',exact:true}).click();await page.waitForURL('**/bakery-fruit-preparations/');await ready();
+ await page.locator('[name="applicationProduct"]').selectOption('iqf-frozen-blueberries');await page.locator('.ap-brief-extra summary').click();await page.locator('[name="applicationPackaging"]').fill('Discuss portioning and packs');await page.locator('[name="applicationDocuments"]').fill('Storage record review');await page.getByRole('button',{name:'Continue to Inquiry',exact:true}).click();await contact();
+ assert(await value('product')==='iqf-frozen-blueberries','Application product');assert(await value('application')==='Bakery & Fruit Preparations','Application direction');assert(await value('packaging')==='Discuss portioning and packs','Application packaging');assert(await value('documentNote')==='Storage record review','Application documents');assert(!page.url().includes('Storage')&&!page.url().includes('portioning'),'Free text stays out of URL');
+ assert((await value('message')).startsWith('Synthetic review'),'Application keeps message');
+ assert(await page.evaluate(()=>localStorage.length===0&&sessionStorage.length===0),'No persistent personal storage');
+ // Clear before any screenshots. No personal fixture data appears in capture artifacts.
+ await page.getByRole('button',{name:'Clear this draft',exact:true}).click();
+ await go('/?product=dried-orange-slices#quote');assert(await value('product')==='dried-orange-slices','Legacy homepage prefill');
+ await page.locator('.planner-product-option').filter({hasText:'Tea Bags & Packed Teas'}).click();await page.locator('.planner-next').click();await page.locator('.planner-field textarea').fill('Plain pouch requirement');await page.locator('.planner-next').click();await page.locator('.planner-field textarea').fill('Discuss sample plan');await page.locator('.planner-next').click();
+ assert(await value('interest')==='tea-bags'&&await value('packaging')==='Plain pouch requirement','Home planner shared fields');
+ await page.locator('.header-quote').click();await contact();assert(await value('packaging')==='Plain pouch requirement','Home to Contact shares draft');
+ await page.getByRole('button',{name:'Clear this draft',exact:true}).click();
+ await go('/contact/?product=unknown&form=invalid&name=IGNORE&email=IGNORE&message=IGNORE');assert(await value('product')===''&&await value('name')===''&&await value('email')===''&&await value('message')==='','Unknown params and personal URL fields ignored');
+ await go('/contact/?source=application&application=beverage-garnishes&product=iqf-frozen-blueberries');assert(await value('product')==='','Unrelated application product rejected');
+ await go('/contact/?source=quality&product=raspberry-leaf-tea&document=unknown&market=unknown&certification=unknown');assert(!await summary().innerText().then(t=>t.includes('unknown')),'Unknown documentation identifiers ignored');
+ await go('/products/');
+ const productLinks=await page.locator('.catalog-card h2 a').evaluateAll(nodes=>nodes.map(n=>n.getAttribute('href')));
+ assert(productLinks.length===9,'Nine products remain');
+ const productResults=[];
+ for(const href of productLinks){await go(href);await page.locator('main').getByRole('link',{name:'Request a Quote',exact:true}).first().click();await contact();const id=href.split('/').filter(Boolean).pop();assert(await value('product')===id,'Product link mismatch '+id);productResults.push({product:id,prefill:'passed'});}
+ await page.getByRole('button',{name:'Clear this draft',exact:true}).click();
+ const layouts=[];
+ for(const viewport of [{width:1440,height:1000},{width:1920,height:1080},{width:900,height:1000},{width:390,height:844}]){
+  await page.setViewportSize(viewport);
+  for(const route of ['about','contact']){await go('/'+route+'/');await width();await readable();assert(await page.locator('main img').evaluateAll(images=>images.every(i=>i.complete&&i.naturalWidth>0&&Math.abs(i.width/i.height-i.naturalWidth/i.naturalHeight)<.015)),'Image ratio or loading');
+   layouts.push({route,width:viewport.width,result:'passed'});
+   if(viewport.width===1440||viewport.width===390){const suffix=viewport.width===390?'mobile':'desktop';await page.screenshot({path:`${shots}/${route}-${suffix}-full.png`,fullPage:true});await page.screenshot({path:`${shots}/${route}-${suffix}-top.png`});}
+  }
+ }
+ await page.getByRole('button',{name:'Open menu',exact:true}).click();await page.getByRole('navigation').getByRole('link',{name:'About',exact:true}).click();await page.waitForURL('**/about/');await ready();assert(await page.getByRole('button',{name:'Open menu',exact:true}).isVisible(),'Mobile menu closed after navigation');
+ await page.getByRole('button',{name:'Open menu',exact:true}).click();await page.getByRole('navigation').getByRole('link',{name:'Request a Quote',exact:true}).click();await contact();
+ await page.getByRole('radio',{name:'Quality Documents',exact:true}).check();await page.locator('.form-extra summary').click();await page.locator('input[name="documentType"][value="specification"]').check();await width();await page.locator('.quote-form').screenshot({path:`${shots}/contact-mobile-documents.png`});
+ await page.getByRole('button',{name:'Clear this draft',exact:true}).click();
+ await page.getByRole('radio',{name:'Product Inquiry',exact:true}).focus();await page.keyboard.press('ArrowRight');assert(await page.getByRole('radio',{name:'Private Label Project',exact:true}).isChecked(),'Radio keyboard interaction');
+ await page.emulateMedia({reducedMotion:'reduce'});for(const route of ['about','contact','private-label']){await go('/'+route+'/');await width();await readable();}await page.emulateMedia({reducedMotion:'no-preference'});
+ assert(errors.length===0,'Page errors: '+errors.join(';'));assert(failed.length===0,'HTTP failures: '+JSON.stringify(failed));assert(sent.length===0,'Unexpected network submission: '+JSON.stringify(sent));
+ return {fourSources:{product:'passed: ID, form, source',privateLabel:'passed: type, direction, packing, quantity, timing',quality:'passed: product, market, multiple documents, certificate and source',application:'passed: product, application, packing, documents, source; free text kept in memory'},productResults,layouts,validation:'required fields, email, inline errors, keyboard, preview/edit, clearing passed',memory:'client navigation and back/re-enter retain message and editable brief; new source replaces only sourcing context; no browser storage',legacy:'homepage form, packaging planner and old query prefills passed',reducedMotion:'About, Contact and Private Label passed',pageErrors:errors,httpFailures:failed,networkSubmissions:sent};
+}

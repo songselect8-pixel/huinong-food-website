@@ -9,6 +9,8 @@ npm run dev
 
 Open `http://localhost:3000`. The homepage includes selectable application scenes, an editable packaging brief, expandable documentation topics and development-only Resources drafts. The inquiry form validates in the browser and previews details; it does not send data. Run `npm run typecheck` and `npm run build` before reviewing changes.
 
+`/about` introduces the product focus and project approach. `/contact` and the homepage share one inquiry form and an in-memory draft. Internal client navigation keeps the draft; refresh/close clears it. No personal data is placed in URLs or persistent browser storage. Current inquiry checks are in `scripts/review-about-contact.js` and `scripts/review-inquiry-final.js`; the screenshot/provenance record is `docs/about-contact-review.md`.
+
 Product claims, sources and image limitations are tracked in `docs/source-map.md` and `docs/missing-content.md`. Selected development records are versioned with the code; original source files and local backups remain excluded.
 
 ## Public development preview

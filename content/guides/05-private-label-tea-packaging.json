@@ -1,0 +1,107 @@
+{
+  "status": "draft",
+  "reviewStatus": "pending",
+  "author": null,
+  "reviewer": null,
+  "createdAt": "2026-10-04",
+  "updatedAt": "2026-10-04",
+  "publishedAt": null,
+  "publicationAuthorization": null,
+  "slug": "private-label-tea-packaging",
+  "title": "Private Label Tea & Dried Fruit Packaging: A Buyer’s Planning Guide",
+  "metaDescription": "Plan a tea or dried-fruit packaging project with a brief for pack format, food-contact materials, fill, labels, samples, quantities and timing.",
+  "summary": "Separate food-contact packaging from presentation, then bring format, filling, artwork and review requirements into one project brief.",
+  "category": "Private Label & Packaging",
+  "coverAlt": "Illustrative unbranded pouches, outer box, filter tea bags and separate dried citrus samples",
+  "bodyAlt": "Illustrative packaging folds, blank label samples and empty filter sachets in a planning arrangement",
+  "relatedProducts": [
+    "cassia-goji-chrysanthemum-tea-bags",
+    "dried-orange-slices",
+    "lemon-passion-fruit-orange-infusion"
+  ],
+  "relatedGuides": [
+    "raspberry-leaf-tea-sourcing",
+    "ingredient-sourcing-inquiry"
+  ],
+  "lead": "A useful packaging brief describes what touches the food, how much each pack should hold, how it will be used and which information must appear on it. Start there before choosing colours or a gift-box shape. Packaging directions in this guide are subjects for project review, not a promise that every material, format or decoration is already available.",
+  "sections": [
+    {
+      "id": "pack-levels",
+      "title": "Separate the ingredient pack from the presentation pack",
+      "paragraphs": [
+        "Map the pack from the inside out. The primary pack contains or contacts the ingredient. A tea bag may be one part of that system, followed by an individual wrap or pouch. An outer carton or gift box may organize and present those packs. Write down which layer performs which role so that an appealing outer box does not stand in for a food-contact packaging specification.",
+        "The European Commission identifies packaging and containers as food contact materials and explains that constituents transferring into food can affect safety and quality. For an EU project, its general framework is a useful starting reference; the applicable material and intended use still need review. [European Commission food-contact overview](https://food.ec.europa.eu/food-safety/chemical-safety/food-contact-materials_en). General framework checked on 4 October 2026.",
+        "Do not infer barrier performance or food-contact suitability from a kraft-paper appearance. Ask for the actual construction and supporting information for the proposed use. Likewise, a recyclable-looking pouch does not establish a recycling, compostability or biodegradability claim. Keep those statements out of artwork until the claim and its market context have been reviewed."
+      ]
+    },
+    {
+      "id": "formats",
+      "title": "Choose a format around the product and customer use",
+      "paragraphs": [
+        "A bulk ingredient order, a filled tea-bag project and a retail pouch ask different questions. A bulk buyer may prioritize receiving, handling and internal portioning. A tea-bag project adds questions about the ingredient cut and the filled unit. A pouch or boxed presentation adds decisions about the consumer-facing information and the arrangement of the packs.",
+        "Distinguish filled tea bags from empty filter materials. If the inquiry concerns a filled bag, identify the ingredient direction and what needs to be confirmed about its declaration. If the inquiry concerns packaging development, say which parts of the pack are being reviewed. Do not let the phrase “tea bags” conceal whether food, filter material or both are in scope.",
+        "For dried slices, describe whether recognizable whole slices are part of the desired presentation. For loose botanical blends, describe how the product will be dispensed or portioned. Treat these as trial questions rather than assumptions that one pouch size or closing system works for every ingredient.",
+        "The current [Private Label page](/private-label) outlines the project conversation and packaging directions. Use it to identify options to discuss, then ask which proposal can be evaluated for your actual ingredient, quantity and intended market."
+      ]
+    },
+    {
+      "id": "dimensions-fill",
+      "title": "Define dimensions and fill before final artwork",
+      "paragraphs": [
+        "Share the intended net quantity and unit, along with any required pack dimensions. If dimensions are undecided, say so and request a proposal for review. Be clear whether a measurement describes the filled pack, the flat material or the outer carton. These distinctions can prevent an artwork layout from being approved against the wrong shape.",
+        "Ask what sample or filling trial is needed to assess the proposal. Product form matters to the discussion: a leaf, a tea blend and a citrus slice should not be assumed to occupy an identical volume at the same weight. Confirm the presentation through the actual sample rather than scaling a photograph.",
+        "Record opening, closing and portioning requirements. Tell the supplier if your team wants to review resealing, individual portions, visibility of the product or protection during distribution. These are needs to assess, not evidence that a particular closure, window or construction is already suitable.",
+        "Confirm how the primary packs will be grouped into cartons or gift packaging. Ask who supplies each component and which dimensions are still provisional. A change to an inner pack can affect the outer layout, so include a final compatibility review before treating the drawing as ready."
+      ]
+    },
+    {
+      "id": "artwork",
+      "title": "Keep artwork responsibilities visible",
+      "paragraphs": [
+        "Prepare a content sheet separately from the visual design. It should identify the product name, ingredient information to confirm, required languages, pack quantity and any other information your market review calls for. Identify who owns the brand assets and who has authority to approve the final label wording.",
+        "Provide editable design files or the artwork format requested for the agreed project. Ask for the current dieline and a proof, and define how revisions will be tracked. Blank concept labels on this website are layout illustrations; they are not approved label text or completed customer packaging.",
+        "Use a single approval record for the final wording and artwork version. Keep unconfirmed claims, certifications and environmental statements visibly unresolved. A design approval should not be interpreted as approval of a food-contact construction or a technical product specification.",
+        "If a destination market has specific language or labelling requirements, have those checked for the actual product before final approval. This guide is not a complete market-specific label review, and it does not supply ready-to-print legal copy."
+      ]
+    },
+    {
+      "id": "planning-checklist",
+      "title": "A packaging development checklist",
+      "paragraphs": [
+        "Bring the following fields into one working brief. Mark undecided items clearly and ask for proposal-specific confirmation."
+      ],
+      "bullets": [
+        "Ingredient and form: named product, actual ingredient declaration and intended application.",
+        "Pack structure: primary food-contact pack, individual wrap if needed, outer carton and any gift presentation.",
+        "Fill and dimensions: target quantity with unit, provisional measurements and trial questions.",
+        "Materials: requested construction or performance questions, with food-contact and market documentation to review.",
+        "Artwork: brand files, languages, content owner, dieline, proof and final approval version.",
+        "Quantities: sample need, initial order, quantity per design and any forecast kept separate.",
+        "Timing: desired sample and decision milestones, with supplier feasibility still to confirm.",
+        "Release questions: outstanding product, packing, documentation and artwork approvals."
+      ]
+    },
+    {
+      "id": "samples-timing",
+      "title": "Use milestones without inventing lead times",
+      "paragraphs": [
+        "A useful schedule identifies decisions: ingredient selection, sample review, pack confirmation, artwork approval and production coordination. Put your desired dates beside those decisions, then ask for a feasible proposal. A preferred launch date should not be mistaken for a confirmed production or delivery commitment.",
+        "Discuss quantity requirements at the component level when relevant. Different pack designs or components may need separate commercial review. Ask for the basis of the proposed quantity requirement rather than assuming a universal MOQ applies to every private label project.",
+        "Before progressing, compare the proposal with the brief and list open items. Use [Quality & Compliance](/quality) for packaging, ingredient and document questions, and the inquiry below for your chosen product. This development preview records a project discussion; it does not place an order or send a message."
+      ]
+    }
+  ],
+  "references": [
+    {
+      "title": "European Commission — Food Contact Materials",
+      "url": "https://food.ec.europa.eu/food-safety/chemical-safety/food-contact-materials_en",
+      "checkedAt": "2026-10-04",
+      "scope": "EU general food-contact framework; no product-specific or material-specific compliance conclusion."
+    }
+  ],
+  "pending": [
+    "Actual formats, materials, barrier/food-contact evidence and artwork-support scope require project confirmation.",
+    "No environmental claims, fixed MOQ or lead time adopted.",
+    "Destination-specific label review and brand publication approval pending."
+  ]
+}

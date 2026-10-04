@@ -1,4 +1,5 @@
 "use client";
+import SiteLink from "@/components/site-link";
 
 import { useState } from "react";
 import { applications, products } from "@/data/site";
@@ -63,18 +64,18 @@ export function ApplicationExplorer() {
                 <span className="mini-label">Related product directions</span>
                 <div className="application-product-links">
                   {relatedProducts.map((product) => (
-                    <a href={sitePath(product.detail ? `/products/${product.id}` : `/products?category=${product.categoryId}`)} key={product.id}>
+                    <SiteLink href={sitePath(product.detail ? `/products/${product.id}` : `/products?category=${product.categoryId}`)} key={product.id}>
                       {product.name} <span aria-hidden="true">↗</span>
-                    </a>
+                    </SiteLink>
                   ))}
                 </div>
               </div>
-              <a
+              <SiteLink
                 className="button button-dark"
                 href={sitePath(application.href)}
               >
                 Explore Application <span aria-hidden="true">↗</span>
-              </a>
+              </SiteLink>
             </div>
           );
         })}

@@ -1,0 +1,132 @@
+{
+  "status": "draft",
+  "reviewStatus": "pending",
+  "author": null,
+  "reviewer": null,
+  "createdAt": "2026-10-04",
+  "updatedAt": "2026-10-04",
+  "publishedAt": null,
+  "publicationAuthorization": null,
+  "slug": "ingredient-sourcing-inquiry",
+  "title": "What to Include in a Fruit & Botanical Ingredient Sourcing Inquiry",
+  "metaDescription": "Write a useful fruit or botanical ingredient inquiry with product identity, application, quantity, packaging, documents and an editable English template.",
+  "summary": "Make the first conversation productive with a clear product brief, specific document requests and a copyable inquiry template.",
+  "category": "Sourcing & Documentation",
+  "coverAlt": "Illustrative sourcing desk with separate botanical and citrus samples, plain pouches and a blank notebook",
+  "bodyAlt": "Illustrative organized sample pouches, dried rose buds and blank project cards",
+  "relatedProducts": [
+    "dried-lemon-slices",
+    "raspberry-leaf-tea",
+    "iqf-frozen-blueberries"
+  ],
+  "relatedGuides": [
+    "specifying-iqf-frozen-blueberries",
+    "private-label-tea-packaging"
+  ],
+  "lead": "A useful sourcing inquiry tells the recipient which ingredient you mean, what you intend to do with it and what decision you need help making. Include known requirements, distinguish them from open questions, and ask for the documents that address your project. A short, specific brief is more actionable than a request for a catalogue, every certificate and the lowest price.",
+  "sections": [
+    {
+      "id": "identify-product",
+      "title": "Identify the ingredient before the commercial request",
+      "paragraphs": [
+        "Use the product name and physical form together. Dried lemon slices, frozen blueberries and raspberry leaf material are different starting points, even if all are purchased by one beverage business. For a botanical, include the declared or required botanical identity and plant part where known. For a blend, name the ingredient direction and ask for the actual declaration rather than guessing a formula from a picture.",
+        "State whether a requested detail is fixed or still open. “We require whole slices” is different from “Please advise which slice forms we can review.” Both can be useful, but they call for different responses. If you have a specification, identify its revision and highlight the criteria that matter most to the first discussion.",
+        "Describe the intended application and the stage at which the ingredient enters your process. Do not rely on a broad word such as beverage or bakery to convey all preparation requirements. You can explain the intended result without disclosing an entire recipe or assuming that an unreviewed product is already suitable."
+      ]
+    },
+    {
+      "id": "quantities",
+      "title": "Give quantity, units and project timing context",
+      "paragraphs": [
+        "Write the number with its unit. Identify whether it describes a trial sample, the first order, a recurring requirement or an early forecast. If quantity is uncertain, give the stage of the project and ask what information is needed for a useful proposal. Do not turn a tentative forecast into an apparent committed order.",
+        "Separate preferred timing from confirmed arrangements. State the milestone you are planning toward and whether sample evaluation, packing development or internal approval must happen first. Ask the supplier to respond with feasible options and dependencies. This avoids treating an aspirational launch date as an agreed delivery promise.",
+        "Name the destination market and, when known, the delivery destination and proposed delivery scope. These details help identify which transport and document questions need review. They do not establish market access, and they should not be replaced by a generic request for “worldwide shipping.”",
+        "For frozen products, flag cold-chain and receiving questions. For dried ingredients, describe the packing and handling needs relevant to the intended use. Ask for the actual storage instructions and supporting information rather than copying conditions from a general product category."
+      ]
+    },
+    {
+      "id": "document-types",
+      "title": "Ask for documents by purpose",
+      "paragraphs": [
+        "Documents answer different questions. Start by explaining the decision behind the request: confirming a product description, reviewing a lot result, checking a system certificate or preparing market-specific import documentation. An organized request allows the recipient to state what exists, what needs coordination and what requires further information.",
+        "ISO explains that it develops standards but does not itself certify organizations; certification is carried out by external certification bodies. When reviewing a claimed certification, identify the issuer and scope rather than relying on a logo. [ISO certification guidance](https://www.iso.org/certification.html). This principle does not verify any FRUNORIA-related certificate.",
+        "Use the following distinctions to read the response. No document listed here automatically substitutes for another, and a requested document should not be assumed to exist or to cover all products."
+      ],
+      "table": {
+        "headers": [
+          "Document",
+          "Question it can help address",
+          "What to check"
+        ],
+        "rows": [
+          [
+            "Product specification",
+            "What product and acceptance description are proposed?",
+            "Product identity, revision, fields, methods and agreed requirements."
+          ],
+          [
+            "COA / testing information",
+            "Which sample or lot was assessed, and for what?",
+            "Sample/lot link, actual analytes, methods, results and report scope."
+          ],
+          [
+            "Food safety system certificate",
+            "Which organization, site and activity are covered?",
+            "Holder, issuer, scope, validity and verification route."
+          ],
+          [
+            "Market / import documentation",
+            "What records are relevant to this destination and transaction?",
+            "Product, origin, importer role and current project-specific requirements."
+          ],
+          [
+            "Packaging / storage information",
+            "How should this proposed pack and product be handled?",
+            "Construction, intended use, instructions and supporting evidence."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "request-scope",
+      "title": "Be precise about testing and certification questions",
+      "paragraphs": [
+        "A request for “all tests” rarely identifies the decision your team needs to make. Name the testing topics, any method or criterion your quality team requires, the destination market and whether the record needs to relate to a proposed lot. Ask the supplier to clarify the scope of available information and any additional coordination required.",
+        "Do not assume that a COA contains pesticide residues, heavy metals and every microbiological test. Read the items actually listed and their sample references. If a relevant topic is absent, ask about it explicitly. Similarly, a specification is a product description or acceptance document; it should not be read as a report that a particular lot has passed every field.",
+        "For certification information, keep brand identity and legal holder separate. Ask which actual holder, site and process the document covers and whether the proposed product falls within that scope. A missing public download does not prove that a certificate does not exist, but it also cannot justify inventing its details.",
+        "The [Quality & Compliance page](/quality) provides the existing request route. Market content there retains its own review state. A completed guide or form does not turn pending certificate relationships or market research into verified supply commitments."
+      ]
+    },
+    {
+      "id": "template",
+      "title": "An editable English inquiry template",
+      "paragraphs": [
+        "Replace the bracketed fields with your own information and remove questions that do not apply. Leave an undecided point clearly labelled “to discuss.” This is a drafting aid, not a real customer inquiry, quotation or completed transaction.",
+        "Keep contact details out of the template until you choose how to share it. The editor below stays in memory, and the copy button copies only your current template text. It does not submit anything. If clipboard access is unavailable, select and copy the text manually."
+      ]
+    },
+    {
+      "id": "review-reply",
+      "title": "Review the reply against the same brief",
+      "paragraphs": [
+        "When a proposal arrives, compare it against the fields you sent. Note any change in product form, packing, quantity basis, delivery scope or document availability. Ask for exceptions to be explicit rather than interpreting silence as agreement. Keep the quoted specification revision and sample reference with the discussion.",
+        "Send outstanding questions in a short follow-up grouped by owner or decision. Your development team may need a sample trial, procurement may need a clarified quantity basis, and quality may need a specific document scope. This is more effective than repeating the entire inquiry without identifying what remains unresolved.",
+        "Use [Applications](/applications) to explore relevant existing product directions or [Private Label](/private-label) for a packing project. At the end of this guide you can actively select a product and document topics to bring into the shared inquiry. Merely reading about a product does not add it to your inquiry."
+      ]
+    }
+  ],
+  "inquiryTemplate": "Subject: Sourcing inquiry — [product name and form]\n\nHello,\nWe are reviewing [product / botanical identity and plant part, if relevant] for [intended application and processing context].\n\nConfirmed requirements: [known specifications or revision reference]\nOpen questions: [details where guidance is needed]\nQuantity and unit: [sample / initial order / forecast — distinguish each]\nPackaging: [inner pack, net quantity, outer pack and label needs]\nTarget market / destination: [market and delivery destination]\nProject timing: [desired milestones, subject to confirmation]\n\nPlease advise on the proposed product, sample review and packaging options. We would like to request [specification / ingredient information / named testing scope / certification holder and scope / storage information]. Please identify any information requiring further confirmation and any exceptions to our brief.\n\nThank you,\n[Your name / company, added only when you choose to share]",
+  "references": [
+    {
+      "title": "ISO — Certification",
+      "url": "https://www.iso.org/certification.html",
+      "checkedAt": "2026-10-04",
+      "scope": "Certification is performed by external certification bodies; verify issuer and scope rather than treating a logo as a lot report."
+    }
+  ],
+  "pending": [
+    "Brand/technical editorial approval; actual document availability remains product-specific.",
+    "No certificate ownership, market clearance, delivery or production promise made.",
+    "Final legal operator/contact channels and publication authorization remain unset."
+  ]
+}

@@ -27,8 +27,8 @@ export const navigation = [
   { label: "Applications", href: "/applications" },
   { label: "Private Label", href: "/private-label" },
   { label: "Quality", href: "/quality" },
-  { label: "About", href: "/#about" },
-  { label: "Resources", href: "/#resources" },
+  { label: "About", href: "/about" },
+  { label: "Resources", href: "/resources" },
 ] as const;
 
 export type Verification = "store-listing" | "store-category" | "provided-brief";
@@ -407,12 +407,3 @@ export const applications = [
     imageAlt: "Illustrative pastry preparation scene with dried citrus nearby",
   },
 ] as const;
-
-export type Article = {
-  slug: string;
-  title: string;
-  publishedAt: string;
-  summary: string;
-};
-
-export const articles: Article[] = [];

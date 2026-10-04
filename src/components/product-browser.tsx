@@ -1,4 +1,5 @@
 "use client";
+import SiteLink from "@/components/site-link";
 
 import { useEffect, useMemo, useState } from "react";
 import { sitePath } from "@/data/paths";
@@ -9,20 +10,20 @@ const orderedProducts = categories.flatMap((category) => products.filter((produc
 
 function ProductCard({ product }: { product: Product }) {
   const category = categories.find((item) => item.id === product.categoryId);
-  const href = sitePath(product.detail ? `/products/${product.id}` : `/?product=${encodeURIComponent(product.id)}#quote`);
+  const href = sitePath(product.detail ? `/products/${product.id}` : `/contact?product=${encodeURIComponent(product.id)}`);
   const image = product.detail?.images.main ?? product.conceptImage;
   const action = product.detail ? "View Product" : "Discuss Product";
 
   return <article className="catalog-card">
-    <a className="catalog-card-media" href={href} aria-label={`${action}: ${product.name}`}>
+    <SiteLink className="catalog-card-media" href={href} aria-label={`${action}: ${product.name}`}>
       {image ? <img src={sitePath(image)} alt={`Illustrative concept of ${product.name.toLowerCase()}`} width={1254} height={1254} loading="lazy" /> : <span className="catalog-visual-pending">Visual in preparation</span>}
       <span className="catalog-visual-label">Illustrative concept</span>
-    </a>
+    </SiteLink>
     <div className="catalog-card-copy">
       <span className={`mini-label ${product.id === "iqf-frozen-raspberries" ? "catalog-label-raspberry" : ""} ${product.id === "iqf-frozen-blueberries" ? "catalog-label-blueberry" : ""}`}>{category?.name}</span>
-      <h2><a href={href}>{product.name}</a></h2>
+      <h2><SiteLink href={href}>{product.name}</SiteLink></h2>
       <p>{product.cardDescription ?? product.detail?.intro}</p>
-      <a className="text-link" href={href}>{action} <span aria-hidden="true">↗</span></a>
+      <SiteLink className="text-link" href={href}>{action} <span aria-hidden="true">↗</span></SiteLink>
     </div>
   </article>;
 }

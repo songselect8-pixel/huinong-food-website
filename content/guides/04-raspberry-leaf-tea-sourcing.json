@@ -1,0 +1,138 @@
+{
+  "status": "draft",
+  "reviewStatus": "pending",
+  "author": null,
+  "reviewer": null,
+  "createdAt": "2026-10-04",
+  "updatedAt": "2026-10-04",
+  "publishedAt": null,
+  "publicationAuthorization": null,
+  "slug": "raspberry-leaf-tea-sourcing",
+  "title": "Raspberry Leaf Tea: Botanical Identity, Cut Size and Sourcing Questions",
+  "metaDescription": "Build a raspberry leaf sourcing brief around botanical identity, plant part, whole or cut form, sample assessment and quality document requests.",
+  "summary": "Keep leaf identity, material form and cut requirements clear before discussing a tea or botanical ingredient project.",
+  "category": "Ingredient Guides",
+  "coverAlt": "Illustrative dried raspberry leaflets with serrated edges and branching veins",
+  "bodyAlt": "Illustrative whole dried leaflets and cut raspberry leaf material in separate glass dishes",
+  "relatedProducts": [
+    "raspberry-leaf-tea",
+    "dried-rose-flowers",
+    "cassia-goji-chrysanthemum-tea-bags"
+  ],
+  "relatedGuides": [
+    "private-label-tea-packaging",
+    "ingredient-sourcing-inquiry"
+  ],
+  "lead": "Raspberry leaf tea is a leaf-material sourcing direction, not raspberry fruit tea. A useful brief identifies the plant, the plant part and the required material form before discussing cut size or packaging. Confirm those details for the actual proposed supply; neither a familiar common name nor an illustrative photograph authenticates a botanical ingredient.",
+  "sections": [
+    {
+      "id": "botanical-identity",
+      "title": "Name the plant and the part separately",
+      "paragraphs": [
+        "Ask for the supplier’s declared botanical name, common name and plant part. A response that says only “raspberry” leaves a basic question unresolved: is the proposed material leaf, fruit or a blend? If your purchasing standard requires a particular botanical identity, provide that requirement in writing and request the supporting identification information.",
+        "Kew describes Rubus idaeus with compound leaves, toothed leaflets and paler, often white-felted undersides. That botanical reference helps explain why leaf material should not be pictured as berry fruit or ordinary rolled green tea. It does not authenticate a commercial lot or establish the identity of FRUNORIA’s offered material. [Kew botanical description](https://growwild.kew.org/plants/raspberry).",
+        "Keep the declared identity distinct from any marketing name. Ask whether the specification, sample label and ingredient declaration use matching terms, and how a supplier resolves synonyms or a change in nomenclature. If a detail has not been confirmed, record it as pending rather than completing the field from a search result.",
+        "Origin and harvest information can be additional questions where they matter to your brief. Specify what evidence your quality team wants and why. Avoid assuming that a sample photograph reveals a country, harvesting practice or verified botanical species."
+      ]
+    },
+    {
+      "id": "whole-cut",
+      "title": "Describe whole leaf and cut material precisely",
+      "paragraphs": [
+        "Start by saying how you plan to handle the ingredient: as a visible loose botanical, as part of a blend, or for a filled tea-bag development discussion. These project directions raise different questions about piece appearance and handling. They do not prove that every available leaf format is suitable for every filling process.",
+        "“Cut” is incomplete without a way to describe the cut. Ask what terminology and assessment method the supplier uses, whether screening is part of the proposed material description, and what information is available about fine particles or larger pieces. Do not state a fixed mesh or millimetre range unless it is your actual requirement or a confirmed specification.",
+        "For whole-leaf discussions, ask what degree of intactness is intended and how sample handling may affect the presentation. A dried leaf may be represented by intact leaflets and fragments, but the acceptance definition should come from the proposed specification rather than an attractive editorial image.",
+        "For a tea-bag project, share the intended bag format and ask what sample evaluation is needed with the proposed cut. The filling trial, bag material and ingredient specification should be considered together. Avoid assuming that one cut will run consistently through an unspecified packing line."
+      ]
+    },
+    {
+      "id": "leaf-checklist",
+      "title": "A leaf-material review checklist",
+      "paragraphs": [
+        "Use the checklist to organize questions, not to assign unverified limits. Request the supplier’s description alongside any acceptance criteria your team already uses."
+      ],
+      "table": {
+        "headers": [
+          "Topic",
+          "Question to resolve"
+        ],
+        "rows": [
+          [
+            "Botanical identity",
+            "What name is declared, and what identification evidence supports it?"
+          ],
+          [
+            "Plant part",
+            "Is the supply leaf material, and how is the part described?"
+          ],
+          [
+            "Material form",
+            "Whole leaflets, cut material or another explicitly identified form?"
+          ],
+          [
+            "Size description",
+            "Which cut or screening method and assessment basis are proposed?"
+          ],
+          [
+            "Fine particles and stems",
+            "How are these described, sampled and reviewed?"
+          ],
+          [
+            "Unwanted material",
+            "Which foreign-matter specification and inspection information apply?"
+          ],
+          [
+            "Identity across records",
+            "Do the sample, specification and ingredient declaration match?"
+          ],
+          [
+            "Project suitability",
+            "What trial and documentation are needed for the intended application?"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "sample-review",
+      "title": "Review the sample without overreading the image",
+      "paragraphs": [
+        "Keep samples identifiable from receipt through assessment. Record the supplier’s sample reference, the form described and any packaging damage noticed on arrival. If more than one cut is proposed, give each sample a separate record rather than comparing several unlabelled portions.",
+        "Ask your team to note visible leaf pieces, fine material, stems and any unexpected material as separate observations. Appearance can generate questions for a supplier; it cannot by itself close an identity or safety review. Where a concern requires analytical or specialist evaluation, request the appropriate evidence instead of making a conclusion from colour or aroma.",
+        "An application trial should have a defined purpose. You might compare presentation in a loose blend or ask whether a proposed cut can be evaluated in the intended bag format. Record the conditions used by your development team so a later sample can be compared on the same basis. This guide provides no extraction, processing or safety-validation parameters.",
+        "Do not use a sensory trial to make health claims. This sourcing article does not position raspberry leaf for pregnancy, hormonal effects, treatment or other medical purposes. The relevant decisions here concern identity, physical form, documentation and suitability for an actual food or beverage project."
+      ]
+    },
+    {
+      "id": "documents",
+      "title": "Request documents by the question they answer",
+      "paragraphs": [
+        "Begin with a product specification and an ingredient or botanical information record. Ask where the botanical name and plant part are declared, how the material is traced, and what identification information is available. Where your team needs additional confirmation, name the question rather than asking vaguely for “all certificates.”",
+        "For testing information, state the relevant product, target market and scope of concern. Ask which samples or lots a report covers, which analyses were performed and how results are linked to the proposed material. Do not assume that a general certificate or a short COA includes every contaminant or microbiological topic your team wants to review.",
+        "Keep certification requests separate from botanical identity. A food safety system certificate describes a defined holder and scope; it is not a substitute for identifying the material in the bag. Use the [Quality & Compliance page](/quality) to request the records needed for your project without treating every available document as interchangeable.",
+        "Request the actual packing and storage information as well. Describe desired inner packs, protection during handling and the receiving environment. Ask for the documented storage and shelf-life basis for the proposed material; no value should be inferred from the fact that a leaf is dry."
+      ]
+    },
+    {
+      "id": "project-brief",
+      "title": "Move from a product name to a usable brief",
+      "paragraphs": [
+        "A concise opening request can say: “We are reviewing raspberry leaf material for [application]. Please confirm botanical identity, plant part and the proposed whole or cut form. We would like to review [specific documentation] and a representative sample against [our requirements or questions].” Add quantity, unit, packaging direction and desired project timing only as far as they are known.",
+        "For related development discussions, use [Tea & Infusion Blends](/applications/tea-infusion-blends) or [Private Label Solutions](/private-label). These links help organize an inquiry; they do not imply that raspberry leaf is combined with every other listed botanical or that a particular formula has already been developed.",
+        "Before the next commercial step, close identity questions and record the agreed form. Leave unsupported details visibly pending. That approach gives procurement, product development and quality teams the same description to review while keeping the actual supplier information separate from concept photography."
+      ]
+    }
+  ],
+  "references": [
+    {
+      "title": "Royal Botanic Gardens, Kew — Raspberry",
+      "url": "https://growwild.kew.org/plants/raspberry",
+      "checkedAt": "2026-10-04",
+      "scope": "Botanical name and leaf morphology only; no health or medicinal statements used."
+    }
+  ],
+  "pending": [
+    "Actual botanical species, origin, leaf/stem distribution and cut specifications require documentation.",
+    "No identity determination from generated images or medical claims.",
+    "Food-use suitability, testing and packaging information still project-specific; editorial approval pending."
+  ]
+}

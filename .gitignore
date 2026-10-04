@@ -2,6 +2,7 @@ node_modules
 .next
 .playwright-cli
 out
+out-preview/
 *.tsbuildinfo
 .env*
 !.env.example

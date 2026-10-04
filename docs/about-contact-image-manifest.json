@@ -1,0 +1,56 @@
+{
+  "generator": "built-in imagegen",
+  "generatedOn": "2026-10-04",
+  "status": "generated, integrated and visually reviewed in local preview; awaiting user visual acceptance",
+  "nature": "Illustrative Concept, not premises, customer cases or supply evidence",
+  "assets": [
+    {
+      "id": "about-brand",
+      "file": "about-brand.webp",
+      "original": "exec-c3e8532a-5e20-4ae1-9946-1daa2fece971.png",
+      "prompt": "Use case: photorealistic-natural. Asset: original About brand ingredient photograph for FRUNORIA sourcing website, NOT a homepage recreation. Landscape 16:9 image. Premium editorial ingredient photography: carefully composed overhead arrangement, two separate shallow chilled ivory ceramic dishes of individually frozen raspberries and blueberries at opposing diagonal positions, moderate frost and recognizable individual berries, dried lemon and deeper orange slices together on a separate slender tray, dried rose buds and chrysanthemum flowers in two small ceramic vessels. Keep ingredient groups separate, each clearly readable, visually balanced across the whole wide frame. Refined off-white stone surface, soft neutral daylight, realistic dry versus frozen textures, restrained styling, rich natural colors without colored filters. Entire dishes and main food subjects comfortably inside frame, small breathing margin, no giant unused half. No factory, people, brand labels, certificates, readable text, logos, watermark, heavy ice, fresh fruit platter, freeze-dried berries, collage or montage. Deliver exactly one independent commercial photograph.",
+      "page": "/about",
+      "placement": "Wide brand ingredient visual",
+      "ratio": "16:9",
+      "generatedPath": "C:/Users/XuWanPi/.codex/generated_images/01a0e2a5-ceeb-78a3-a1d8-bce77c95dd44/exec-c3e8532a-5e20-4ae1-9946-1daa2fece971.png",
+      "output": "public/images/about-contact/v1/about-brand.webp",
+      "width": 1672,
+      "height": 941,
+      "bytes": 440156,
+      "sha256": "b9acc870b996df70e19098af11c920f781e6fb983e6f851068321c28f82090a7",
+      "visualReview": "Natural ingredient colours; subjects identifiable; no text or labels; distinct independent composition."
+    },
+    {
+      "id": "about-selection",
+      "file": "about-selection.webp",
+      "original": "exec-750e5de2-4c4c-4c40-8da7-596279a0a746.png",
+      "prompt": "Use case: photorealistic-natural. New original ingredient-selection editorial photograph, 4:3 landscape. Three small separate pale ceramic sample dishes: naturally yellow dried lemon slices, deeper orange dried orange slices, and dried rose buds beside a very small separate pinch of dried chrysanthemum. Arrange a few complete slices and small cut pieces so ingredient form differences are visible. A simple stainless scoop and two small completely blank neutral sample cards sit neatly alongside on a pale neutral stone work surface. Slightly oblique overhead view, natural side light, tactile realistic dried citrus flesh and petal texture. Refined, uncluttered B2B food sourcing aesthetic. Keep every dish and scoop fully inside the image with comfortable margins. No laboratory equipment, official documents, company premises, readable text, logos, hands, people, watermark, fake certificates, berries, oversized ingredient piles, collage. One coherent independent photograph, not the About hero or a crop of it.",
+      "page": "/about",
+      "placement": "How We Approach Your Project",
+      "ratio": "4:3",
+      "generatedPath": "C:/Users/XuWanPi/.codex/generated_images/01a0e2a5-ceeb-78a3-a1d8-bce77c95dd44/exec-750e5de2-4c4c-4c40-8da7-596279a0a746.png",
+      "output": "public/images/about-contact/v1/about-selection.webp",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 299782,
+      "sha256": "f629b1514672f1eb85c92d634d2217dc646b1002b06750a581f99b9110197507",
+      "visualReview": "Natural ingredient colours; subjects identifiable; no text or labels; distinct independent composition."
+    },
+    {
+      "id": "contact-project",
+      "file": "contact-project.webp",
+      "original": "exec-7d151211-c90d-4eb9-b976-0525d0d1386e.png",
+      "prompt": "Use case: photorealistic-natural. One new independent premium sourcing-project commercial photograph for a Contact page sidebar, landscape 4:3. A single small off-white ceramic dish with a modest selection of dried tea ingredients (distinct dry citrus fragments and a few dried flower buds), one plain unbranded small standing sample pouch in pale neutral paper, a closed blank linen notebook lying flat, and one restrained botanical sprig. Arrange in a coherent triangular composition on a warm-white plaster surface. Oblique eye-level tabletop view instead of overhead, clear focal point and comfortable margins around all main objects. Soft neutral natural daylight, realistic food and paper textures, elegant restrained B2B food sourcing mood. No readable writing, personal data, branded packaging, certificates, office signage, hands, people, watermark, giant food piles, laboratory or factory. No claims or printing on pouch or notebook. Food remains natural color, no wine-red or blue filter. Distinct composition from About images and earlier website images. This is an illustrative concept, not an actual project photograph.",
+      "page": "/contact",
+      "placement": "Inquiry sidebar",
+      "ratio": "4:3",
+      "generatedPath": "C:/Users/XuWanPi/.codex/generated_images/01a0e2a5-ceeb-78a3-a1d8-bce77c95dd44/exec-7d151211-c90d-4eb9-b976-0525d0d1386e.png",
+      "output": "public/images/about-contact/v1/contact-project.webp",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 190754,
+      "sha256": "58b38ae13059a463a9bc147fca6fe220e5b00cf7ad64a173b974a5c400c49d4a",
+      "visualReview": "Natural ingredient colours; subjects identifiable; no text or labels; distinct independent composition."
+    }
+  ]
+}

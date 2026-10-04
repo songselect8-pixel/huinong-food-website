@@ -1,19 +1,22 @@
 "use client";
+import SiteLink from "@/components/site-link";
 
 import { createContext, useContext, useState, type ReactNode } from "react";
 import { sitePath } from "@/data/paths";
+import { useInquiryDraft } from "./inquiry-draft";
 
 const ProductInquiryContext = createContext<{ selected: string; select: (value: string) => void; href: string }>({ selected: "", select: () => {}, href: "" });
 
 export function ProductInquiryProvider({ productId, children }: { productId: string; children: ReactNode }) {
-  const [selected, setSelected] = useState("");
-  const href = sitePath(`/?product=${encodeURIComponent(productId)}${selected ? `&form=${encodeURIComponent(selected)}` : ""}#quote`);
+  const { fields } = useInquiryDraft();
+  const [selected, setSelected] = useState(() => fields.productId === productId ? fields.form : "");
+  const href = sitePath(`/contact?product=${encodeURIComponent(productId)}${selected ? `&form=${encodeURIComponent(selected)}` : ""}`);
   return <ProductInquiryContext.Provider value={{ selected, select: (value) => setSelected((current) => current === value ? "" : value), href }}>{children}</ProductInquiryContext.Provider>;
 }
 
 export function ProductQuoteLink({ children = "Request a Quote", className = "button button-dark" }: { children?: ReactNode; className?: string }) {
   const { href } = useContext(ProductInquiryContext);
-  return <a className={className} href={href}>{children} <span aria-hidden="true">↗</span></a>;
+  return <SiteLink className={className} href={href}>{children} <span aria-hidden="true">↗</span></SiteLink>;
 }
 
 export function ProductInquiryPicker({ options }: { options: { name: string; note: string }[] }) {
