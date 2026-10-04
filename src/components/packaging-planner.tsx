@@ -1,4 +1,5 @@
 "use client";
+import SiteLink from "@/components/site-link";
 
 import { useState } from "react";
 import { categories } from "@/data/site";
@@ -20,14 +21,11 @@ export function PackagingPlanner() {
 
   const addToInquiry = () => {
     applyBrief({
-      interest: product,
-      note: [
-        "Packaging discussion brief:",
-        `Product direction: ${product || "To be discussed"}`,
-        `Packaging request: ${packaging.trim() || "To be discussed"}`,
-        `Other requirements: ${requirements.trim() || "To be discussed"}`,
-        "Available formats and documents need confirmation for this product and project.",
-      ].join("\n"),
+      kind: "private-label",
+      categoryId: categories.find(item => item.name === product)?.id ?? "",
+      packaging: packaging.trim(),
+      projectNotes: requirements.trim(),
+      source: "/#private-label",
     });
     setAdded(true);
   };
@@ -110,9 +108,9 @@ export function PackagingPlanner() {
               Continue <span aria-hidden="true">↗</span>
             </button>
           ) : (
-            <a className="button button-dark planner-next" href="#quote" onClick={addToInquiry}>
+            <SiteLink className="button button-dark planner-next" href="#quote" onClick={addToInquiry}>
               {added ? "Update Inquiry" : "Add to Inquiry"} <span aria-hidden="true">↗</span>
-            </a>
+            </SiteLink>
           )}
         </div>
       </div>

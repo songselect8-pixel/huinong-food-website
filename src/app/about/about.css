@@ -1,0 +1,43 @@
+.about-page { background: var(--warm-white); }
+.about-page h1,.about-page h2 { font-family: var(--display); font-weight: 500; letter-spacing: -.035em; line-height: 1.12; }
+.about-page h1 { font-size: clamp(48px,5vw,78px); margin: 20px 0; }
+.about-page h2 { font-size: clamp(34px,3.3vw,51px); margin: 17px 0 20px; }
+.about-page h3 { font-size: 22px; font-weight: 600; line-height: 1.3; }
+.about-page p { color: var(--muted); line-height: 1.7; }
+.ab-intro { display: grid; grid-template-columns: 1fr 1.08fr; gap: 9%; padding-block: 66px 42px; align-items: start; }
+.ab-intro-copy h2 { font: 500 clamp(23px,2.1vw,31px)/1.3 var(--display); margin: 0 0 18px; letter-spacing: -.02em; max-width: 650px; }
+.ab-intro-copy p { margin: 12px 0 0; max-width: 650px; }
+.about-page figure { position: relative; }
+.about-page figure img { width: 100%; height: auto; object-fit: contain; }
+.about-page figcaption { position: absolute; bottom: 0; left: 0; padding: 7px 12px; background: var(--warm-white); color: var(--muted); font-size: 11px; }
+.ab-main-image { margin-block: 0; }
+.ab-section { padding-block: 80px; }
+.ab-focus { display: grid; grid-template-columns: .75fr 1.25fr; gap: 9%; }
+.ab-focus > div:first-child p { max-width: 330px; margin: 0 0 25px; }
+.ab-directory > a { display: grid; grid-template-columns: 28px 1fr 22px; gap: 20px; padding: 23px 0; border-bottom: 1px solid var(--line); }
+.ab-directory > a:first-child { padding-top: 0; }
+.ab-directory h3 { margin: 0 0 6px; }
+.ab-directory p { margin: 0; font-size: 15px; max-width: 620px; }
+.ab-index { color: var(--brand-wine); font-size: 12px; font-weight: 700; padding-top: 6px; }
+.ab-arrow { color: var(--brand-wine); font-size: 22px; }
+.ab-directory > a:hover h3 { color: var(--brand-wine); }
+.ab-approach { background: var(--ice); }
+.ab-section-head { margin-bottom: 32px; }
+.ab-approach-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6%; align-items: center; }
+.ab-approach-grid figure { margin: 0; }
+.ab-approach-topics article { border-bottom: 1px solid var(--line-strong); padding: 22px 0; }
+.ab-approach-topics article:first-child { padding-top: 0; }
+.ab-approach-topics article:last-child { border-bottom: 0; padding-bottom: 0; }
+.ab-approach-topics h3 { margin: 7px 0 9px; }
+.ab-approach-topics p { margin: 0 0 13px; }
+.ab-audience { display: grid; grid-template-columns: 1fr 1fr; gap: 8%; align-items: start; }
+.ab-audience p { max-width: 380px; }
+.ab-audience ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 20px 30px; }
+.ab-audience li { border-top: 1px solid var(--line-strong); padding: 21px 0; color: var(--brand-blue); font-size: 19px; }
+.ab-audience li span { display: block; color: var(--brand-wine); margin-bottom: 14px; }
+.ab-closing { background: var(--blush); padding-block: 54px; }
+.ab-closing > div { display: flex; justify-content: space-between; gap: 35px; align-items: center; }
+.ab-closing h2 { margin-bottom: 0; }
+.ab-closing-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 20px; }
+@media(max-width:900px) { .ab-intro,.ab-focus,.ab-audience { gap: 35px; }.ab-approach-grid { gap: 30px; }.about-page h3 { font-size: 20px; } }
+@media(max-width:650px) { .ab-intro,.ab-focus,.ab-approach-grid,.ab-audience { grid-template-columns: 1fr; }.ab-intro { padding-block: 38px 28px; gap: 5px; }.ab-intro h1 { margin-bottom: 15px; }.ab-section { padding-block: 45px; }.ab-directory > a { gap: 12px; }.ab-audience ul { gap: 12px 20px; }.ab-audience li { font-size: 17px; }.ab-closing > div { flex-direction: column; align-items: flex-start; }.about-page figcaption { font-size: 10px; padding: 4px 8px; } }

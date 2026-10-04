@@ -1,0 +1,38 @@
+.unified-inquiry [hidden] { display: none !important; }
+.unified-inquiry { min-width: 0; }
+.inquiry-kind { margin: 0 0 22px; padding: 0; border: 0; min-width: 0; }
+.inquiry-kind legend { font-size: 18px; font-weight: 600; color: var(--brand-blue); margin-bottom: 14px; }
+.inquiry-kind > div { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 7px; }
+.inquiry-kind label { position: relative; cursor: pointer; }
+.inquiry-kind input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.inquiry-kind label span { display: flex; align-items: center; justify-content: center; text-align: center; min-height: 56px; padding: 8px; border: 1px solid var(--line); background: var(--warm-white); color: var(--brand-blue); font-size: 12px; font-weight: 700; }
+.inquiry-kind input:checked + span { background: var(--brand-wine); border-color: var(--brand-wine); color: white; }
+.inquiry-kind input:focus-visible + span { outline: 3px solid var(--brand-wine); outline-offset: 3px; }
+.inquiry-kind label:hover span { border-color: var(--brand-wine); }
+.inquiry-notice { margin: -4px 0 17px; color: var(--muted); font-size: 12px; }
+.inquiry-summary { padding: 18px; margin-bottom: 24px; background: var(--ice); border-left: 3px solid var(--brand-blue); }
+.inquiry-summary-heading { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+.inquiry-summary-heading button,.inquiry-clear { background: transparent; border: 0; padding: 0; color: var(--brand-wine); text-decoration: underline; text-underline-offset: 3px; font-size: 12px; }
+.inquiry-summary dl { margin: 16px 0; }
+.inquiry-summary dl > div { display: grid; grid-template-columns: 108px minmax(0,1fr) 24px; gap: 8px; margin: 9px 0; font-size: 12px; align-items: start; }
+.inquiry-summary dt { color: var(--muted); }
+.inquiry-summary dd { margin: 0; color: var(--brand-blue); overflow-wrap: anywhere; white-space: pre-wrap; }
+.inquiry-summary dl button { border: 0; background: none; color: var(--brand-wine); font-size: 19px; line-height: 1; min-height: 28px; }
+.form-required-note { margin: 0 0 18px; font-size: 12px; color: var(--muted); }
+.field-error { color: var(--brand-wine); font-size: 12px; font-weight: 600; }
+.unified-inquiry [aria-invalid="true"] { border-color: var(--brand-wine); border-width: 2px; }
+.unified-inquiry .form-grid label > small { color: var(--muted); font-size: 12px; }
+.unified-inquiry .form-grid label > .field-error { color: var(--brand-wine); }
+.inquiry-documents { border: 0; padding: 0; margin: 0; min-width: 0; }
+.inquiry-documents legend { font-size: 13px; color: var(--brand-blue); font-weight: 700; margin-bottom: 10px; }
+.inquiry-documents label { display: flex; flex-direction: row; align-items: center; padding: 9px 0; gap: 10px; }
+.inquiry-documents input[type="checkbox"] { min-height: 20px; width: 20px; height: 20px; flex-shrink: 0; accent-color: var(--brand-wine); }
+.inquiry-documents label > span { font-weight: 500; }
+.inquiry-privacy { color: var(--muted); font-size: 12px; margin: 20px 0 12px; line-height: 1.6; }
+.inquiry-preview { outline: none; }
+.inquiry-preview h3 { font: 500 34px/1.2 var(--display); margin: 15px 0; }
+.inquiry-preview dl { margin: 25px 0; }
+.inquiry-preview dl > div { padding: 13px 0; border-bottom: 1px solid var(--line); }
+.inquiry-preview dt { color: var(--muted); font-size: 12px; font-weight: 700; margin-bottom: 4px; }
+.inquiry-preview dd { margin: 0; color: var(--text); font-size: 15px; overflow-wrap: anywhere; white-space: pre-wrap; }
+@media(max-width:650px) { .unified-inquiry { padding: 23px 18px; }.inquiry-kind > div { gap: 5px; }.inquiry-kind label span { padding: 7px 4px; font-size: 11px; }.inquiry-summary { padding: 13px; }.inquiry-summary dl > div { grid-template-columns: minmax(0,1fr) 28px; gap: 3px; margin-bottom: 14px; }.inquiry-summary dt { grid-column: 1; }.inquiry-summary dd { grid-column: 1; }.inquiry-summary dl button { grid-column: 2; grid-row: span 2; min-height: 36px; }.unified-inquiry .form-grid { grid-template-columns: 1fr; }.inquiry-documents label { padding-block: 12px; } }

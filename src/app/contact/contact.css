@@ -1,0 +1,15 @@
+.contact-page { background: var(--blush); padding-block: 55px 76px; }
+.ct-layout { display: grid; grid-template-columns: minmax(0,.82fr) minmax(0,1.18fr); gap: 6%; align-items: start; }
+.ct-intro h1 { margin: 19px 0 22px; font-family: var(--display); font-weight: 500; font-size: clamp(42px,4.2vw,64px); letter-spacing: -.04em; line-height: 1.08; }
+.ct-lead { max-width: 490px; font-size: 18px; color: var(--muted); line-height: 1.65; }
+.ct-intro figure { margin: 29px 0; position: relative; }
+.ct-intro img { width: 100%; height: auto; object-fit: contain; }
+.ct-intro figcaption { position: absolute; bottom: 0; left: 0; padding: 6px 10px; font-size: 11px; color: var(--muted); background: var(--warm-white); }
+.ct-guide { padding-top: 6px; max-width: 500px; }
+.ct-guide h2,.ct-confirmed-contact h2 { font-size: 23px; font-weight: 500; font-family: var(--display); margin: 0 0 10px; }
+.ct-guide p { color: var(--muted); font-size: 15px; line-height: 1.65; margin: 0 0 22px; }
+.ct-guide .text-link { display: flex; width: fit-content; margin-block: 14px; }
+.ct-confirmed-contact { border-top: 1px solid var(--line-strong); padding-top: 22px; margin-top: 28px; }
+.ct-form-area { min-width: 0; }
+@media(max-width:1000px) { .ct-layout { gap: 4%; grid-template-columns: minmax(0,.7fr) minmax(0,1.3fr); } }
+@media(max-width:760px) { .contact-page { padding-block: 35px 45px; }.ct-layout { grid-template-columns: 1fr; gap: 28px; }.ct-intro h1 { font-size: 44px; }.ct-intro figure { max-width: 440px; margin-block: 22px; }.ct-guide { display: none; }.ct-lead { font-size: 16px; } }

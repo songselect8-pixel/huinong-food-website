@@ -1,38 +1,52 @@
 "use client";
 
-import { createContext, useCallback, useContext, useState, type ReactNode } from "react";
+import { createContext, Suspense, useCallback, useContext, useEffect, useRef, useState, type ReactNode } from "react";
+import { usePathname, useSearchParams } from "next/navigation";
+import { emptyBrief, emptyInquiry, readInquiryRequest, type InquiryBrief, type InquiryFields } from "@/data/inquiry";
 
-type BriefUpdate = {
-  interest?: string;
-  note: string;
-};
-
-type InquiryDraftValue = {
-  interest: string;
-  setInterest: (value: string) => void;
-  contextNote: string | null;
-  applyBrief: (update: BriefUpdate) => void;
+type Draft = {
+  fields: InquiryFields;
+  patch: (value: Partial<InquiryFields>) => void;
+  applyBrief: (value: Partial<InquiryBrief>) => void;
   clearBrief: () => void;
+  clearAll: () => void;
+  notice: string;
+  acceptRoute: (key: string, value: InquiryBrief) => void;
 };
+const InquiryDraftContext = createContext<Draft | null>(null);
 
-const InquiryDraftContext = createContext<InquiryDraftValue | null>(null);
+function RoutePrefill() {
+  const pathname = usePathname();
+  const search = useSearchParams();
+  const { acceptRoute } = useInquiryDraft();
+  useEffect(() => {
+    const path = pathname.replace(/\/$/, "");
+    if (path !== "" && path !== "/contact") return;
+    const brief = readInquiryRequest(new URLSearchParams(search.toString()));
+    if (brief) acceptRoute(`${path}?${search.toString()}`, brief);
+  }, [pathname, search, acceptRoute]);
+  return null;
+}
 
+// One in-memory draft survives Next.js navigation. No browser storage, network submission or analytics.
 export function InquiryProvider({ children }: { children: ReactNode }) {
-  const [interest, setInterest] = useState("");
-  const [contextNote, setContextNote] = useState<string | null>(null);
-
-  const applyBrief = useCallback(({ interest: nextInterest, note }: BriefUpdate) => {
-    if (nextInterest !== undefined) setInterest(nextInterest);
-    setContextNote(note);
+  const [fields, setFields] = useState<InquiryFields>(emptyInquiry);
+  const [notice, setNotice] = useState("");
+  const lastRoute = useRef("");
+  const patch = useCallback((value: Partial<InquiryFields>) => setFields(current => ({ ...current, ...value })), []);
+  const applyBrief = useCallback((value: Partial<InquiryBrief>) => {
+    lastRoute.current = "";
+    setFields(current => ({ ...current, ...emptyBrief, ...value }));
+    setNotice("Your sourcing details have been updated. Your contact details and message are unchanged.");
   }, []);
-
-  const clearBrief = useCallback(() => setContextNote(null), []);
-
-  return (
-    <InquiryDraftContext.Provider value={{ interest, setInterest, contextNote, applyBrief, clearBrief }}>
-      {children}
-    </InquiryDraftContext.Provider>
-  );
+  const acceptRoute = useCallback((key: string, value: InquiryBrief) => {
+    if (lastRoute.current === key) return;
+    applyBrief(value);
+    lastRoute.current = key;
+  }, [applyBrief]);
+  const clearBrief = useCallback(() => {patch(emptyBrief); setNotice("Sourcing details removed. Your contact details and message are unchanged.");}, [patch]);
+  const clearAll = useCallback(() => {setFields(emptyInquiry); setNotice("Draft cleared.");}, []);
+  return <InquiryDraftContext.Provider value={{ fields, patch, applyBrief, clearBrief, clearAll, notice, acceptRoute }}><Suspense fallback={null}><RoutePrefill /></Suspense>{children}</InquiryDraftContext.Provider>;
 }
 
 export function useInquiryDraft() {

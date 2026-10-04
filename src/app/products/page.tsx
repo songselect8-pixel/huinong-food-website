@@ -1,3 +1,4 @@
+import SiteLink from "@/components/site-link";
 import type { Metadata } from "next";
 import { ProductBrowser } from "@/components/product-browser";
 import { ScrollReveals } from "@/components/scroll-reveals";
@@ -19,7 +20,7 @@ export default function ProductsPage() {
         <p>Browse product directions and tell us the format, application and documentation your team needs. Specifications and supply terms are confirmed by project.</p>
       </section>
       <section className="shell catalog-main" aria-label="Products and category filters"><ProductBrowser /></section>
-      <section className="catalog-end"><div className="shell"><h2>Need a more specific starting point?</h2><p>Share your use, target market and requested form. We can review the product direction with you.</p><a className="button button-dark" href={sitePath("/#quote")}>Start an inquiry <span aria-hidden="true">↗</span></a></div></section>
+      <section className="catalog-end"><div className="shell"><h2>Need a more specific starting point?</h2><p>Share your use, target market and requested form. We can review the product direction with you.</p><SiteLink className="button button-dark" href={sitePath("/contact")}>Start an inquiry <span aria-hidden="true">↗</span></SiteLink></div></section>
     </main>
     <SiteFooter /><ScrollReveals />
   </>;

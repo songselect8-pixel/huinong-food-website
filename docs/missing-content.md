@@ -85,3 +85,15 @@ The overview, four detail pages and nine original concepts have been developed; 
 | 待资料确认 | Prior certificate holder/site/product/process mapping, original files/permissions, lot reports and current project-specific market pathway | Unchanged Quality backlog |
 
 These images are not actual manufacturing, customer-case or product-performance evidence. No regulatory or health conclusion, exact formula, fixed shelf life, MOQ or delivery promise was added. Stop after Applications visual delivery; do not begin the remaining inner pages automatically.
+
+## About + Contact confirmation backlog — 2026-10-04
+
+Both pages and three images are complete in local development; visual acceptance is pending. Their implementation does not establish legal identity or a business relationship.
+
+- 待资料确认: website operating entity, rights to use the public FRUNORIA brand, and verified relationships to historical companies/suppliers/production sites.
+- 待资料确认: public email, phone, address, WhatsApp/social accounts and eventual domain. The central values remain null and Contact hides these areas; no map, fake address or contact button was added.
+- 待资料确认: formal privacy text and responsible entity; for future delivery, agree the actual service, recipients/processors, retention, rights contact and consent handling. The current local preview sends nothing and stores no persistent personal data.
+- 待视觉验收: About and Contact desktop/mobile layouts and three newly generated concepts.
+- Unchanged: actual product identity/specifications/lot imagery, certificate holder/site/product/process coverage, original files/sharing permissions and product-specific market pathway.
+
+Stop after this About + Contact round. Resources remains planned only; no email connection, push or deployment is authorized for this round.

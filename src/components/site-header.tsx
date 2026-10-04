@@ -1,4 +1,5 @@
 "use client";
+import SiteLink from "@/components/site-link";
 
 import { useEffect, useState } from "react";
 import { brand, navigation } from "@/data/site";
@@ -18,10 +19,10 @@ export function SiteHeader() {
   return (
     <header className={`site-header ${scrolled ? "is-scrolled" : ""}`}>
       <div className="header-inner shell">
-        <a className="wordmark" href={sitePath("/#top")} onClick={() => setMenuOpen(false)} aria-label={`${brand.name}, back to home`}>
+        <SiteLink className="wordmark" href={sitePath("/#top")} onClick={() => setMenuOpen(false)} aria-label={`${brand.name}, back to home`}>
           <span className="wordmark-main">{brand.name}</span>
           <span className="wordmark-sub">{brand.descriptor}</span>
-        </a>
+        </SiteLink>
 
         <button
           type="button"
@@ -37,18 +38,18 @@ export function SiteHeader() {
 
         <nav id="primary-navigation" className={`primary-nav ${menuOpen ? "is-open" : ""}`} aria-label="Main navigation">
           {navigation.map((item) => (
-            <a href={sitePath(item.href)} key={item.label} onClick={() => setMenuOpen(false)}>
+            <SiteLink href={sitePath(item.href)} key={item.label} onClick={() => setMenuOpen(false)}>
               {item.label}
-            </a>
+            </SiteLink>
           ))}
-          <a className="mobile-quote" href={sitePath("/#quote")} onClick={() => setMenuOpen(false)}>
+          <SiteLink className="mobile-quote" href={sitePath("/contact")} onClick={() => setMenuOpen(false)}>
             Request a Quote <span aria-hidden="true">↗</span>
-          </a>
+          </SiteLink>
         </nav>
 
-        <a className="header-quote button button-dark" href={sitePath("/#quote")}>
+        <SiteLink className="header-quote button button-dark" href={sitePath("/contact")}>
           Request a Quote <span aria-hidden="true">↗</span>
-        </a>
+        </SiteLink>
       </div>
     </header>
   );

@@ -1,9 +1,12 @@
 "use client";
+import SiteLink from "@/components/site-link";
 
 import { useEffect, useState, type KeyboardEvent } from "react";
 import { certifications, documentGroups, documentTypes, marketGuides, requestMarkets } from "@/data/quality";
 import { categories, products } from "@/data/site";
 import { sitePath } from "@/data/paths";
+import { useRouter } from "next/navigation";
+import { useInquiryDraft } from "./inquiry-draft";
 
 function FileIcon({ shield = false }: { shield?: boolean }) {
   return <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{shield ? <><path d="m16 3-10 4v9c0 6 5 10 10 13 5-3 10-7 10-13V7L16 3Z" /><path d="m11 16 3 3 7-8" /></> : <><path d="M8 3h11l6 6v20H8V3Zm11 0v7h6M12 15h9m-9 5h9m-9 5h5" /></>}</svg>;
@@ -24,12 +27,15 @@ function Tabs({id, label, items, selected, onSelect}: {id: string; label: string
 }
 
 export function QualityExplorer() {
+  const router = useRouter();
+  const { fields } = useInquiryDraft();
+  const previous = fields.kind === "quality" && fields.source === "/quality";
   const [groupId, setGroupId] = useState("frozen");
   const [marketTab, setMarketTab] = useState("eu");
-  const [productId, setProductId] = useState("");
-  const [selectedTypes, setSelectedTypes] = useState<string[]>(["specification"]);
-  const [marketId, setMarketId] = useState("undecided");
-  const [certificateId, setCertificateId] = useState("");
+  const [productId, setProductId] = useState(previous ? fields.productId : "");
+  const [selectedTypes, setSelectedTypes] = useState<string[]>(previous ? fields.documents : ["specification"]);
+  const [marketId, setMarketId] = useState(previous ? requestMarkets.find(item => item.name === fields.targetMarket)?.id ?? "undecided" : "undecided");
+  const [certificateId, setCertificateId] = useState(previous ? fields.certificateId : "");
 
   useEffect(() => {
     const search = new URLSearchParams(window.location.search);
@@ -74,7 +80,7 @@ export function QualityExplorer() {
           <div><dt>Verification record</dt><dd>{certificate.verification === "verified" && certificate.verifiedOn ? `Reviewed ${certificate.verifiedOn}` : "Original document and issuer check pending"}</dd></div>
           <div><dt>Public file access</dt><dd>{certificate.file.publicPermission === "approved" ? "Approved for public access" : certificate.file.publicPermission === "restricted" ? "Restricted access" : "Publication permission not confirmed"}</dd></div>
         </dl></details>
-        {certificate.file.status === "on-file" && certificate.file.publicPermission === "approved" && certificate.file.href ? <a className="text-link" href={sitePath(certificate.file.href)} download>View certificate <span aria-hidden="true">↓</span></a> : <button type="button" className="text-link q-text-button" onClick={() => prepareRequest("certification", undefined, certificate.id)} aria-label={`Request ${certificate.name} certification information`}>Request certification information <span aria-hidden="true">↗</span></button>}
+        {certificate.file.status === "on-file" && certificate.file.publicPermission === "approved" && certificate.file.href ? <SiteLink className="text-link" href={sitePath(certificate.file.href)} download>View certificate <span aria-hidden="true">↓</span></SiteLink> : <button type="button" className="text-link q-text-button" onClick={() => prepareRequest("certification", undefined, certificate.id)} aria-label={`Request ${certificate.name} certification information`}>Request certification information <span aria-hidden="true">↗</span></button>}
       </article>)}</div>
     </section>
 
@@ -94,7 +100,7 @@ export function QualityExplorer() {
       <div className="q-panels">{marketGuides.map(market => <div className="q-panel q-market-panel" key={market.id} id={`markets-panel-${market.id}`} role="tabpanel" aria-labelledby={`markets-tab-${market.id}`} aria-hidden={marketTab !== market.id} inert={marketTab !== market.id}>
         <div className="q-market-heading"><div><span className={`q-status ${market.status === "draft" ? "is-draft" : ""}`}>{market.status === "draft" ? "Research draft · not verified" : `Official sources checked · ${market.checkedOn}`}</span><h3>{market.name}</h3><p>{market.intro}</p></div><button type="button" className="button button-outline" onClick={() => {setMarketId(market.id); document.getElementById("documentation-requests")?.scrollIntoView({block: "start"}); document.getElementById("request-product")?.focus({preventScroll: true});}}>Use this market <span aria-hidden="true">↓</span></button></div>
         {market.status === "source-reviewed" ? <div className="q-market-rows"><article><span className="q-rule-label">Legal / import requirements</span><p>{market.legal}</p></article><article><span className="q-rule-label">When conditions apply</span><p>{market.conditional}</p></article><article><span className="q-rule-label">Buyer requirements</span><p>{market.buyer}</p></article></div> : <div className="q-draft-panel"><FileIcon /><p>The existing report is a research starting point. This draft is not a current import checklist and makes no claim of market access.</p></div>}
-        <div className="q-market-footer"><p>{market.next}</p>{market.sources.length > 0 && <ul aria-label={`${market.name} official sources`}>{market.sources.map(source => <li key={source.url}><a href={source.url} target="_blank" rel="noreferrer">{source.label} <span aria-hidden="true">↗</span></a></li>)}</ul>}</div>
+        <div className="q-market-footer"><p>{market.next}</p>{market.sources.length > 0 && <ul aria-label={`${market.name} official sources`}>{market.sources.map(source => <li key={source.url}><SiteLink href={source.url} target="_blank" rel="noreferrer">{source.label} <span aria-hidden="true">↗</span></SiteLink></li>)}</ul>}</div>
       </div>)}</div>
       <p className="q-footnote">These sourcing guides cover the cited topics, not a shipment clearance decision. Check the actual product, origin, intended use and rules at dispatch with the destination importer.</p>
     </section>
@@ -106,7 +112,7 @@ export function QualityExplorer() {
         const search = new URLSearchParams({source:"quality",product:productId,market:marketId});
         documentTypes.filter(item => selectedTypes.includes(item.id)).forEach(item => search.append("document", item.id));
         if (certificateId && selectedTypes.includes("certification")) search.set("certification",certificateId);
-        window.location.assign(sitePath(`/?${search.toString()}#quote`));
+        router.push(`/contact?${search.toString()}`);
       }}>
         <div className="q-request-controls"><div className="q-select-row"><label htmlFor="request-product"><span>Product <b aria-hidden="true">*</b></span><select id="request-product" name="product" required value={productId} onChange={event => setProductId(event.target.value)}><option value="" disabled>Choose a product</option>{categories.map(category => <optgroup key={category.id} label={category.name}>{products.filter(product => product.categoryId === category.id).map(product => <option key={product.id} value={product.id}>{product.name}</option>)}</optgroup>)}</select></label><label htmlFor="request-market"><span>Target market</span><select id="request-market" name="market" value={marketId} onChange={event => setMarketId(event.target.value)}>{requestMarkets.map(market => <option value={market.id} key={market.id}>{market.name}{market.id === "jp" ? " (guide in draft)" : ""}</option>)}</select></label></div>
           <fieldset className="q-type-options"><legend>Documents to discuss <span>Choose one or more</span></legend>{documentTypes.map((type,index) => <label key={type.id} className={selectedTypes.includes(type.id) ? "is-selected" : ""}><input type="checkbox" name="document" value={type.id} checked={selectedTypes.includes(type.id)} required={index === 0 && selectedTypes.length === 0} onChange={() => {setSelectedTypes(current => current.includes(type.id) ? current.filter(id => id !== type.id) : [...current,type.id]); if (type.id === "certification") setCertificateId("");}} /><span><strong>{type.name}</strong><small>{type.description}</small></span></label>)}</fieldset>

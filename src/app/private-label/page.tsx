@@ -1,3 +1,4 @@
+import SiteLink from "@/components/site-link";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { ScrollReveals } from "@/components/scroll-reveals";
@@ -62,8 +63,8 @@ export default function PrivateLabelPage() {
             <h1 id="pl-hero-title">Private Label <em>Tea &amp; Fruit</em> Solutions</h1>
             <p>From ingredient sourcing and blend development to custom packaging solutions, we help brands move tea and fruit ideas toward finished products.</p>
             <div className="pl-hero-actions">
-              <a className="button button-dark" href={sitePath("/#quote")}>Start Your Project <span aria-hidden="true">↗</span></a>
-              <a className="text-link" href="#process">Explore the process <span aria-hidden="true">↓</span></a>
+              <SiteLink className="button button-dark" href={sitePath("/contact?source=private-label")}>Start Your Project <span aria-hidden="true">↗</span></SiteLink>
+              <SiteLink className="text-link" href="#process">Explore the process <span aria-hidden="true">↓</span></SiteLink>
             </div>
           </div>
           <figure className="pl-hero-media">
@@ -172,7 +173,7 @@ export default function PrivateLabelPage() {
                   <span className="mini-label">05 / Presentation</span>
                   <h3>Custom Packaging</h3>
                   <p>Bring a packaging brief so the available formats can be confirmed.</p>
-                  <a className="text-link" href="#packaging">See packaging directions <span aria-hidden="true">↗</span></a>
+                  <SiteLink className="text-link" href="#packaging">See packaging directions <span aria-hidden="true">↗</span></SiteLink>
                 </div>
               </article>
             </div>
@@ -211,7 +212,7 @@ export default function PrivateLabelPage() {
           </div>
           <aside className="shell pl-frozen-brief" aria-label="Frozen berry packaging discussion">
             <div><span className="eyebrow section-kicker">A separate frozen product brief</span><h3>Frozen berry packaging &amp; cold-chain requirements</h3><p>Frozen berries need their own packaging, storage and delivery discussion. Share the proposed berry, pack format, destination and temperature-record requirements so availability and project scope can be checked.</p></div>
-            <a className="text-link" href={sitePath("/products/frozen-berries")}>Explore Frozen Berries <span aria-hidden="true">↗</span></a>
+            <SiteLink className="text-link" href={sitePath("/products/frozen-berries")}>Explore Frozen Berries <span aria-hidden="true">↗</span></SiteLink>
           </aside>
         </section>
 
@@ -221,7 +222,7 @@ export default function PrivateLabelPage() {
               <span className="eyebrow section-kicker">Make the brief your own</span>
               <h2 id="pl-custom-title">The details that shape <em>your product.</em></h2>
               <p>Share what you already know. The remaining details can be explored together during the sourcing discussion.</p>
-              <a className="text-link" href={sitePath("/#private-label")}>Build a short brief <span aria-hidden="true">↗</span></a>
+              <SiteLink className="text-link" href={sitePath("/#private-label")}>Build a short brief <span aria-hidden="true">↗</span></SiteLink>
             </div>
             <ul className="pl-custom-list" data-reveal="">
               {customizationTopics.map((topic) => (
@@ -246,7 +247,7 @@ export default function PrivateLabelPage() {
               <h2 id="pl-quality-title">Confidence in every <em>sourcing decision.</em></h2>
               <p>Discuss product specifications, testing reports and the documentation required for your market and project.</p>
             </div>
-            <a className="button button-outline" href={sitePath("/quality")}>Explore Quality &amp; Compliance <span aria-hidden="true">↗</span></a>
+            <SiteLink className="button button-outline" href={sitePath("/quality")}>Explore Quality &amp; Compliance <span aria-hidden="true">↗</span></SiteLink>
           </div>
         </section>
 
@@ -257,7 +258,7 @@ export default function PrivateLabelPage() {
               <h2 id="pl-cta-title">Ready to Develop <em>Your Product?</em></h2>
               <p>Tell us the product direction, format and market you have in mind. We will start with the details that matter to your team.</p>
             </div>
-            <a className="button button-dark" href={sitePath("/#quote")}>Start Your Project <span aria-hidden="true">↗</span></a>
+            <SiteLink className="button button-dark" href={sitePath("/contact?source=private-label")}>Start Your Project <span aria-hidden="true">↗</span></SiteLink>
           </div>
         </section>
       </main>

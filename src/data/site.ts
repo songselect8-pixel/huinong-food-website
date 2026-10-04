@@ -27,7 +27,7 @@ export const navigation = [
   { label: "Applications", href: "/applications" },
   { label: "Private Label", href: "/private-label" },
   { label: "Quality", href: "/quality" },
-  { label: "About", href: "/#about" },
+  { label: "About", href: "/about" },
   { label: "Resources", href: "/#resources" },
 ] as const;
 

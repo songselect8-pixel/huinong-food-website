@@ -1,3 +1,4 @@
+import SiteLink from "@/components/site-link";
 import type { Metadata } from "next";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -14,7 +15,7 @@ export default function NotFound() {
       <span className="eyebrow section-kicker">404 / Page not found</span>
       <h1>Let’s return to the right ingredients.</h1>
       <p>This page is not available. Explore {brand.name}’s product ranges or return to the homepage.</p>
-      <a className="button button-dark" href={sitePath("/")}>Back to {brand.name} <span aria-hidden="true">↗</span></a>
+      <SiteLink className="button button-dark" href={sitePath("/")}>Back to {brand.name} <span aria-hidden="true">↗</span></SiteLink>
     </main>
     <SiteFooter />
   </>;

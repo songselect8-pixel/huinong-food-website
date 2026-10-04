@@ -1,5 +1,5 @@
+import SiteLink from "@/components/site-link";
 import { ApplicationExplorer } from "@/components/application-explorer";
-import { InquiryProvider } from "@/components/inquiry-draft";
 import { PackagingPlanner } from "@/components/packaging-planner";
 import { QualityDetails } from "@/components/quality-details";
 import { QuoteForm } from "@/components/quote-form";
@@ -60,7 +60,7 @@ function SupportIcon({ kind }: { kind: "systems" | "testing" | "export" }) {
 
 export default function HomePage() {
   return (
-    <InquiryProvider>
+    <>
       <SiteHeader />
       <main id="top">
         <section className="hero shell" aria-labelledby="hero-title">
@@ -84,15 +84,15 @@ export default function HomePage() {
             <h1 id="hero-title">Fruit <em>&amp;</em> Botanical Ingredients for Your Business</h1>
             <p>Explore frozen berries, dried fruits, floral ingredients and tea blends for your next sourcing project.</p>
             <div className="hero-actions">
-              <a className="button button-dark" href="#quote">Request a Quote <span aria-hidden="true">↗</span></a>
-              <a className="text-link" href="#products">Explore Products <span aria-hidden="true">↗</span></a>
+              <SiteLink className="button button-dark" href="#quote">Request a Quote <span aria-hidden="true">↗</span></SiteLink>
+              <SiteLink className="text-link" href="#products">Explore Products <span aria-hidden="true">↗</span></SiteLink>
             </div>
           </div>
         </section>
 
         <div className="shell hero-underbar">
           <span>Ingredient directions for considered sourcing</span>
-          <a href="#products">Discover the range <span aria-hidden="true">↓</span></a>
+          <SiteLink href="#products">Discover the range <span aria-hidden="true">↓</span></SiteLink>
         </div>
 
         <section className="product-section section-space" id="products" aria-labelledby="products-title">
@@ -107,7 +107,7 @@ export default function HomePage() {
 
             <div className="category-grid" data-reveal="">
               {categories.map((category) => (
-                <a className={`category-card ${category.id === "frozen-berries" ? "category-card-frozen" : ""}`} href={sitePath(`/products?category=${category.id}`)} key={category.id} aria-label={`Explore ${category.name}`}>
+                <SiteLink className={`category-card ${category.id === "frozen-berries" ? "category-card-frozen" : ""}`} href={sitePath(`/products?category=${category.id}`)} key={category.id} aria-label={`Explore ${category.name}`}>
                   <div className="category-media">
                     <img
                       src={sitePath(category.image)}
@@ -124,7 +124,7 @@ export default function HomePage() {
                     <p>{category.description}</p>
                     <span className="category-action">Explore range <span aria-hidden="true">↗</span></span>
                   </div>
-                </a>
+                </SiteLink>
               ))}
             </div>
             <p className="image-disclaimer">Category images are illustrative in this development preview. Confirm specific ingredients and formats before ordering.</p>
@@ -143,7 +143,7 @@ export default function HomePage() {
             <ApplicationExplorer />
             <div className="application-more">
               <span className="mini-label">More ingredient directions</span>
-              <p>For baked goods, fruit preparations and dairy or frozen dessert projects, explore <a href={sitePath("/products/frozen-berries")}>Frozen Berries</a>. For botanical blends or loose-leaf infusions, explore <a href={sitePath("/products/raspberry-leaf-tea")}>Raspberry Leaf Tea</a>. Suitability is reviewed by product and use.</p>
+              <p>For baked goods, fruit preparations and dairy or frozen dessert projects, explore <SiteLink href={sitePath("/products/frozen-berries")}>Frozen Berries</SiteLink>. For botanical blends or loose-leaf infusions, explore <SiteLink href={sitePath("/products/raspberry-leaf-tea")}>Raspberry Leaf Tea</SiteLink>. Suitability is reviewed by product and use.</p>
             </div>
           </div>
         </section>
@@ -189,7 +189,7 @@ export default function HomePage() {
             </div>
             <div className="support-footer">
               <p className="support-assurance">Supporting global buyers with reliable quality documents, testing reports and export requirements.</p>
-              <a className="button button-outline support-cta" href={sitePath("/quality")}>Explore Quality &amp; Compliance <span aria-hidden="true">↗</span></a>
+              <SiteLink className="button button-outline support-cta" href={sitePath("/quality")}>Explore Quality &amp; Compliance <span aria-hidden="true">↗</span></SiteLink>
             </div>
           </div>
         </section>
@@ -213,7 +213,7 @@ export default function HomePage() {
               <span className="eyebrow quality-kicker">05 / Specifications &amp; quality</span>
               <h2 id="quality-title">Product Specifications &amp; Documentation</h2>
               <p>Start with the information your team needs. We will confirm which details and documents are available for the product and market in question.</p>
-              <a className="text-link text-link-light" href={sitePath("/quality")}>Explore Quality &amp; Compliance <span aria-hidden="true">↗</span></a>
+              <SiteLink className="text-link text-link-light" href={sitePath("/quality")}>Explore Quality &amp; Compliance <span aria-hidden="true">↗</span></SiteLink>
             </div>
             <QualityDetails />
           </div>
@@ -229,8 +229,8 @@ export default function HomePage() {
             <div className="about-copy">
               <p><strong>{brand.name}</strong> brings together frozen berries, dried fruits, botanical ingredients and tea solutions for food and beverage businesses. Share the product, format and market you have in mind so we can review the right sourcing information for your project.</p>
               <div className="about-actions">
-                <button className="button button-outline about-pending-button" type="button" disabled aria-describedby="about-page-note">About Us</button>
-                <span id="about-page-note">Full About page in preparation</span>
+                <SiteLink className="button button-outline" href={sitePath("/about")}>About Us <span aria-hidden="true">↗</span></SiteLink>
+
               </div>
             </div>
           </div>
@@ -279,6 +279,6 @@ export default function HomePage() {
       </main>
       <SiteFooter />
       <ScrollReveals />
-    </InquiryProvider>
+    </>
   );
 }
