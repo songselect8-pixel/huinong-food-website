@@ -66,4 +66,3 @@ async page => {
  check(errors.length===0,'Browser page errors: '+errors.join(';'));check(failed.length===0,'HTTP failures: '+JSON.stringify(failed));check(writes.length===0,'Unexpected network writes');
  return {results,search:'combined categories, query, reset and empty state passed',viewports:'1440 / 1920: 3 columns; 900: 2; 390: 1; no document overflow',inquiry:'all six selected prefills; no auto-selection; existing message preserved; validation/preview/edit passed; mobile passed',template:'edited text copied to clipboard',reducedMotion:'complete visible text and functional mobile contents',errors,failed,writes};
 }
-
