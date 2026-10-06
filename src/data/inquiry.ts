@@ -1,17 +1,18 @@
-import { categories, products } from "./site";
+import { brand, categories, products } from "./site";
 import { readApplicationRequest } from "./applications";
 import { certifications, documentTypes, readDocumentationRequest } from "./quality";
 
 export const inquiryTypes = [
   { id: "product", name: "Product Inquiry" },
+  { id: "sample", name: "Sample Discussion" },
   { id: "private-label", name: "Private Label Project" },
   { id: "quality", name: "Quality Documents" },
 ] as const;
 export const emptyBrief = {
-  kind: "product" as "product" | "private-label" | "quality",
+  kind: "product" as "product" | "sample" | "private-label" | "quality",
   productId: "", categoryId: "", form: "", application: "", packaging: "",
   quantity: "", unit: "", timeline: "", targetMarket: "", documents: [] as string[],
-  certificateId: "", documentNote: "", source: "", articleTitle: "", coldChain: "", leafFormat: "", projectNotes: "",
+  certificateId: "", documentNote: "", source: "", articleTitle: "", coldChain: "", leafFormat: "", projectNotes: "", sampleFocus: "",
 };
 export type InquiryBrief = typeof emptyBrief;
 export const emptyInquiry = { ...emptyBrief, name: "", email: "", company: "", region: "", message: "" };
@@ -34,6 +35,7 @@ export function readInquiryRequest(search: URLSearchParams): InquiryBrief | null
   }
   if (source === "private-label") return { ...emptyBrief, kind: "private-label", source: "/private-label", categoryId: category?.id ?? "" };
   if (source === "about") return { ...emptyBrief, source: "/about" };
+  if (source === "resources") return { ...emptyBrief, source: "/resources" };
   if (product) return { ...emptyBrief, productId: product.id, categoryId: product.categoryId, form: product.detail?.forms.find(item => item.name === search.get("form"))?.name ?? "", source: `/products/${product.id}` };
   if (category) return { ...emptyBrief, categoryId: category.id, source: "/products" };
   return search.has("product") || search.has("category") || source ? { ...emptyBrief } : null;
@@ -56,7 +58,18 @@ export function briefRows(fields: InquiryFields): { key: keyof InquiryBrief; lab
     {key: "coldChain", label: "Cold-chain requirements", value: fields.coldChain},
     {key: "leafFormat", label: "Leaf format", value: fields.leafFormat},
     {key: "projectNotes", label: "Project requirements", value: fields.projectNotes},
+    {key: "sampleFocus", label: "Sample evaluation", value: fields.sampleFocus},
     {key: "source", label: "Source page", value: fields.source},
     {key: "articleTitle", label: "Buying guide", value: fields.articleTitle},
   ].filter(row => row.value) as { key: keyof InquiryBrief; label: string; value: string }[];
+}
+
+// Plain text generated only on the buyer's explicit copy/download action; never transmitted.
+export function inquiryText(fields: InquiryFields): string {
+  const rows = [
+    {label:"Name",value:fields.name}, {label:"Email",value:fields.email},
+    {label:"Company",value:fields.company}, {label:"Country / Region",value:fields.region},
+    ...briefRows(fields), {label:"Message",value:fields.message},
+  ];
+  return [`${brand.name} — ${inquiryTypes.find(type => type.id === fields.kind)?.name ?? "Inquiry"}`, "Local draft — not sent", "", ...rows.filter(row => row.value).map(row => `${row.label}: ${row.value}`)].join("\n\n");
 }

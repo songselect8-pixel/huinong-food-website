@@ -1,10 +1,10 @@
 # FRUNORIA site roadmap
 
-Updated: 2026-10-04. This is the current development sequence; older design notes remain historical records.
+Updated: 2026-10-06. This is the current development sequence; older design notes remain historical records.
 
 ## Fixed boundaries
 
-Keep FRUNORIA, the wine / blueberry / warm-white / blush / ice palette, approved Home and Private Label structure, the Products grid and existing URLs. Develop in the current project. Inquiry remains a local preview. This Resources round is local-only: no email integration, remote push, publication or deployment. The deployment workflow remains manual-only.
+Keep FRUNORIA, the wine / blueberry / warm-white / blush / ice palette, approved Home and Private Label structure, the Products grid and existing URLs. Develop in the current project. Inquiry remains a local preview. The current buyer-content round is local-only: no email integration, remote push, publication or deployment. The previous version was explicitly authorized and deployed on 2026-10-04; that deployment did not publish draft guides or activate inquiry delivery. The deployment workflow remains manual-only.
 
 Status vocabulary: **未开始**, **开发中**, **已完成开发**, **已检查功能**, **待视觉验收**, **待资料确认**. Code completion, actual interaction checks, visual acceptance and evidence verification are separate. A working page does not verify business claims or authorize publication.
 
@@ -40,9 +40,23 @@ All six: development complete; functionality checked; visual acceptance pending;
 
 Default production export omits every unapproved article's body, title, route and images. The local preview is explicitly built to `out-preview` and served only on 127.0.0.1. No new product, company history, contact channel or certificate ownership claim was added. No public content API or formal sitemap exists; domain-dependent indexing checks remain future work.
 
-## Stop point
 
-This round ends after Resources and six complete drafts are delivered for review. Stop before whole-site acceptance or launch preparation. Keep pending content, certificate, specification and market evidence separate from completed development. Do not publish, push or deploy.
+## Current round — buyer content, 2026-10-06
+
+| Area | Development | Checks / acceptance | Evidence |
+| --- | --- | --- | --- |
+| Nine product details | Completed: distinct sample criteria, packaging / handover guidance and sample inquiry | 已检查功能 — 1440 / 1920 / 390px; see current QA record; visual acceptance pending | Offered values, sample charges, actual packing and lot photographs still need confirmation |
+| Shared inquiry | Completed: sample mode, editable evaluation brief, explicit copy / local text download | 已检查功能 — 1440 / 1920 / 390px; see current QA record; remains unsent | Delivery channel, contacts and operator deferred by user |
+| Four applications | Completed: distinct trial topics carried into the shared brief | 已检查功能 — 1440 / 1920 / 390px; see current QA record | Suitability and processing responsibilities remain product-specific |
+| Private Label | Completed: richer existing workflow, customization briefs and four buyer FAQs | 已检查功能 — 1440 / 1920 / 390px; see current QA record; no second workflow | Capabilities and commercial conditions not newly verified |
+| Quality | Completed: clearer certificate scope/access copy and document matching checklist | 已检查功能 — 1440 / 1920 / 390px; see current QA record | Four owner-attested systems stay pending verification; no invented files or new market claims |
+| About / Contact / Resources | Completed: buyer-focused copy, four contact FAQs, sourcing checklist download and nine-product quick reference | 已检查功能 — 1440 / 1920 / 390px; see current QA record | Six guides remain draft/pending with no author/date/publication authorization |
+
+No new imagery, legal pages, contact channel or domain has been fabricated. Existing approved imagery and major layouts remain. See `buyer-content-qa-results.json` after checks for actual executed coverage.
+
+## Current stop point
+
+Complete buyer-facing supporting content and local checks across the existing pages, then stop for review. The user will provide operator, contact and domain information later. Keep six guide drafts unpublished and all product/certificate/market evidence states unchanged. Do not publish, push or deploy this round.
 
 ## About + Contact delivery — 2026-10-04
 

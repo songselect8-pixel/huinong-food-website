@@ -1,5 +1,15 @@
 # Content needed before production use
 
+## Current status — 2026-10-06
+
+- Existing Home, nine Products, Applications overview/four details, Private Label, Quality, About and Contact pages are implemented; a prior approved version was deployed on 2026-10-04.
+- This local round supplements buyer content and inquiry preparation. It does not verify product specifications or activate contact delivery.
+- About navigation is connected. Resources has six complete local draft guides and twelve editorial concepts; none has publication approval. New general sourcing tools do not expose those draft articles.
+- Legal operator, approved contact details and domain are explicitly deferred by the user. Privacy/terms, real inquiry delivery, canonical/sitemap and indexing depend on those confirmations.
+- Product values, actual offered packing, sample conditions, certificate holder/scope/files and real-photo attribution remain pending. Missing evidence must not be replaced with competitor data or generated proof.
+- Historical notes below describe earlier phases; this current summary takes precedence for development status.
+
+
 | Priority | Needed item | Why it matters |
 | --- | --- | --- |
 | High | Confirm the website's legal operator and its relationship to the FRUNORIA brand | Keep brand identity separate from contracts, certificates and the legal entity |
@@ -18,10 +28,10 @@
 | Medium | Clarify which tea bag listings are filled products and whether empty bags are sold | Keep the product taxonomy accurate |
 | Medium | Approved application guidance by product | Confirm beverage and bakery suitability, preparation and market restrictions |
 | Medium | Genuine packaging and facility images, if the company wants those sections | Avoid AI images posing as operations or customer projects |
-| Medium | Approved About Us page content | Enable the currently disabled About Us button without creating an empty page or false link |
-| Later | Real sourcing articles with review dates and author/owner | Replace the three marked, unlinked development drafts in Resources |
+| Medium | Verified business role, location and legal/brand relationship | About is built and linked; add real identity facts after owner confirmation |
+| Later | Technical review, author/reviewer identity and publication permission for six existing guide drafts | Complete the approval record before exporting articles publicly; no new duplicate articles needed |
 
-The three user-requested new product cards and pages are present **only in the development preview** as illustrated buyer briefs. Before public release, replace or approve the concept imagery and verify each product direction, identity, format and supporting documents. Certificate imagery, invented terms and real form delivery remain excluded.
+Historical preview phase: the three user-requested new product cards and pages were first built as illustrated buyer briefs. The prior approved deployment now contains nine product detail pages; concept imagery still does not verify actual supply. Before public release, replace or approve the concept imagery and verify each product direction, identity, format and supporting documents. Certificate imagery, invented terms and real form delivery remain excluded.
 The three application visuals are generated use concepts; review their accuracy against actual products and approved application guidance before production use.
 The four `/private-label` visuals are generated product/packaging concepts. Replace or approve them against actual product and packaging capabilities before production use; no factory image was generated.
 The 2026-10-03 homepage hero is a generated concept combining frozen berries with dried citrus and a few dried flowers. Confirm that each depicted ingredient fits the actual FRUNORIA offer before public release; the original `01-home-hero.webp` remains available for rollback.
