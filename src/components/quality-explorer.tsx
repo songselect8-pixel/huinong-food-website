@@ -68,10 +68,10 @@ export function QualityExplorer() {
   return <>
     <section className="q-certifications shell q-section" id="certifications" aria-labelledby="certifications-title">
       <div className="q-section-heading"><div><span className="eyebrow">01 / Systems & scope</span><h2 id="certifications-title">Food Safety <em>Certifications</em></h2></div><p>Check a certification against its actual holder, production site and product scope. The brand name alone does not establish certificate coverage.</p></div>
-      <div className="q-cert-note"><FileIcon shield /><p><strong>Certification names confirmed in project records.</strong> Holder, scope and validity verification is pending. File availability is tracked separately from certification status.</p></div>
+      <div className="q-cert-note"><FileIcon shield /><p><strong>Request the certification relevant to your supply.</strong> The business has confirmed the four systems below. Certificate holder, site, product scope and validity still need verification; document access is reviewed separately.</p></div>
       <div className="q-cert-grid">{certifications.map(certificate => <article className="q-cert-card" key={certificate.id}>
         <div className="q-cert-top"><div className="q-cert-icon"><FileIcon shield /></div><div><span className="mini-label">Food safety system</span><h3>{certificate.name}</h3></div></div>
-        <dl className="q-cert-status"><div><dt>Certification record</dt><dd>{certificate.confirmation === "owner-attested" ? "Owner-confirmed" : "Document-confirmed"} · {certificate.verification === "verified" ? "verified" : "verification pending"}</dd></div><div><dt>File status</dt><dd>{certificate.file.status === "not-supplied" ? "Copy not yet supplied for review" : "Copy held for review"}</dd></div></dl>
+        <dl className="q-cert-status"><div><dt>Scope review</dt><dd>{certificate.verification === "verified" ? "Certificate scope verified" : "Holder and product scope awaiting verification"}</dd></div><div><dt>File status</dt><dd>{certificate.file.status === "not-supplied" ? "Public copy not currently available" : "Document access subject to sharing permission"}</dd></div></dl>
         <details className="q-cert-details"><summary>Holder, scope & verification <span aria-hidden="true">+</span></summary><dl>
           <div><dt>Actual certificate holder</dt><dd>{certificate.holder ?? "Awaiting holder confirmation"}</dd></div>
           <div><dt>Production site / scope</dt><dd>{certificate.siteScope ?? "Awaiting site and process scope"}</dd></div>
@@ -91,6 +91,12 @@ export function QualityExplorer() {
         <div className="q-document-intro"><span className="q-document-icon"><FileIcon /></span><h3>{group.name}</h3><p>{group.intro}</p><span className="q-side-note">Select a topic to see what to review and how to request it.</span></div>
         <div className="q-document-topics">{group.topics.map((topic,index) => <details key={topic.title} open={index === 0}><summary><span className="q-topic-number">0{index + 1}</span><span>{topic.title}</span><b aria-hidden="true">+</b></summary><div className="q-topic-content"><dl><div><dt>What it contains</dt><dd>{topic.includes}</dd></div><div><dt>What to check</dt><dd>{topic.check}</dd></div><div><dt>How to request</dt><dd>{topic.request}</dd></div></dl><button type="button" className="text-link q-text-button" onClick={() => prepareRequest(topic.type, group.id)}>Prepare document request <span aria-hidden="true">↗</span></button></div></details>)}</div>
       </div>)}</div>
+      <aside className="q-report-check" aria-labelledby="report-check-title"><div><span className="mini-label">Read the right evidence</span><h3 id="report-check-title">Match the Document to the Decision</h3><p>Use these checks when reviewing a specification, analysis report or certificate.</p></div><dl>{[
+        {name:"Identity & reference",detail:"Match the product, plant part or formula, sample or lot reference and supplying site to the item being considered."},
+        {name:"Scope & method",detail:"Read what was measured or certified, the method or scope, and the acceptance criteria relevant to your request."},
+        {name:"Dates & version",detail:"Check the sample or issue date, specification revision and any stated certificate validity. Keep the version you reviewed."},
+        {name:"Use & permission",detail:"Confirm whether the file relates to a raw ingredient, blend or finished pack, and whether it may be shared with your team."},
+      ].map(item => <div key={item.name}><dt>{item.name}</dt><dd>{item.detail}</dd></div>)}</dl></aside>
       <p className="q-footnote">A COA reports the scope actually tested. Pesticide residues, heavy metals and microbiology are not automatically included in every COA or every lot.</p>
     </div></section>
 

@@ -13,3 +13,12 @@
 .ct-form-area { min-width: 0; }
 @media(max-width:1000px) { .ct-layout { gap: 4%; grid-template-columns: minmax(0,.7fr) minmax(0,1.3fr); } }
 @media(max-width:760px) { .contact-page { padding-block: 35px 45px; }.ct-layout { grid-template-columns: 1fr; gap: 28px; }.ct-intro h1 { font-size: 44px; }.ct-intro figure { max-width: 440px; margin-block: 22px; }.ct-guide { display: none; }.ct-lead { font-size: 16px; } }
+.ct-faq { display: grid; grid-template-columns: .82fr 1.18fr; gap: 6%; border-top: 1px solid var(--line-strong); padding-top: 45px; margin-top: 60px; }
+.ct-faq h2 { font: 500 clamp(32px,3vw,44px)/1.15 var(--display); margin: 17px 0; }
+.ct-faq > div > p { color: var(--muted); max-width: 390px; }
+.ct-faq details { border-bottom: 1px solid var(--line-strong); }
+.ct-faq summary { display: flex; justify-content: space-between; gap: 18px; align-items: center; padding: 20px 0; cursor: pointer; color: var(--brand-blue); font-weight: 600; list-style: none; }
+.ct-faq summary::-webkit-details-marker { display: none; }
+.ct-faq summary span { color: var(--brand-wine); }
+.ct-faq details p { margin: 0 0 24px; font-size: 15px; line-height: 1.75; color: var(--muted); }
+@media (max-width: 760px) { .ct-faq { grid-template-columns: 1fr; gap: 20px; margin-top: 35px; padding-top: 32px; } }

@@ -4,24 +4,25 @@ import { useEffect, useRef, useState } from "react";
 import { categories, products } from "@/data/site";
 import { applicationPages } from "@/data/applications";
 import { certifications, documentTypes, requestMarkets } from "@/data/quality";
-import { briefRows, inquiryTypes, type InquiryBrief, type InquiryFields } from "@/data/inquiry";
+import { briefRows, inquiryText, inquiryTypes, type InquiryBrief, type InquiryFields } from "@/data/inquiry";
 import { useInquiryDraft } from "./inquiry-draft";
 
 export function QuoteForm() {
   const { fields, patch, clearBrief, clearAll, notice } = useInquiryDraft();
   const [previewed, setPreviewed] = useState(false);
   const [errors, setErrors] = useState<Record<string,string>>({});
+  const [exportStatus, setExportStatus] = useState("");
   const formRef = useRef<HTMLFormElement>(null);
   const extraRef = useRef<HTMLDetailsElement>(null);
   const previewRef = useRef<HTMLDivElement>(null);
   const rows = briefRows(fields);
   const product = products.find(item => item.id === fields.productId);
-  useEffect(() => setPreviewed(false), [fields]);
+  useEffect(() => {setPreviewed(false); setExportStatus("");}, [fields]);
   useEffect(() => { if (previewed) previewRef.current?.focus(); }, [previewed]);
   const update = (value: Partial<InquiryFields>) => { patch(value); setErrors({}); };
   const remove = (key: keyof InquiryBrief) => {
-    if (key === "productId") update({ productId: "", form: "", coldChain: "", leafFormat: "" });
-    else if (key === "categoryId") update({ categoryId: "", productId: "", form: "", coldChain: "", leafFormat: "" });
+    if (key === "productId") update({ productId: "", form: "", coldChain: "", leafFormat: "", sampleFocus: "" });
+    else if (key === "categoryId") update({ categoryId: "", productId: "", form: "", coldChain: "", leafFormat: "", sampleFocus: "" });
     else if (key === "documents") update({ documents: [], certificateId: "" });
     else if (key === "quantity") update({ quantity: "", unit: "" });
     else update({ [key]: "" });
@@ -50,6 +51,7 @@ export function QuoteForm() {
   }}>
     <div hidden={previewed}>
       <fieldset className="inquiry-kind"><legend>What would you like to discuss?</legend><div>{inquiryTypes.map(type => <label key={type.id}><input type="radio" name="inquiryType" value={type.id} checked={fields.kind === type.id} onChange={() => update({kind:type.id})} /><span>{type.name}</span></label>)}</div></fieldset>
+      {fields.kind === "sample" && <p className="inquiry-sample-note">Describe your trial and the amount of material you need. Sample availability, charges and delivery conditions require confirmation; this preview does not place an order.</p>}
       {notice && <p className="inquiry-notice" role="status">{notice}</p>}
       {rows.length > 0 && <section className="inquiry-summary" aria-label="Your sourcing brief"><div className="inquiry-summary-heading"><span className="mini-label">Your sourcing brief</span><button type="button" onClick={editBrief}>Edit details</button></div><dl>{rows.map(row => <div key={row.key}><dt>{row.label}</dt><dd>{row.value}</dd><button type="button" onClick={() => remove(row.key)} aria-label={`Remove ${row.label.toLowerCase()}`}>×</button></div>)}</dl><button type="button" className="inquiry-clear" onClick={clearBrief}>Remove all sourcing details</button></section>}
       <p className="form-required-note">Fields marked * are required. Project details are optional.</p>
@@ -61,27 +63,28 @@ export function QuoteForm() {
         <label className="form-wide"><span>Message <b aria-hidden="true">*</b></span><textarea name="message" required rows={4} maxLength={2000} value={fields.message} onChange={event => update({message:event.target.value})} placeholder="Tell us about your sourcing requirements. Details already in your brief do not need to be repeated." aria-invalid={errors.message ? true : undefined} aria-describedby={errors.message ? "error-message" : undefined} />{errors.message && <small className="field-error" id="error-message">{errors.message}</small>}</label>
       </div>
       <details className="form-extra" ref={extraRef}><summary>Optional {fields.kind === "quality" ? "document" : "project"} details <span aria-hidden="true">+</span></summary><div className="form-grid">
-        <label className="form-wide"><span>Product direction</span><select name="interest" value={fields.categoryId} onChange={event => update({categoryId:event.target.value,productId:"",form:"",coldChain:"",leafFormat:""})}><option value="">Help me select a direction</option>{categories.map(category => <option key={category.id} value={category.id}>{category.name}</option>)}</select></label>
-        <label className="form-wide"><span>Product</span><select name="product" value={fields.productId} onChange={event => {const next = products.find(item => item.id === event.target.value); update({productId:next?.id ?? "",categoryId:next?.categoryId ?? fields.categoryId,form:"",coldChain:"",leafFormat:""});}}><option value="">Help me select a product</option>{products.filter(item => !fields.categoryId || item.categoryId === fields.categoryId).map(item => <option key={item.id} value={item.id}>{item.name}</option>)}</select></label>
+        <label className="form-wide"><span>Product direction</span><select name="interest" value={fields.categoryId} onChange={event => update({categoryId:event.target.value,productId:"",form:"",coldChain:"",leafFormat:"",sampleFocus:""})}><option value="">Help me select a direction</option>{categories.map(category => <option key={category.id} value={category.id}>{category.name}</option>)}</select></label>
+        <label className="form-wide"><span>Product</span><select name="product" value={fields.productId} onChange={event => {const next = products.find(item => item.id === event.target.value); update({productId:next?.id ?? "",categoryId:next?.categoryId ?? fields.categoryId,form:"",coldChain:"",leafFormat:"",sampleFocus:""});}}><option value="">Help me select a product</option>{products.filter(item => !fields.categoryId || item.categoryId === fields.categoryId).map(item => <option key={item.id} value={item.id}>{item.name}</option>)}</select></label>
         {product && <label className="form-wide"><span>Form / selection requirement</span><select name="form" value={fields.form} onChange={event => update({form:event.target.value})}><option value="">To be discussed</option>{product.detail?.forms.map(item => <option key={item.name} value={item.name}>{item.name}</option>)}</select></label>}
         {(fields.kind !== "quality" || fields.packaging || fields.quantity || fields.application || fields.timeline) && <>
-          {(fields.kind === "product" || fields.application) && <>{input("application","Intended application",{wide:true,max:160,placeholder:"Tell us the planned use"})}<datalist id="application-suggestions">{applicationPages.map(item => <option key={item.id} value={item.name} />)}</datalist></>}
+          {(fields.kind === "product" || fields.kind === "sample" || fields.application) && <>{input("application","Intended application",{wide:true,max:160,placeholder:"Tell us the planned use"})}<datalist id="application-suggestions">{applicationPages.map(item => <option key={item.id} value={item.name} />)}</datalist></>}
           {input("packaging",fields.kind === "private-label" ? "Packaging format / requirements" : "Packaging requirements",{wide:true,max:600,placeholder:"Format, pack size or labeling questions"})}
-          {input("quantity",fields.kind === "private-label" ? "Estimated quantity" : "Quantity",{type:"number"})}
+          {input("quantity",fields.kind === "sample" ? "Requested sample quantity" : fields.kind === "private-label" ? "Estimated quantity" : "Quantity",{type:"number"})}
           <label><span>Unit</span><select name="unit" value={fields.unit} onChange={event => update({unit:event.target.value})}><option value="">To be discussed</option><option value="kg">kg</option><option value="tonnes">tonnes</option><option value="packs">packs</option><option value="other">Other</option></select></label>
-          {(fields.kind === "private-label" || fields.timeline) && input("timeline","Project timing requirements",{wide:true,placeholder:"Your proposed milestones or timing questions"})}
+          {(fields.kind === "private-label" || fields.kind === "sample" || fields.timeline) && input("timeline","Project timing requirements",{wide:true,placeholder:"Your proposed milestones or timing questions"})}
         </>}
         {input("targetMarket","Target market",{max:100,placeholder:"Destination country or region",wide:true})}<datalist id="market-suggestions">{requestMarkets.map(item => <option key={item.id} value={item.name} />)}</datalist>
         {(fields.kind === "quality" || fields.documents.length > 0) && <><fieldset className="inquiry-documents form-wide"><legend>Document types</legend>{documentTypes.map(type => <label key={type.id}><input type="checkbox" name="documentType" value={type.id} checked={fields.documents.includes(type.id)} onChange={event => update({documents:event.target.checked ? [...fields.documents,type.id] : fields.documents.filter(id => id !== type.id), ...(!event.target.checked && type.id === "certification" ? {certificateId:""} : {})})} /><span>{type.name}</span></label>)}</fieldset>{fields.documents.includes("certification") && <label className="form-wide"><span>Certification topic</span><select name="certification" value={fields.certificateId} onChange={event => update({certificateId:event.target.value})}><option value="">To be discussed</option>{certifications.map(item => <option key={item.id} value={item.id}>{item.name}</option>)}</select><small>Topic selection does not establish the certificate holder or product scope.</small></label>}</>}
         {input("documentNote","Document requirements",{wide:true,max:300,placeholder:"Reports or information your team needs to review"})}
         {(product?.categoryId === "frozen-berries") && input("coldChain","Cold-chain delivery requirements",{wide:true})}
         {product?.id === "raspberry-leaf-tea" && input("leafFormat","Leaf cut or tea-bag development brief",{wide:true})}
+        {(fields.kind === "sample" || fields.sampleFocus) && <label className="form-wide"><span>Sample evaluation requirements</span><textarea name="sampleFocus" rows={4} maxLength={1800} value={fields.sampleFocus} onChange={event => update({sampleFocus:event.target.value})} placeholder="Appearance, cut, preparation trial or packing checks" /><small>Include a sample or formula reference if you have one. Share delivery addresses only after the receiving channel is confirmed.</small></label>}
         {input("projectNotes","Other project requirements",{wide:true,max:600})}
       </div></details>
       <div className="form-actions"><button className="button button-dark" type="submit">Preview Inquiry <span aria-hidden="true">↗</span></button><p>Preview mode — your request has not been sent.</p></div>
-      <p className="inquiry-privacy">This preview keeps your entries only in this open page session. Nothing is sent or saved to browser storage. Reloading or closing the page clears this draft.</p>
+      <p className="inquiry-privacy">This preview keeps your entries only in this open page session. Nothing is sent or saved automatically. You can explicitly copy or download your preview. Reloading or closing the page clears this draft.</p>
       <button type="button" className="inquiry-clear" onClick={() => {clearAll(); setErrors({});}}>Clear this draft</button>
     </div>
-    {previewed && <div className="inquiry-preview" tabIndex={-1} ref={previewRef} aria-label="Inquiry preview"><span className="eyebrow">Review your inquiry</span><h3>{inquiryTypes.find(type => type.id === fields.kind)?.name}</h3><p className="form-feedback" role="status">Preview mode — your request has not been sent.</p><dl>{[{label:"Name",value:fields.name},{label:"Email",value:fields.email},{label:"Company",value:fields.company},{label:"Country / Region",value:fields.region},...rows,{label:"Message",value:fields.message}].filter(row => row.value).map(row => <div key={row.label}><dt>{row.label}</dt><dd>{row.value}</dd></div>)}</dl><button className="button button-outline" type="button" onClick={() => {setPreviewed(false); requestAnimationFrame(() => (formRef.current?.elements.namedItem("message") as HTMLElement)?.focus());}}>Back to Edit <span aria-hidden="true">↗</span></button></div>}
+    {previewed && <div className="inquiry-preview" tabIndex={-1} ref={previewRef} aria-label="Inquiry preview"><span className="eyebrow">Review your inquiry</span><h3>{inquiryTypes.find(type => type.id === fields.kind)?.name}</h3><p className="form-feedback" role="status">Preview mode — your request has not been sent.</p><dl>{[{label:"Name",value:fields.name},{label:"Email",value:fields.email},{label:"Company",value:fields.company},{label:"Country / Region",value:fields.region},...rows,{label:"Message",value:fields.message}].filter(row => row.value).map(row => <div key={row.label}><dt>{row.label}</dt><dd>{row.value}</dd></div>)}</dl><div className="inquiry-export-actions"><button className="button button-dark" type="button" onClick={async () => {try {await navigator.clipboard.writeText(inquiryText(fields)); setExportStatus("Copied to your clipboard. Your inquiry has not been sent.");} catch {setExportStatus("Copy is unavailable in this browser. Use Download Draft to keep a text copy.");}}}>Copy Inquiry <span aria-hidden="true">↗</span></button><button className="button button-outline" type="button" onClick={() => {const url = URL.createObjectURL(new Blob([inquiryText(fields)], {type:"text/plain;charset=utf-8"})); const link = document.createElement("a"); link.href = url; link.download = "frunoria-inquiry-draft.txt"; link.click(); setTimeout(() => URL.revokeObjectURL(url), 1000); setExportStatus("Text file prepared for download. It includes the details shown here; your inquiry has not been sent.");}}>Download Draft <span aria-hidden="true">↓</span></button></div><p className="inquiry-export-status" role="status">{exportStatus}</p><button className="button button-outline" type="button" onClick={() => {setPreviewed(false); requestAnimationFrame(() => (formRef.current?.elements.namedItem("message") as HTMLElement)?.focus());}}>Back to Edit <span aria-hidden="true">↗</span></button></div>}
   </form>;
 }

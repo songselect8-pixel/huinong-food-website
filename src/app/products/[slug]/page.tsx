@@ -2,11 +2,12 @@ import SiteLink from "@/components/site-link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ProductGallery } from "@/components/product-gallery";
-import { ProductInquiryPicker, ProductInquiryProvider, ProductQuoteLink } from "@/components/product-inquiry-picker";
+import { ProductInquiryPicker, ProductInquiryProvider, ProductQuoteLink, ProductSampleBrief } from "@/components/product-inquiry-picker";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { categories, products } from "@/data/site";
 import { sitePath } from "@/data/paths";
+import { productReview } from "@/data/buyer-support";
 import { pageMetadata } from "@/data/metadata";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -26,6 +27,7 @@ export default async function ProductPage({ params }: Props) {
   const product = products.find((item) => item.id === slug && item.detail);
   if (!product?.detail) notFound();
   const detail = product.detail;
+  const packing = productReview[product.id]?.packing ?? detail.storage;
   const category = categories.find((item) => item.id === product.categoryId)!;
   const others = products.filter((item) => item.id !== product.id && item.detail);
   const related = [...others.filter((item) => item.categoryId === product.categoryId), ...others.filter((item) => item.categoryId !== product.categoryId)].slice(0, 3);
@@ -48,15 +50,15 @@ export default async function ProductPage({ params }: Props) {
           </div>
         </section>
 
-        <nav className="shell pd-section-nav" aria-label="Product page sections"><SiteLink href="#overview">Overview</SiteLink><SiteLink href="#specifications">Specifications & Selection</SiteLink><SiteLink href="#applications">Applications</SiteLink><SiteLink href="#packing">Packaging & Storage</SiteLink><SiteLink href="#quality">Quality & Documentation</SiteLink><SiteLink href="#faq">FAQ</SiteLink></nav>
+        <nav className="shell pd-section-nav" aria-label="Product page sections"><SiteLink href="#overview">Overview</SiteLink><SiteLink href="#specifications">Specifications & Selection</SiteLink><SiteLink href="#applications">Applications</SiteLink><SiteLink href="#sample-review">Sample Review</SiteLink><SiteLink href="#packing">Packaging & Storage</SiteLink><SiteLink href="#quality">Quality & Documentation</SiteLink><SiteLink href="#faq">FAQ</SiteLink></nav>
 
         <section className="shell pd-overview section-space" id="overview"><div className="pd-section-heading"><div><span className="eyebrow section-kicker">01 / Product information</span><h2>Product <em>Overview</em></h2></div><p>{detail.overview}</p></div><dl className="pd-known-facts">{detail.knownFacts.map((fact) => <div key={fact.name}><dt>{fact.name}</dt><dd>{fact.value}</dd></div>)}</dl><p className="pd-facts-note">Product identity and direction shown above. Lot specifications and the final declaration are confirmed with the proposed supply.</p></section>
 
-        <section className="pd-options section-space" id="specifications"><div className="shell"><div className="pd-section-heading"><div><span className="eyebrow section-kicker">02 / Build your brief</span><h2>Specifications <em>& Selection</em></h2></div><p>{detail.positioning}</p></div><h3 className="pd-subheading" id="product-options">Your procurement requirements</h3><ProductInquiryPicker options={detail.forms} /><div className="pd-spec-heading"><h3 className="pd-subheading">Key points to confirm</h3><p>Share your targets. Measured values and acceptance criteria belong in the agreed product specification.</p></div><div className="pd-spec-grid">{detail.specification.map((item, index) => <article key={item.name}><span>{String(index + 1).padStart(2, "0")}</span><h3>{item.name}</h3><p>{item.buyerCheck}</p></article>)}</div></div></section>
+        <section className="pd-options section-space" id="specifications"><div className="shell"><div className="pd-section-heading"><div><span className="eyebrow section-kicker">02 / Build your brief</span><h2>Specifications <em>& Selection</em></h2></div><p>{detail.positioning}</p></div><h3 className="pd-subheading" id="product-options">Your procurement requirements</h3><ProductInquiryPicker options={detail.forms} /><div className="pd-spec-heading"><h3 className="pd-subheading">Key points to confirm</h3><p>Share your targets. Measured values and acceptance criteria belong in the agreed product specification.</p></div><div className="pd-spec-grid">{detail.specification.map((item, index) => <article key={item.name}><span>{String(index + 1).padStart(2, "0")}</span><h3>{item.name}</h3><p>{item.buyerCheck}</p></article>)}</div><ProductSampleBrief /></div></section>
 
         <section className="pd-applications section-space" id="applications"><div className="shell"><div className="pd-section-heading"><div><span className="eyebrow section-kicker">03 / Intended use</span><h2>Application <em>Directions</em></h2></div><p>Use these starting points to describe your project. Review suitability and preparation against the actual product.</p></div><div className="pd-use-cards">{detail.applications.map((item, index) => <article key={item.name}><span>0{index + 1}</span><h3>{item.name}</h3><p>{item.note}</p></article>)}</div></div></section>
 
-        <section className="shell pd-logistics section-space" id="packing"><div className="pd-section-heading"><div><span className="eyebrow section-kicker">04 / Handling</span><h2>Packaging <em>& Storage</em></h2></div><p>Align the pack, storage instructions and handover requirements with the selected product.</p></div><div className="pd-logistics-grid">{detail.storage.map((item, index) => <article key={item}><span>0{index + 1}</span><p>{item}</p></article>)}</div></section>
+        <section className="shell pd-logistics section-space" id="packing"><div className="pd-section-heading"><div><span className="eyebrow section-kicker">04 / Handling</span><h2>Packaging <em>& Storage</em></h2></div><p>Align the pack, storage instructions and handover requirements with the selected product.</p></div><div className="pd-logistics-grid">{packing.map((item, index) => <article key={item}><span>0{index + 1}</span><p>{item}</p></article>)}</div></section>
 
         <section className="pd-documents section-space" id="quality"><div className="shell"><div className="pd-section-heading"><div><span className="eyebrow section-kicker">05 / Buyer checklist</span><h2>Quality <em>& Documentation</em></h2></div><p>Review the documents relevant to the product, supplying site, lot and destination market.</p></div><div className="pd-document-grid">{detail.documents.map((group, index) => <article key={group.group}><span className="pd-document-number">0{index + 1}</span><h3>{group.group}</h3><p>{group.note}</p><ul>{group.items.map((item) => <li key={item}>{item}</li>)}</ul></article>)}</div><p className="pd-document-note">Document topics for discussion; specific reports and certificate scope require confirmation.</p><SiteLink className="text-link" href={sitePath(`/quality?product=${product.id}#product-documents`)}>Explore Quality &amp; Compliance <span aria-hidden="true">↗</span></SiteLink></div></section>
 

@@ -141,3 +141,15 @@ The shared form now supports Product Inquiry, Private Label Project and Quality 
 Six complete editorial drafts now live in `content/guides`; 12 separate generated editorial concepts are in `content/images/resources`. See `docs/resources-source-review.md` and `docs/resources-content-review.json` for actual primary sources, checked dates, scope limitations and per-article pending items. Historical report numbers/specification examples were not converted into supply commitments. Old Home placeholder topics were merged into the completed leaf, packing and inquiry drafts; no parallel Blog collection remains.
 
 The images are illustrative and do not identify actual lots, species, tested grades, customer projects or packaging performance. Default production exports exclude unapproved content and assets; local preview is separate.
+
+
+## Buyer content additions — 2026-10-06
+
+- `src/data/buyer-support.ts` provides product-specific sample-review and packing/handover prompts derived from the existing nine product briefs and four user-approved application directions. These are buyer decisions to agree, not measured values, test methods, standards or confirmed manufacturing capabilities.
+- Product identity, source URLs, verification flags, `skuImage`, certificate records and market-source dates are unchanged. No new regulatory or technical threshold has been asserted.
+- Private Label clarifies sample references, formula/artwork versions, packing responsibilities and commercial questions within the existing six-step illustrative workflow. No fixed minimum, free sample, turnaround or capability promise was added.
+- Quality wording separates certificate scope from public access; the four business-attested systems still have pending holder/scope/validity review. The document-matching checklist is a reading aid, not a report or certificate.
+- Resources adds a general editable text sourcing checklist and a quick reference using the existing product names/links. This is not a technical catalogue, product specification or downloadable quality file. Six article bodies and images remain behind the existing production gate.
+- The explicit copy/download buttons serialize the same locally previewed inquiry. No request is sent; no automatic persistent storage is added. A user-triggered downloaded file or clipboard copy contains their own chosen details.
+- The owner deferred identity/contact/domain inputs until after the content round. No guessed contacts, relationship statement, formal privacy terms or domain configuration was created.
+- Existing `实拍图片` assets remain untouched and unpublished; scene/ownership/product attribution still needs owner confirmation.

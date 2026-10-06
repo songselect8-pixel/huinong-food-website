@@ -155,3 +155,10 @@
   .q-type-options legend span { display:block; margin:5px 0 0; }
   .q-closing-layout { align-items:flex-start; flex-direction:column; gap:28px; }
 }
+.q-report-check { margin-top: 36px; display: grid; grid-template-columns: .75fr 1.25fr; gap: 36px; padding-top: 30px; border-top: 1px solid var(--line-strong); }
+.q-report-check h3 { font: 500 29px/1.2 var(--display); margin: 12px 0; }
+.q-report-check p { color: var(--muted); font-size: 15px; max-width: 370px; }
+.q-report-check dl { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 0; }
+.q-report-check dt { font-size: 16px; font-weight: 650; color: var(--brand-blue); margin-bottom: 8px; }
+.q-report-check dd { margin: 0; font-size: 14px; color: var(--muted); line-height: 1.7; }
+@media (max-width: 760px) { .q-report-check, .q-report-check dl { grid-template-columns: 1fr; gap: 22px; } }

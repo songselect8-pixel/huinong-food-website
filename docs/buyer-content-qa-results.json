@@ -1,0 +1,86 @@
+{
+  "checkedAt": "2026-10-06",
+  "mode": "localhost-only, no delivery or deployment",
+  "baseline": "98ce9a3da351eb37acbab5c43b8f19fb35aacfc1",
+  "commands": {
+    "npm run typecheck": "passed",
+    "npm run build:preview": "passed",
+    "npm run build": "passed; six unpublished guides excluded",
+    "node scripts/check-guide-content.cjs": "passed; six draft guides and twelve distinct editorial images"
+  },
+  "browser": {
+    "script": "scripts/review-buyer-content.js",
+    "result": "passed",
+    "viewports": [
+      1440,
+      1920,
+      390
+    ],
+    "products": "Nine distinct sample checklists, packing content, three-image gallery controls and correct sample inquiry handoffs",
+    "inquiry": "Selected product, form, evaluation topics and source retained; existing message retained; preview/copy/download agree; product removal clears dependent sample focus; no browser storage",
+    "applications": "All four application briefs retain product, application, pack, documents and evaluation topics",
+    "quality": "Document categories, expansion and product/certificate/testing/market request passed; no certificate download without approved file",
+    "resources": "Six local drafts retained, real text checklist download, nine product reference links",
+    "responsive": "Seven updated page types at each viewport: no horizontal overflow or faded headings/body; 390px reduced motion, frozen gallery/sample inquiry/expanded cold-chain field checked",
+    "privateLabel": "One six-step workflow retained; buyer FAQ opens",
+    "pageErrors": [],
+    "httpFailures": [],
+    "nonGetRequests": []
+  },
+  "visualInspection": [
+    "sample-1440.png",
+    "sample-390.png",
+    "private-label-1440.png",
+    "resources-1440.png",
+    "contact-390.png"
+  ],
+  "screenshots": [
+    "output/playwright/buyer-content/about-1440.png",
+    "output/playwright/buyer-content/about-390.png",
+    "output/playwright/buyer-content/applications-dairy-frozen-desserts-1440.png",
+    "output/playwright/buyer-content/applications-dairy-frozen-desserts-390.png",
+    "output/playwright/buyer-content/contact-1440.png",
+    "output/playwright/buyer-content/contact-390.png",
+    "output/playwright/buyer-content/private-label-1440.png",
+    "output/playwright/buyer-content/private-label-390.png",
+    "output/playwright/buyer-content/quality-1440.png",
+    "output/playwright/buyer-content/quality-390.png",
+    "output/playwright/buyer-content/resources-1440.png",
+    "output/playwright/buyer-content/resources-390.png",
+    "output/playwright/buyer-content/sample-1440.png",
+    "output/playwright/buyer-content/sample-390.png",
+    "output/playwright/buyer-content/sample-inquiry-mobile.png"
+  ],
+  "legacyRegression": {
+    "script": "scripts/review-about-contact.js (same checks, localhost port and screenshot output adapted in ignored runner)",
+    "result": "passed",
+    "coverage": [
+      "Nine original Request a Quote links and product prefill",
+      "Private Label quantity, packing and timing brief",
+      "Quality market, multiple document types and certificate dependencies",
+      "Application context without personal URL fields",
+      "Homepage inquiry and three-step packaging planner",
+      "Unknown and unrelated legacy query identifiers rejected",
+      "Back/edit and same-link draft retention",
+      "Required fields, email validation, keyboard radio selection and clearing",
+      "About/Contact at 1440,1920,900,390; mobile navigation",
+      "Reduced motion About/Contact/Private Label"
+    ],
+    "pageErrors": [],
+    "httpFailures": [],
+    "networkSubmissions": []
+  },
+  "pending": [
+    "Owner visual acceptance",
+    "Operator/contact/domain confirmation",
+    "Actual product specs, certificate holder/scope/validity/files, sample/order terms and photo attribution",
+    "Six guide editorial/technical review and publication authorization"
+  ],
+  "unchanged": [
+    "Brand palette, fonts and content width",
+    "Home composition and five-range order",
+    "Products three-column grid",
+    "Nine product identities, 27 product concepts and source verification flags",
+    "Certificate data and market-source review dates"
+  ]
+}

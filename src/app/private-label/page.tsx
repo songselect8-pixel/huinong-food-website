@@ -27,21 +27,21 @@ const packagingCustomization = [
 ] as const;
 
 const customizationTopics = [
-  { number: "01", name: "Ingredient Selection", detail: "Choose a product direction." },
-  { number: "02", name: "Blend Ratio", detail: "Share your target profile." },
-  { number: "03", name: "Cut Size", detail: "Define the format you need." },
-  { number: "04", name: "Packaging Format", detail: "Discuss your presentation." },
-  { number: "05", name: "Label Design", detail: "Bring your artwork brief." },
-  { number: "06", name: "MOQ Requirements", detail: "Share your target order quantity." },
+  { number: "01", name: "Ingredient Selection", detail: "Name the ingredient, plant part or complete blend declaration." },
+  { number: "02", name: "Blend Ratio", detail: "Provide your formula or flavour brief; record revisions for sample review." },
+  { number: "03", name: "Cut Size", detail: "Relate the requested cut to infusion, blending or bag-filling needs." },
+  { number: "04", name: "Packaging Format", detail: "Specify pack size, material, unit count and outer-carton requirements." },
+  { number: "05", name: "Label Design", detail: "Identify artwork files, label language and who approves the final information." },
+  { number: "06", name: "MOQ Requirements", detail: "Separate trial quantity, first order and repeat demand; confirm material minimums." },
 ] as const;
 
 const workflowSteps = [
-  { name: "Customer Idea", detail: "Share the product idea, intended use and target market.", icon: "M9 18h6m-5 3h4M12 2a7 7 0 0 0-4 12.8c.8.5 1.3 1.2 1.5 2.2h5c.2-1 .7-1.7 1.5-2.2A7 7 0 0 0 12 2Z" },
-  { name: "Ingredient Discussion", detail: "Review relevant fruit, botanical and tea ingredients.", icon: "M12 21V10m0 6c-5 0-8-2.5-8-7 5 0 8 2.5 8 7Zm0-3c0-5 3-8 8-8 0 5-3 8-8 8Z" },
-  { name: "Sample Development", detail: "Agree on a sample brief and review feasible options.", icon: "M8 3h8m-6 0v6l-4.8 8.2A2.5 2.5 0 0 0 7.4 21h9.2a2.5 2.5 0 0 0 2.2-3.8L14 9V3M8 15h8" },
-  { name: "Packaging Confirmation", detail: "Check the format, materials and artwork requirements.", icon: "m3 7 9-4 9 4-9 4-9-4Zm0 0v10l9 4 9-4V7m-9 4v10M7.5 5l9 4" },
-  { name: "Production Coordination", detail: "Align the agreed route, responsibilities and timing.", icon: "M4 4h6v6H4zm10 0h6v6h-6zm-5 10h6v6H9zM7 10v2h5v2m5-4v2h-5" },
-  { name: "Quality Review", detail: "Review specifications and documents for the agreed scope.", icon: "m12 2-8 3v6c0 5 3.4 8.6 8 11 4.6-2.4 8-6 8-11V5l-8-3Zm-3.5 10 2.5 2.5 4.5-5" },
+  { name: "Customer Idea", detail: "Define the product, intended use, market and proposed order quantity.", icon: "M9 18h6m-5 3h4M12 2a7 7 0 0 0-4 12.8c.8.5 1.3 1.2 1.5 2.2h5c.2-1 .7-1.7 1.5-2.2A7 7 0 0 0 12 2Z" },
+  { name: "Ingredient Discussion", detail: "Agree ingredient identity, formula direction and the requirements to check.", icon: "M12 21V10m0 6c-5 0-8-2.5-8-7 5 0 8 2.5 8 7Zm0-3c0-5 3-8 8-8 0 5-3 8-8 8Z" },
+  { name: "Sample Development", detail: "Set evaluation criteria, sample references, cost and delivery arrangements.", icon: "M8 3h8m-6 0v6l-4.8 8.2A2.5 2.5 0 0 0 7.4 21h9.2a2.5 2.5 0 0 0 2.2-3.8L14 9V3M8 15h8" },
+  { name: "Packaging Confirmation", detail: "Record the pack format, materials, artwork version and approval responsibilities.", icon: "m3 7 9-4 9 4-9 4-9-4Zm0 0v10l9 4 9-4V7m-9 4v10M7.5 5l9 4" },
+  { name: "Production Coordination", detail: "Confirm the supply route, responsible parties and timing after the scope is agreed.", icon: "M4 4h6v6H4zm10 0h6v6h-6zm-5 10h6v6H9zM7 10v2h5v2m5-4v2h-5" },
+  { name: "Quality Review", detail: "Match the agreed specification, product and lot to the documents requested.", icon: "m12 2-8 3v6c0 5 3.4 8.6 8 11 4.6-2.4 8-6 8-11V5l-8-3Zm-3.5 10 2.5 2.5 4.5-5" },
 ] as const;
 
 const projectConsiderations = [
@@ -190,7 +190,7 @@ export default function PrivateLabelPage() {
             <div className="pl-packaging-copy" data-reveal="">
               <span className="eyebrow section-kicker">Packaging directions</span>
               <h2 id="pl-packaging-title">Presentation starts with <em>the right format.</em></h2>
-              <p>Tell us how your product should be packed and presented. Format availability is confirmed against the product and project requirements.</p>
+              <p>Bring your unit weight, pack count and intended sales channel. Review the inner food-contact material, outer protection and label requirements together; the formats below are options for feasibility discussion.</p>
               <ul className="pl-format-list">
                 {packagingFormats.map((format, index) => (
                   <li key={format.name}>
@@ -221,7 +221,7 @@ export default function PrivateLabelPage() {
             <div className="pl-custom-intro" data-reveal="">
               <span className="eyebrow section-kicker">Make the brief your own</span>
               <h2 id="pl-custom-title">The details that shape <em>your product.</em></h2>
-              <p>Share what you already know. The remaining details can be explored together during the sourcing discussion.</p>
+              <p>A useful brief separates the ingredient, the pack and the approval decisions. Record who supplies the artwork, reviews market wording and signs off the sample before discussing production.</p>
               <SiteLink className="text-link" href={sitePath("/#private-label")}>Build a short brief <span aria-hidden="true">↗</span></SiteLink>
             </div>
             <ul className="pl-custom-list" data-reveal="">
@@ -249,6 +249,16 @@ export default function PrivateLabelPage() {
             </div>
             <SiteLink className="button button-outline" href={sitePath("/quality")}>Explore Quality &amp; Compliance <span aria-hidden="true">↗</span></SiteLink>
           </div>
+        </section>
+
+        <section className="shell pl-buyer-faq" aria-labelledby="pl-buyer-faq-title">
+          <div><span className="eyebrow">Before approving the project</span><h2 id="pl-buyer-faq-title">Questions worth <em>settling early.</em></h2><p>Keep the sample, packaging and commercial approvals connected to the same product brief.</p></div>
+          <div>{[
+            {question:"Can I use an existing blend or bring a new formula?",answer:"Treat these as different briefs. For an existing direction, confirm the actual ingredient declaration and sample reference. For a new formula, share ingredient preferences, intended format and evaluation criteria so development feasibility and responsibilities can be discussed."},
+            {question:"What should a sample agreement cover?",answer:"Record the sample contents or formula version, trial amount, evaluation method and person approving it. Agree sample charges, delivery conditions and how changes will be recorded. Sample approval should refer to the product and pack actually being considered."},
+            {question:"Who supplies and approves the artwork?",answer:"Identify who provides the design files, the required label language and who checks ingredient information and market wording. Artwork support, print proof review and final approval responsibilities must be agreed for the project; they are not automatically included in every packing request."},
+            {question:"How are quantity and timing confirmed?",answer:"Share your first-order quantity, expected repeat demand and target milestones. Ingredient availability, pack-material minimums, sample revisions and approval dates need to be reviewed before an order quantity or production schedule is agreed."},
+          ].map(item => <details key={item.question}><summary>{item.question}<span aria-hidden="true">+</span></summary><p>{item.answer}</p></details>)}</div>
         </section>
 
         <section className="pl-cta section-space" id="start-project" aria-labelledby="pl-cta-title">

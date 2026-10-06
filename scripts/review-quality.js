@@ -29,8 +29,8 @@ async (page) => {
   assert(await page.locator('main form').count() === 1, 'Duplicate request form');
   assert(await page.locator('.q-cert-card').count() === 4, 'Missing certification records');
   for (const card of await page.locator('.q-cert-card').all()) {
-    assert((await card.innerText()).includes('Owner-confirmed · verification pending'), 'Unsupported certification claim');
-    assert((await card.innerText()).includes('Copy not yet supplied for review'), 'File state lost');
+    assert((await card.innerText()).includes('Holder and product scope awaiting verification'), 'Unsupported certification claim');
+    assert((await card.innerText()).includes('Public copy not currently available'), 'File state lost');
     await card.locator('summary').click();
     assert(await card.locator('.q-cert-details dl > div').count() === 6, 'Incomplete certificate fields');
     assert(await card.getByText('Publication permission not confirmed').isVisible(), 'Missing public-access status');
